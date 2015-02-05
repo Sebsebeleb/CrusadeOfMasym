@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: 5aaac5bdef637bb45890e44c7c6b9024
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Meteor_0
+    21300002: Meteor_1
+    21300004: Meteor_2
+    21300006: Meteor_3
+    21300008: Meteor_4
+    21300010: Meteor_5
+    21300012: Meteor_6
+    21300014: Meteor_7
+    21300016: Meteor_8
+    21300018: Meteor_9
+    21300020: Meteor_10
+    21300022: Meteor_11
+    21300024: Meteor_12
+    21300026: Meteor_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +39,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +56,146 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Meteor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1857
+        width: 261
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1743
+        width: 416
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_2
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1715
+        width: 496
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_3
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1715
+        width: 474
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1335
+        width: 505
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1357
+        width: 414
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_6
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1359
+        width: 422
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_7
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1391
+        width: 364
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 371
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_9
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 977
+        width: 432
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_10
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1075
+        width: 304
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_11
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1203
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_12
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 943
+        width: 474
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 761
+        width: 373
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
