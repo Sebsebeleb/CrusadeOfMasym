@@ -10,6 +10,8 @@ public class CreatureStats : MonoBehaviour
     //Counts how long we have not moved. Only used if speed is lower than 1.0, if it is, this counter will increase by _speed each turn, and the creature will only move if it has speedcounter >= 1.0 and the counter is then reset
     private float _speedCounter;
     public String name;
+    private bool isImobile = false; // If we are, we can never move on our own
+
 
     public int MaxHealth
     {
@@ -43,13 +45,14 @@ public class CreatureStats : MonoBehaviour
         set { _speed = value; }
     }
 
-    // Use this for initialization
-    private void Start()
+    public bool CanMove()
     {
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
+        if (Speed >= 1) {
+            return true;
+        }
+        if (Speed > 0 && _speedCounter >= 1.0f) {
+            return true;
+        }
+        return false;
     }
 }

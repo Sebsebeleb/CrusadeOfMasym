@@ -52,6 +52,8 @@ public class MapPosition
                 return new MapPosition(x - 1, y - 1);
             case Direction.DOWNRIGHT:
                 return new MapPosition(x, y - 1);
+            default:
+                return null;
         }
     }
 }
