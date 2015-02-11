@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22229122}
   - 114: {fileID: 11429120}
   - 114: {fileID: 11467938}
+  - 114: {fileID: 11478430}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -221,9 +222,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11429120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11478430}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11478430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd75cd23685fc0c478385d01d90a3220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameText: {fileID: 11429122}
+  DescriptionText: {fileID: 11429124}
+  TypeText: {fileID: 11429126}
 --- !u!222 &22229122
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -263,10 +290,10 @@ RectTransform:
   - {fileID: 22429128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -320, y: -104.500008}
-  m_SizeDelta: {x: 270, y: 378}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22429124
 RectTransform:
@@ -280,10 +307,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22429122}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 171.399994}
-  m_SizeDelta: {x: 196.800003, y: 35.0999985}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -17.6000061}
+  m_SizeDelta: {x: -73.1999969, y: 35.1000061}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22429126
 RectTransform:
@@ -297,10 +324,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22429122}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -1.29999995, y: -99.6999969}
-  m_SizeDelta: {x: 241.5, y: 112.099998}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1.30000305, y: -99.6999969}
+  m_SizeDelta: {x: -28.5, y: -265.899994}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22429128
 RectTransform:
@@ -314,11 +341,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22429122}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -0, y: 145.699997}
-  m_SizeDelta: {x: 214.100006, y: 16.2000008}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -43.3000641}
+  m_SizeDelta: {x: -55.8999939, y: 16.2000122}
+  m_Pivot: {x: .50000006, y: .499997139}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum Direction
 {
@@ -55,6 +56,11 @@ public class MapPosition
             default:
                 return null;
         }
+    }
+
+    public static implicit operator Vector2(MapPosition pos)
+    {
+        return new Vector2(pos.x, pos.y);
     }
 }
 

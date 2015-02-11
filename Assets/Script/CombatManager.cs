@@ -7,24 +7,41 @@ public static class CombatManager
     // Note: 15,y does not exist in every second row
     private static CreatureStats[,] permanentMap = new CreatureStats[15, 5];
 
-    // Spawn a new permanent on the map
-    public static void SpawnPermanent(CreatureStats permanent, MapPosition pos)
+    public static Vector3 GridToWorld(MapPosition pos)
     {
-        // Debug stuff
+        float x = pos.x;
+        float y = pos.y%2 == 0 ? pos.y : pos.y - 0.5f;
+
+        y = -y;
+
+        x -= 6;
+        y += 2;
+
+        //permanent.transform.position = new Vector3(x, y);
+
+        //return new Vector3(pos.x -7.5, pos.y-0.5, 0);
+        return new Vector3(x, y, 0);
+    }
+
+    // Spawn a new permanent on the map
+    public static void SpawnPermanent(GameObject permanentPrefab, MapPosition pos)
+    {
+        GameObject permanent = GameObject.Instantiate(permanentPrefab) as GameObject;
+        CreatureStats stats = permanent.GetComponent<CreatureStats>();
+
+        // Error checking
         if (Utils.OutOfBounds(pos)) {
-            Debug.LogError("Error, " + permanent.name + " was attempted to be spawned in invalid position: " + pos);
+            Debug.LogError("Error, " + stats.name + " was attempted to be spawned in invalid position: " + pos);
         }
 
         if (permanentMap[pos.x, pos.y] != null) {
-            Debug.LogError("Error, " + permanent.name + " was attempted to be spawned on top of another permanent at: " +
+            Debug.LogError("Error, " + stats.name + " was attempted to be spawned on top of another permanentPrefab at: " +
                            pos);
         }
         //Set the position
-        float x = pos.x;
-        float y = pos.y%2 == 0 ? pos.y : pos.y - 0.5f;
-        permanent.transform.position = new Vector3(x, y);
+        permanent.transform.position = GridToWorld(pos);
 
-        permanentMap[pos.x, pos.y] = permanent;
+        permanentMap[pos.x, pos.y] = stats;
     }
 
     public static IEnumerator DoCombatPhase(Owner player)

@@ -34,6 +34,11 @@ public class Deck
 
     public BaseCard DrawCard()
     {
+        //If the library is empty, we shuffle it before drawing
+        if (remainingCards.Count <= 0) {
+            Reset();
+        }
+
         BaseCard draw = remainingCards[0];
         remainingCards.RemoveAt(0);
 
