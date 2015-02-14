@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class CombatManager
@@ -24,7 +26,7 @@ public static class CombatManager
     }
 
     // Spawn a new permanent on the map
-    public static void SpawnPermanent(GameObject permanentPrefab, MapPosition pos)
+    public static void SpawnPermanent(GameObject permanentPrefab, Owner caster, MapPosition pos)
     {
         GameObject permanent = GameObject.Instantiate(permanentPrefab) as GameObject;
         CreatureStats stats = permanent.GetComponent<CreatureStats>();
@@ -35,41 +37,63 @@ public static class CombatManager
         }
 
         if (permanentMap[pos.x, pos.y] != null) {
-            Debug.LogError("Error, " + stats.name + " was attempted to be spawned on top of another permanentPrefab at: " +
+            Debug.LogError("Error, " + stats.name +
+                           " was attempted to be spawned on top of another permanentPrefab at: " +
                            pos);
         }
         //Set the position
         permanent.transform.position = GridToWorld(pos);
 
         permanentMap[pos.x, pos.y] = stats;
+
+        stats.OwnedBy = caster;
+        stats.GridPosition = pos;
     }
 
     public static IEnumerator DoCombatPhase(Owner player)
     {
-        for (int x = 0; x <= 5; x++) {
-            for (int y = 0; y <= 15; y++) {
+
+        Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
+
+
+        // Populate the turnOrder
+        // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
+        for (int x = 0; x < 15; x++) {
+            for (int y = 0; y < 5; y++) {
                 if (y%2 == 0 && x == 15) {
                     //Skip the non-existing tiles
                     continue;
                 }
                 CreatureStats permanent = permanentMap[x, y];
                 if (permanent != null && permanent.OwnedBy == player) {
-                    ActPermanent(permanent);
+                    turnOrder.Push(permanent);
                 }
-                // Now we wait until animations are finished before continuing
-                if (StateManager.GetAnimationState() == AnimState.Playing) {
-                    yield return 0;
-                }
+            }
+        }
+
+        //Now act on creatures
+        foreach (CreatureStats creature in turnOrder) {
+            ActPermanent(creature);
+
+
+            // Now we wait until animations are finished before continuing
+            if (StateManager.GetAnimationState() == AnimState.Playing) {
+                yield return 0;
             }
         }
     }
 
+    public static CreatureStats GetCreatureAt(MapPosition pos)
+    {
+        return permanentMap[pos.x, pos.y];
+    }
 
     // Does a creature's combat turn
     private static void ActPermanent(CreatureStats permanent)
     {
         if (CanAttackAnything(permanent)) {
             Attack(permanent);
+            return;
         }
 
         if (permanent.CanMove()) {
@@ -81,18 +105,43 @@ public static class CombatManager
         }
     }
 
+    // Do we have a target to attack?
     private static bool CanAttackAnything(CreatureStats permanent)
     {
+        // Check if there is a target in front of us
+        CreatureStats inFront = GetCreatureAt(permanent.GetForward());
+
+        if (inFront) {
+            return true;
+        }
         return false;
     }
 
     private static void Attack(CreatureStats permanent)
     {
-
+        Debug.Log("FIGHT!");
+        CreatureStats enemy = permanent.GetAttackTarget();
+        enemy.TakeDamage(permanent, permanent.Attack);
     }
 
     private static void Move(CreatureStats permanent)
     {
+        permanentMap[permanent.GridPosition.x, permanent.GridPosition.y] = null;
 
+        MapPosition to = permanent.GetForward();
+
+        permanentMap[to.x, to.y] = permanent;
+        permanent.GridPosition = to;
+
+        permanent.transform.position = GridToWorld(to);
+    }
+
+    /// <summary>
+    /// Removes a permanent from the game. Destroys the gameobject and performs other cleanup actions and event handling
+    /// </summary>
+    /// <param name="permanent"></param>
+    public static void RemovePermanent(CreatureStats permanent)
+    {
+        GameObject.Destroy(permanent.gameObject);
     }
 }

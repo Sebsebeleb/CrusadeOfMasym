@@ -42,6 +42,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OwnedBy: 0
   name: 
+  Attack: 3
+  Defense: 0
 --- !u!212 &21263684
 SpriteRenderer:
   m_ObjectHideFlags: 1

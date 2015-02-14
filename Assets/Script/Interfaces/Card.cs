@@ -20,7 +20,7 @@ public abstract class BaseCard
     public GameObject AssociatedPermanent = null; // The permanent associated with this card for creature and equipment cards
 
     // Called when a card is succesfully used at a target tile
-    abstract public void UseCard(MapPosition target);
+    abstract public void UseCard(Owner caster, MapPosition target);
 
 }
 
@@ -33,8 +33,8 @@ public class CreatureCard : BaseCard
         Description = description;
         AssociatedPermanent = CreatureLibrary.GetFromName(Name);
     }
-    public override void UseCard(MapPosition target)
+    public override void UseCard(Owner caster, MapPosition target)
     {
-        CombatManager.SpawnPermanent(AssociatedPermanent, target);
+        CombatManager.SpawnPermanent(AssociatedPermanent, caster, target);
     }
 }

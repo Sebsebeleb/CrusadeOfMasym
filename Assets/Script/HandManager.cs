@@ -39,6 +39,7 @@ public class HandManager : MonoBehaviour
             if (selectedCard != null && Input.GetMouseButtonDown(0)) {
                 if (CanUseSpell(selectedCard, x, y)) {
                     UseCard(selectedCard, x, y);
+                    selectedCard = null;
                 }
             }
         }
@@ -52,6 +53,6 @@ public class HandManager : MonoBehaviour
 
     private void UseCard(BaseCard card, int x, int y)
     {
-        card.UseCard(new MapPosition(x, y));
+        card.UseCard(TurnManager.CurrentPlayer, new MapPosition(x, y));
     }
 }

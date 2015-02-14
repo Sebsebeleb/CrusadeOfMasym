@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
-    private Owner CurrentPlayer;
+    public static Owner CurrentPlayer;
 
     public Deck PlayerDeck;
     public Deck EnemyDeck;
@@ -76,7 +76,6 @@ public class TurnManager : MonoBehaviour
         int toDraw =  7 - PlayerHand.transform.childCount;
 
         for (int i = toDraw; i > 0; i--) {
-            Debug.Log(currentDeck);
             BaseCard drawn = currentDeck.DrawCard();
             GameObject physicalCard = MakePhysicalCard(drawn);
             physicalCard.transform.SetParent(CurrentHand.transform);
@@ -101,6 +100,8 @@ public class TurnManager : MonoBehaviour
 
     public void NewTurn()
     {
+        StartCoroutine(CombatManager.DoCombatPhase(CurrentPlayer));
+
         if (CurrentPlayer == Owner.ENEMY) {
             EnemyHand.gameObject.SetActive(false);
             EnemyHand.gameObject.SetActive(true);
@@ -111,8 +112,9 @@ public class TurnManager : MonoBehaviour
         }
 
         // Change current player
-        CurrentPlayer = (CurrentPlayer == Owner.PLAYER) ? Owner.ENEMY : Owner.PLAYER;
+        CurrentPlayer = (!(CurrentPlayer != Owner.PLAYER)) ? Owner.ENEMY : Owner.PLAYER;
 
         DrawStep();
+
     }
 }

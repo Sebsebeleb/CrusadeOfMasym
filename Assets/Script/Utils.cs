@@ -62,6 +62,7 @@ public class MapPosition
     {
         return new Vector2(pos.x, pos.y);
     }
+
 }
 
 internal class Utils
