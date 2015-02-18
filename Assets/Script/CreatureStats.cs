@@ -15,6 +15,7 @@ public class CreatureStats : MonoBehaviour
 
     public int Attack;
     public int Defense;
+    public int StartMaxHealth;
 
     public MapPosition GridPosition;
 
@@ -55,6 +56,12 @@ public class CreatureStats : MonoBehaviour
             return _speed;
         }
         set { _speed = value; }
+    }
+
+    public void Start()
+    {
+        _maxHP = StartMaxHealth;
+        _hp = _maxHP;
     }
 
     public bool CanMove()

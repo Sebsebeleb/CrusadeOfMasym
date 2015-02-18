@@ -30,6 +30,22 @@ public class MapPosition
         y = yy;
     }
 
+    /// <summary>
+    /// Returns the distances in tiles (how many tiles you would have to walk) between two positions
+    /// </summary>
+    /// <param name="a">From position</param>
+    /// <param name="b">To position</param>
+    /// <returns>Distance in tiles</returns>
+    public static int Distance(MapPosition a, MapPosition b)
+    {
+
+        float deltaX = Mathf.Pow(a.x - b.x, 2);
+        float deltaY = Mathf.Pow(a.y - b.y, 2);
+        float squared = Mathf.Sqrt(deltaX + deltaY);
+
+        return (int) Mathf.Round(squared);
+    }
+
     public override string ToString()
     {
         return "MapPosition(" + x + "," + y + ")";

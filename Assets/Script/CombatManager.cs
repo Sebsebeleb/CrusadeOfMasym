@@ -9,6 +9,11 @@ public static class CombatManager
     // Note: 15,y does not exist in every second row
     private static CreatureStats[,] permanentMap = new CreatureStats[15, 5];
 
+    /// <summary>
+    /// Translates a grid position to the correct world position
+    /// </summary>
+    /// <param name="pos">Grid position</param>
+    /// <returns>World position</returns>
     public static Vector3 GridToWorld(MapPosition pos)
     {
         float x = pos.x;
@@ -48,6 +53,8 @@ public static class CombatManager
 
         stats.OwnedBy = caster;
         stats.GridPosition = pos;
+        
+        EventManager.InvokeCreatureSpawned(stats, pos);
     }
 
     public static IEnumerator DoCombatPhase(Owner player)
@@ -73,6 +80,8 @@ public static class CombatManager
 
         //Now act on creatures
         foreach (CreatureStats creature in turnOrder) {
+            EventManager.InvokeCreatureStartMovement(creature);
+
             ActPermanent(creature);
 
 
@@ -119,13 +128,17 @@ public static class CombatManager
 
     private static void Attack(CreatureStats permanent)
     {
-        Debug.Log("FIGHT!");
         CreatureStats enemy = permanent.GetAttackTarget();
         enemy.TakeDamage(permanent, permanent.Attack);
     }
 
+    /// <summary>
+    /// Moves the permanent based on its movement stats
+    /// </summary>
+    /// <param name="permanent">Permanent to make move</param>
     private static void Move(CreatureStats permanent)
     {
+        MapPosition from = permanent.GridPosition;
         permanentMap[permanent.GridPosition.x, permanent.GridPosition.y] = null;
 
         MapPosition to = permanent.GetForward();
@@ -134,6 +147,8 @@ public static class CombatManager
         permanent.GridPosition = to;
 
         permanent.transform.position = GridToWorld(to);
+
+        EventManager.InvokePermanentMoved(permanent, from, to);
     }
 
     /// <summary>
@@ -142,6 +157,8 @@ public static class CombatManager
     /// <param name="permanent"></param>
     public static void RemovePermanent(CreatureStats permanent)
     {
+        EventManager.InvokePermanentDestroyed(permanent);
+
         GameObject.Destroy(permanent.gameObject);
     }
 }
