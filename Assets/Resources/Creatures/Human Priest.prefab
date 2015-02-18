@@ -44,6 +44,7 @@ MonoBehaviour:
   name: 
   Attack: 3
   Defense: 0
+  StartMaxHealth: 6
 --- !u!212 &21263684
 SpriteRenderer:
   m_ObjectHideFlags: 1
