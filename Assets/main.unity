@@ -621,8 +621,8 @@ GameObject:
   - 4: {fileID: 1647348089}
   - 114: {fileID: 1647348090}
   - 114: {fileID: 1647348091}
-  - 114: {fileID: 1647348092}
   - 114: {fileID: 1647348093}
+  - 114: {fileID: 1647348092}
   m_Layer: 0
   m_Name: GM
   m_TagString: GM
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1647348088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d63e2c18ae94f6547ba45f0bb3898e64, type: 3}
+  m_Script: {fileID: 11500000, guid: 620d984cbb4664041a782d7642164f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1647348093
