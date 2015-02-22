@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class Deck
 {
     // The original cards in the deck.
-    private List<BaseCard> originalCards;
-    private List<BaseCard> remainingCards;
+    private List<string> originalCards;
+    private List<string> remainingCards;
 
-    public Deck(List<BaseCard> cards)
+    public Deck(List<string> cards)
     {
         originalCards = cards;
         remainingCards = originalCards;
@@ -26,20 +26,20 @@ public class Deck
     }
 
     // Puts new cards into the deck, then shuffles it.
-    public void ShuffleInto(IEnumerable<BaseCard> additionalCards)
+    public void ShuffleInto(IEnumerable<string> additionalCards)
     {
         remainingCards.AddRange(additionalCards);
         Shuffle();
     }
 
-    public BaseCard DrawCard()
+    public string DrawCard()
     {
         //If the library is empty, we shuffle it before drawing
         if (remainingCards.Count <= 0) {
             Reset();
         }
 
-        BaseCard draw = remainingCards[0];
+        string draw = remainingCards[0];
         remainingCards.RemoveAt(0);
 
         return draw;

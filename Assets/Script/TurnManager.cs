@@ -34,16 +34,14 @@ public class TurnManager : MonoBehaviour
     // Currently sets the decks of both players to a test deck
     private void PopulateDecks()
     {
-        List<BaseCard> playerExampleCards = new List<BaseCard>(); 
-        List<BaseCard> enemyExampleCards = new List<BaseCard>(); 
+        List<string> playerExampleCards = new List<string>(); 
+        List<string> enemyExampleCards = new List<string>(); 
 
 
         for (int i = 0; i < 20; i++) {
-            BaseCard testCard = new CreatureCard("Human Priest", "Test");
-            playerExampleCards.Add(testCard);
+            playerExampleCards.Add("Human Priest");
 
-            BaseCard testCard2 = new CreatureCard("Human Priest", "Test");
-            enemyExampleCards.Add(testCard2);
+            enemyExampleCards.Add("Human Priest");
 
         }
 
@@ -76,19 +74,22 @@ public class TurnManager : MonoBehaviour
         int toDraw =  7 - PlayerHand.transform.childCount;
 
         for (int i = toDraw; i > 0; i--) {
-            BaseCard drawn = currentDeck.DrawCard();
+            string drawn = currentDeck.DrawCard();
             GameObject physicalCard = MakePhysicalCard(drawn);
             physicalCard.transform.SetParent(CurrentHand.transform);
 
         }
     }
 
-    private GameObject MakePhysicalCard(BaseCard card)
+    private GameObject MakePhysicalCard(string card)
     {
+        // Find the actual card by the given name
+        CardData data = DataLibrary.LoadCardFromString(card);
+
         GameObject newCard = Instantiate(CardPrefab, Vector3.zero, Quaternion.identity) as GameObject;
         CardBehaviour behaviour = newCard.GetComponent<CardBehaviour>();
 
-        behaviour.SetCard(card);
+        behaviour.SetCard(data);
 
         return newCard;
     }

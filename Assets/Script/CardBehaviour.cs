@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class CardBehaviour : MonoBehaviour
 {
 
     // The actual card this is associated with which will be used if it is cast
-    public BaseCard Card;
+    private BaseCard Card;
 
     // Refs
     private HandManager handManager;
@@ -27,9 +28,20 @@ public class CardBehaviour : MonoBehaviour
 
     }
 
-    public void SetCard(BaseCard card)
+    public void SetCard(CardData cardData)
     {
-        Card = card;
+        switch (cardData.TypeOfCard) {
+            case CardType.Creature:
+                Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
+                break;
+            case CardType.Spell:
+                Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description);
+                break;
+            case CardType.Equipment:
+                Debug.LogException(new NotImplementedException());
+                break;
+
+        }
 
         NameText.text = Card.Name;
         DescriptionText.text = Card.Description;

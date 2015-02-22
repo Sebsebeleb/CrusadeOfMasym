@@ -55,9 +55,9 @@ public class SpellCard : BaseCard
     // The effect that will be used when this card is used
     public string AssociatedEffect;
 
-    public SpellCard(String name, String description)
+    public SpellCard(String spell, String description)
     {
-        Name = name;
+        AssociatedEffect = spell;
         Description = description;
 
     }

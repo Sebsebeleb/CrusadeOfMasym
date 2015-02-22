@@ -16,6 +16,7 @@ public class CreatureEntry
 public static class DataLibrary
 {
     private const string ResourcePath = "Creatures/";
+    private const string CardPath = "Cards/";
 
     // Used to input creatures in the inspector, they are then parsed into the CreatureMap dictionary at the start of the game
     private static Dictionary<string, GameObject> CreatureMap = new Dictionary<string, GameObject>();
@@ -79,5 +80,12 @@ public static class DataLibrary
         IEffect newEffect = (IEffect)Activator.CreateInstance(effectType);
 
         return newEffect;
+    }
+
+    public static CardData LoadCardFromString(string id)
+    {
+        CardData card = Resources.Load<CardData>(CardPath + id);
+
+        return card;
     }
 }

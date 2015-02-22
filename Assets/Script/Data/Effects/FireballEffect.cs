@@ -8,7 +8,7 @@ namespace Effects
     {
         public void OnCast(MapPosition pos)
         {
-            
+
         }
     }
 }
