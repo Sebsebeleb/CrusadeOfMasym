@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11463684}
   - 114: {fileID: 11493168}
   m_Layer: 0
-  m_Name: Human Priest
+  m_Name: Human Phalanx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OwnedBy: 0
   name: 
-  Attack: 3
+  Attack: 2
   Defense: 0
   StartMaxHealth: 6
 --- !u!114 &11493168
@@ -57,7 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5c23238815594459ec97207fedaace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartEffects: []
+  StartEffects:
+  - phalanxeffect
 --- !u!212 &21263684
 SpriteRenderer:
   m_ObjectHideFlags: 1

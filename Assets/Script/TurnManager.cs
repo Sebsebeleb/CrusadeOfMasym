@@ -39,9 +39,9 @@ public class TurnManager : MonoBehaviour
 
 
         for (int i = 0; i < 20; i++) {
-            playerExampleCards.Add("Human Priest");
+            playerExampleCards.Add("Human Phalanx");
 
-            enemyExampleCards.Add("Human Priest");
+            enemyExampleCards.Add("Human Phalanx");
 
         }
 
@@ -55,15 +55,15 @@ public class TurnManager : MonoBehaviour
     public void DrawStep()
     {
         Deck currentDeck = null;
-        Transform CurrentHand = null;
+        Transform currentHand = null;
         switch (CurrentPlayer) {
             case Owner.PLAYER:
                 currentDeck = PlayerDeck;
-                CurrentHand = PlayerHand;
+                currentHand = PlayerHand;
                 break;
             case Owner.ENEMY:
                 currentDeck = EnemyDeck;
-                CurrentHand = EnemyHand;
+                currentHand = EnemyHand;
                 break;
             default:
                 Debug.LogException(new Exception("Something went wrong during drawstep"));
@@ -71,12 +71,12 @@ public class TurnManager : MonoBehaviour
 
         }
 
-        int toDraw =  7 - PlayerHand.transform.childCount;
+        int toDraw =  7 - currentHand.transform.childCount;
 
         for (int i = toDraw; i > 0; i--) {
             string drawn = currentDeck.DrawCard();
             GameObject physicalCard = MakePhysicalCard(drawn);
-            physicalCard.transform.SetParent(CurrentHand.transform);
+            physicalCard.transform.SetParent(currentHand.transform);
 
         }
     }
@@ -105,15 +105,15 @@ public class TurnManager : MonoBehaviour
 
         if (CurrentPlayer == Owner.ENEMY) {
             EnemyHand.gameObject.SetActive(false);
-            EnemyHand.gameObject.SetActive(true);
+            PlayerHand.gameObject.SetActive(true);
         }
         else {
             PlayerHand.gameObject.SetActive(false);
-            PlayerHand.gameObject.SetActive(true);
+            EnemyHand.gameObject.SetActive(true);
         }
 
         // Change current player
-        CurrentPlayer = (!(CurrentPlayer != Owner.PLAYER)) ? Owner.ENEMY : Owner.PLAYER;
+        CurrentPlayer = (CurrentPlayer == Owner.PLAYER) ? Owner.ENEMY : Owner.PLAYER;
 
         DrawStep();
 

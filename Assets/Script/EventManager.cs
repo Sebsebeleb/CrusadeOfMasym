@@ -21,6 +21,7 @@ public static class EventManager
 
     public delegate void CreatureSpawned(CreatureStats creature, MapPosition at);
 
+
     public static void InvokePermanentMoved(CreatureStats mover, MapPosition from, MapPosition to)
     {
         var handler = OnPermanentMoved;

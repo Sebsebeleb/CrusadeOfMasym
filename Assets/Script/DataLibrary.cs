@@ -75,6 +75,9 @@ public static class DataLibrary
     /// <returns></returns>
     public static IEffect GetEffect(string identifier)
     {
+        if (!effectsMap.ContainsKey(identifier)) {
+            Debug.LogError("Effect was not found: " + identifier);
+        }
         // Return a new instance of the effect
         Type effectType = effectsMap[identifier];
         IEffect newEffect = (IEffect)Activator.CreateInstance(effectType);

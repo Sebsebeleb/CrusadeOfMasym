@@ -6,12 +6,11 @@ public class HandManager : MonoBehaviour
 {
     private BaseCard selectedCard;
 
-    void Start()
+    private void Start()
     {
-
     }
 
-    void Update()
+    private void Update()
     {
         CheckMouse();
     }
@@ -21,12 +20,12 @@ public class HandManager : MonoBehaviour
         selectedCard = card;
     }
 
-    void CheckMouse()
+    private void CheckMouse()
     {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         float fx = worldPos.x + 7.5f;
-        int y = (int) Mathf.Floor(worldPos.y - 1.5f) * -1;
+        int y = (int) Mathf.Floor(worldPos.y - 1.5f)*-1;
 
         if (y%2 != 0) {
             fx += 0.5f;
@@ -45,9 +44,14 @@ public class HandManager : MonoBehaviour
         }
     }
 
-    //TODO: NYI
     private bool CanUseSpell(BaseCard card, int x, int y)
     {
+        // We cannot spawn creatures on top of other creatures
+        if (card.Type == CardType.Creature) {
+            if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null) {
+                return false;
+            }
+        }
         return true;
     }
 
