@@ -45,7 +45,6 @@ public class EffectHolder : MonoBehaviour
 
     void OnDestroy()
     {
-        Debug.Log("Uh hello?");
         foreach (IEffect effect in Effects) {
             effect.Removed();
         }
