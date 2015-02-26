@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22496840}
   - 222: {fileID: 22296842}
   - 114: {fileID: 11496840}
+  - 114: {fileID: 11441852}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -62,6 +63,7 @@ GameObject:
   - 224: {fileID: 22496846}
   - 222: {fileID: 22296846}
   - 114: {fileID: 11496846}
+  - 114: {fileID: 11441850}
   m_Layer: 0
   m_Name: Defence
   m_TagString: Untagged
@@ -79,6 +81,7 @@ GameObject:
   - 224: {fileID: 22496848}
   - 222: {fileID: 22296848}
   - 114: {fileID: 11496848}
+  - 114: {fileID: 11441848}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -100,6 +103,48 @@ MonoBehaviour:
   HealthText: {fileID: 11496848}
   AttackText: {fileID: 11496840}
   DefenceText: {fileID: 11496846}
+--- !u!114 &11441848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .643137276}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &11441850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .643137276}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &11441852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .643137276}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11496840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,10 +157,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: .707809389, g: 1, b: .683823526, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1b3b4a7175ec87a43a4202bea72a6232, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -160,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8320e21efbcd97e40822e0e94a0d5e9a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -180,10 +225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: .588235259, g: .727383435, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1b3b4a7175ec87a43a4202bea72a6232, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -206,10 +251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: .889705896, g: .405601233, b: .405601233, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 1b3b4a7175ec87a43a4202bea72a6232, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -275,8 +320,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 107.410004, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 33.7999992, y: 0}
+  m_SizeDelta: {x: 52.5, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22496842
 RectTransform:
@@ -293,8 +338,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -1.40999997}
-  m_SizeDelta: {x: 200, y: 41.5200005}
+  m_AnchoredPosition: {x: -7.86863375, y: 1.7519021}
+  m_SizeDelta: {x: 60, y: 35}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22496844
 RectTransform:
@@ -330,8 +375,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -.000111103058, y: -1.28298998e-05}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -4.42266464e-05, y: -1.23977661e-05}
+  m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22496848
 RectTransform:
@@ -347,8 +392,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -105.099998, y: -1.28298998e-05}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -33.0999985, y: -0}
+  m_SizeDelta: {x: 53.7999992, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:

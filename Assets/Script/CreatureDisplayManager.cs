@@ -21,6 +21,6 @@ public class CreatureDisplayManager : MonoBehaviour
 
         newDisplay.transform.SetParent(creature.transform, true);
         newDisplay.GetComponent<StatDisplayBehaviour>().SetOwner(creature);
-        newDisplay.GetComponent<RectTransform>().anchoredPosition = new Vector3(0f, -1.5f, -0.5f);
+        newDisplay.GetComponent<RectTransform>().anchoredPosition = new Vector3(0f, -0.5f, -0.5f);
     }
 }
