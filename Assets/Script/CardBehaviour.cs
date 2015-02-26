@@ -28,6 +28,11 @@ public class CardBehaviour : MonoBehaviour
 
     }
 
+    public BaseCard GetBaseCard()
+    {
+        return Card;
+    }
+
     public void SetCard(CardData cardData)
     {
         switch (cardData.TypeOfCard) {
@@ -51,6 +56,6 @@ public class CardBehaviour : MonoBehaviour
     // Called by UI event system when this is selected in the hand
     public void Select()
     {
-        handManager.SelectCard(Card);
+        handManager.SelectCard(this);
     }
 }

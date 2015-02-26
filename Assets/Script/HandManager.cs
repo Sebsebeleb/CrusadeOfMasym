@@ -4,7 +4,7 @@ using System.Collections;
 
 public class HandManager : MonoBehaviour
 {
-    private BaseCard selectedCard;
+    private CardBehaviour selectedCard;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class HandManager : MonoBehaviour
         CheckMouse();
     }
 
-    public void SelectCard(BaseCard card)
+    public void SelectCard(CardBehaviour card)
     {
         selectedCard = card;
     }
@@ -36,8 +36,9 @@ public class HandManager : MonoBehaviour
         // TODO: every second row
         if (0 <= x && x <= 15) {
             if (selectedCard != null && Input.GetMouseButtonDown(0)) {
-                if (CanUseSpell(selectedCard, x, y)) {
-                    UseCard(selectedCard, x, y);
+                if (CanUseSpell(selectedCard.GetBaseCard(), x, y)) {
+                    UseCard(selectedCard.GetBaseCard(), x, y);
+                    Destroy(selectedCard.gameObject);
                     selectedCard = null;
                 }
             }
