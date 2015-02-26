@@ -17,12 +17,16 @@ public static class CombatManager
     public static Vector3 GridToWorld(MapPosition pos)
     {
         float x = pos.x;
-        float y = pos.y%2 == 0 ? pos.y : pos.y - 0.5f;
+        float y = pos.y;
+
+        if (pos.y%2 != 0) {
+            x -= 0.5f;
+        }
 
         y = -y;
 
         x -= 6;
-        y += 2;
+        y += 1.5f;
 
         //permanent.transform.position = new Vector3(x, y);
 
