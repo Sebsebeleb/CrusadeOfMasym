@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 6543a5adbb7af264b876cd5ae1fa2968
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Consecration_0
+    21300002: Consecration_1
+    21300004: Consecration_2
+    21300006: Consecration_3
+    21300008: Consecration_4
+    21300010: Consecration_5
+    21300012: Consecration_6
+    21300014: Consecration_7
+    21300016: Consecration_8
+    21300018: Consecration_9
+    21300020: Consecration_10
+    21300022: Consecration_11
+    21300024: Consecration_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Consecration_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 994
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 956
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 915
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 904
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_4
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 904
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_5
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 884
+        width: 154
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_6
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 856
+        width: 179
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 643
+        width: 217
+        height: 204
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_8
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 608
+        width: 260
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_9
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 648
+        width: 127
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 332
+        width: 184
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 391
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Consecration_12
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 366
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

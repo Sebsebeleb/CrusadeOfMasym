@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public static class CombatManager
 {
     // Note: 15,y does not exist in every second row
     private static CreatureStats[,] permanentMap = new CreatureStats[15, 5];
+
+    private const float AnimationMoveDuration = 0.35f;
 
     /// <summary>
     /// Translates a grid position to the correct world position
@@ -50,20 +53,27 @@ public static class CombatManager
                            " was attempted to be spawned on top of another permanentPrefab at: " +
                            pos);
         }
-        //Set the position
+
+        // Set up stats
+        stats.OwnedBy = caster;
+        stats.GridPosition = pos;
+
+        //Set the transform position
         permanent.transform.position = GridToWorld(pos);
+
+        // Flip the creature if it is an enemy
+        int xScale = stats.OwnedBy == Owner.PLAYER ? 1 : -1;
+        Vector3 scale = new Vector3(xScale, 1f, 1f);
+        permanent.transform.localScale = scale;
 
         permanentMap[pos.x, pos.y] = stats;
 
-        stats.OwnedBy = caster;
-        stats.GridPosition = pos;
-        
+
         EventManager.InvokeCreatureSpawned(stats, pos);
     }
 
     public static IEnumerator DoCombatPhase(Owner player)
     {
-
         Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
 
 
@@ -88,9 +98,8 @@ public static class CombatManager
 
             ActPermanent(creature);
 
-
             // Now we wait until animations are finished before continuing
-            if (StateManager.GetAnimationState() == AnimState.Playing) {
+            while (StateManager.GetAnimationState() == AnimState.Playing) {
                 yield return 0;
             }
         }
@@ -150,7 +159,18 @@ public static class CombatManager
         permanentMap[to.x, to.y] = permanent;
         permanent.GridPosition = to;
 
-        permanent.transform.position = GridToWorld(to);
+        permanent.GetComponent<Animator>().SetBool("IsWalking", true);
+
+        // Move it and set animating state
+        LeanTween.move(permanent.gameObject, GridToWorld(to), AnimationMoveDuration).
+            setOnComplete(() =>
+            {
+                if (!permanent) return;
+                permanent.GetComponent<Animator>().SetBool("IsWalking", false);
+            });
+
+        StateManager.RegisterAnimation(AnimationMoveDuration);
+        //permanent.transform.position = GridToWorld(to);
 
         EventManager.InvokePermanentMoved(permanent, from, to);
     }

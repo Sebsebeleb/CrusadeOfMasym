@@ -14,14 +14,20 @@ public static class StateManager
 {
     // The Time.time number when all animations are done
     private static float animationTime = 0f;
+    private const float animationDelay = 0.05f; // The delay added to all registered animations
+
+    public static float AnimationTime
+    {
+        get { return animationTime; }
+    }
 
     public static void RegisterAnimation(float time)
     {
         // Add a short delay to slow down playback time
-        float finishTime = Time.time + time + 0.5f;
-        
+        float finishTime = Time.time + time + animationDelay;
+
         // If the new animation is longer than the old one, update the finish time
-        animationTime = Math.Min(finishTime, animationTime);
+        animationTime = Math.Max(finishTime, animationTime);
     }
 
     public static AnimState GetAnimationState()
@@ -32,5 +38,4 @@ public static class StateManager
 
         return AnimState.Playing;
     }
-
 }
