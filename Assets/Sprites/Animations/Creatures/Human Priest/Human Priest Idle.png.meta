@@ -55,7 +55,7 @@ TextureImporter:
         y: 634
         width: 328
         height: 390
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Idle_1
@@ -65,7 +65,7 @@ TextureImporter:
         y: 640
         width: 333
         height: 384
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Idle_2
@@ -75,7 +75,7 @@ TextureImporter:
         y: 656
         width: 321
         height: 368
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Idle_3
@@ -85,7 +85,7 @@ TextureImporter:
         y: 240
         width: 312
         height: 385
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Idle_4
@@ -95,7 +95,7 @@ TextureImporter:
         y: 246
         width: 323
         height: 379
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

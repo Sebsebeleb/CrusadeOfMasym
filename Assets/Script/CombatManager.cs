@@ -11,6 +11,7 @@ public static class CombatManager
     private static CreatureStats[,] permanentMap = new CreatureStats[15, 5];
 
     private const float AnimationMoveDuration = 0.35f;
+    private const float AnimationAttackDuration = 0.35f;
 
     /// <summary>
     /// Translates a grid position to the correct world position
@@ -22,7 +23,7 @@ public static class CombatManager
         float x = pos.x;
         float y = pos.y;
 
-        if (pos.y%2 != 0) {
+        if (pos.y%2 == 0) {
             x -= 0.5f;
         }
 
@@ -74,23 +75,8 @@ public static class CombatManager
 
     public static IEnumerator DoCombatPhase(Owner player)
     {
-        Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
+        Stack<CreatureStats> turnOrder = GetTurnOrder(player);
 
-
-        // Populate the turnOrder
-        // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
-        for (int x = 0; x < 15; x++) {
-            for (int y = 0; y < 5; y++) {
-                if (y%2 == 0 && x == 15) {
-                    //Skip the non-existing tiles
-                    continue;
-                }
-                CreatureStats permanent = permanentMap[x, y];
-                if (permanent != null && permanent.OwnedBy == player) {
-                    turnOrder.Push(permanent);
-                }
-            }
-        }
 
         //Now act on creatures
         foreach (CreatureStats creature in turnOrder) {
@@ -103,6 +89,39 @@ public static class CombatManager
                 yield return 0;
             }
         }
+    }
+
+    private static Stack<CreatureStats> GetTurnOrder(Owner player)
+    {
+        Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
+
+        // Populate the turnOrder
+        // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
+        for (int y = 4; y >= 0; y--) {
+            for (int x = 0; x < 15; x++) {
+                if (y%2 == 0 && x == 15) {
+                    //Skip the non-existing tiles
+                    continue;
+                }
+
+                // Retrieve the creature in correct order depending on player
+                CreatureStats permanent = null;
+                switch (player) {
+                    case Owner.PLAYER:
+                        permanent = permanentMap[x, y];
+                        break;
+                    case Owner.ENEMY:
+                        permanent = permanentMap[15 - 1 - x, y];
+                        break;
+                }
+
+                if (permanent != null && permanent.OwnedBy == player) {
+                    turnOrder.Push(permanent);
+                }
+            }
+        }
+
+        return turnOrder;
     }
 
     public static CreatureStats GetCreatureAt(MapPosition pos)
@@ -143,6 +162,9 @@ public static class CombatManager
     {
         CreatureStats enemy = permanent.GetAttackTarget();
         enemy.TakeDamage(permanent, permanent.Attack);
+
+        permanent.GetComponent<Animator>().Play("Attack");
+        StateManager.RegisterAnimation(AnimationAttackDuration);
     }
 
     /// <summary>

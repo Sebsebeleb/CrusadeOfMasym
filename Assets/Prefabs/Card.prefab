@@ -111,7 +111,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 26
     m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -290,10 +290,10 @@ RectTransform:
   - {fileID: 22429128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: -270, y: -637}
+  m_SizeDelta: {x: 270, y: 378}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22429124
 RectTransform:
@@ -307,11 +307,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22429122}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -17.6000061}
-  m_SizeDelta: {x: -73.1999969, y: 35.1000061}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: .129888892, y: .907354534}
+  m_AnchorMax: {x: .866481543, y: .986772478}
+  m_AnchoredPosition: {x: -6.98001099, y: 5}
+  m_SizeDelta: {x: 14.9799995, y: 5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!224 &22429126
 RectTransform:
   m_ObjectHideFlags: 1
@@ -325,10 +325,10 @@ RectTransform:
   m_Father: {fileID: 22429122}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.30000305, y: -99.6999969}
-  m_SizeDelta: {x: -28.5, y: -265.899994}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMax: {x: 1, y: .383354515}
+  m_AnchoredPosition: {x: -1, y: 1.52590001e-05}
+  m_SizeDelta: {x: -28, y: .350010008}
+  m_Pivot: {x: .5, y: 0}
 --- !u!224 &22429128
 RectTransform:
   m_ObjectHideFlags: 1
@@ -341,10 +341,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22429122}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -43.3000641}
-  m_SizeDelta: {x: -55.8999939, y: 16.2000122}
+  m_AnchorMin: {x: .129888892, y: .865000069}
+  m_AnchorMax: {x: .88500005, y: .907354534}
+  m_AnchoredPosition: {x: -1.99999785, y: -.300045013}
+  m_SizeDelta: {x: 10.1000061, y: .200012207}
   m_Pivot: {x: .50000006, y: .499997139}
 --- !u!1001 &100100000
 Prefab:

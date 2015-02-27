@@ -57,7 +57,7 @@ TextureImporter:
         y: 1657
         width: 329
         height: 391
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_1
@@ -67,7 +67,7 @@ TextureImporter:
         y: 1639
         width: 343
         height: 409
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_2
@@ -77,7 +77,7 @@ TextureImporter:
         y: 1213
         width: 344
         height: 420
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_3
@@ -87,7 +87,7 @@ TextureImporter:
         y: 1200
         width: 346
         height: 433
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_4
@@ -97,7 +97,7 @@ TextureImporter:
         y: 744
         width: 349
         height: 451
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_5
@@ -107,7 +107,7 @@ TextureImporter:
         y: 763
         width: 344
         height: 432
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Priest Walking_6
@@ -117,7 +117,7 @@ TextureImporter:
         y: 336
         width: 337
         height: 405
-      alignment: 8
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

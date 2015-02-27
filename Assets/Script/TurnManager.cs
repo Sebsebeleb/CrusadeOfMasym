@@ -101,6 +101,9 @@ public class TurnManager : MonoBehaviour
 
     public void NewTurn()
     {
+        if (!CanEndTurn()) {
+            return;
+        }
         StartCoroutine(CombatManager.DoCombatPhase(CurrentPlayer));
 
         if (CurrentPlayer == Owner.ENEMY) {
@@ -117,5 +120,14 @@ public class TurnManager : MonoBehaviour
 
         DrawStep();
 
+    }
+
+    private bool CanEndTurn()
+    {
+        if (StateManager.GetAnimationState() != AnimState.Idle) {
+            return false;
+        }
+
+        return true;
     }
 }
