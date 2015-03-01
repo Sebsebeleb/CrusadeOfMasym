@@ -36,13 +36,11 @@ public class CardBehaviour : MonoBehaviour
 
     public void SetCard(CardData cardData)
     {
-        Debug.Log(cardData.CardName);
         switch (cardData.TypeOfCard) {
             case CardType.Creature:
                 Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
                 break;
             case CardType.Spell:
-                Debug.Log("Created a spell card");
                 Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description, cardData.SpellAnimationController);
                 break;
             case CardType.Equipment:

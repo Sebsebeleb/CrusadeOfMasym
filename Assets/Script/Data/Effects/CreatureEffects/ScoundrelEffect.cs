@@ -25,12 +25,20 @@ public class ScoundrelEffect : IEffect
     public void InitCallbacks()
     {
         EventManager.OnPermanentMoved += OnPermanentMoved;
+        EventManager.OnCreatureSpawned += OnCreatureSpawned;
     }
 
     private void OnPermanentMoved(CreatureStats mover, MapPosition from, MapPosition to)
     {
         // Was it me that moved?
         if (mover == ownerStats) {
+            CheckZoneBonus();
+        }
+    }
+
+    private void OnCreatureSpawned(CreatureStats permanent, MapPosition pos)
+    {
+        if (permanent == ownerStats) {
             CheckZoneBonus();
         }
     }

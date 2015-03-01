@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
@@ -168,6 +169,9 @@ public static class CombatManager
 
     public static CreatureStats GetCreatureAt(MapPosition pos)
     {
+        if (Utils.OutOfBounds(pos)) {
+            return null;
+        }
         return permanentMap[pos.x, pos.y];
     }
 
@@ -180,7 +184,7 @@ public static class CombatManager
         }
 
         if (permanent.CanMove()) {
-            int movesLeft = Math.Min(1, (int) Mathf.Round(permanent.Speed));
+            int movesLeft = (int)permanent.Speed;
 
             for (int i = 0; i < movesLeft; i++) {
                 Move(permanent);
@@ -248,5 +252,39 @@ public static class CombatManager
         EventManager.InvokePermanentDestroyed(permanent);
 
         GameObject.Destroy(permanent.gameObject);
+    }
+
+    /// <summary>
+    /// Returns the default tile for a creature to move in. This will always be x+1 or x-1 unless the creature is at the end of the lane and need to advance towards the general by switching lane.
+    /// </summary>
+    public static MapPosition GetAdvancingMovement(MapPosition position, Owner faction)
+    {
+        // If we are not at the end of the lane, just move forward.
+        if (!Utils.IsAtEndOfLane(position, faction)) {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.RIGHT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.LEFT);
+            }
+        }
+
+        if (position.y <= 2) {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.UPLEFT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.UPRIGHT);
+            }
+        }
+        else {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.DOWNLEFT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.DOWNRIGHT);
+            }
+        }
+        throw new Exception("Error finding advancing move. Invalid faction? " + faction + ", " + position);
     }
 }
