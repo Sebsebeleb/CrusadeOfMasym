@@ -35,7 +35,6 @@ public class StatDisplayBehaviour : MonoBehaviour
 
         LeanTween.value(gameObject, delegate(float f)
         {
-            Debug.Log(f);
             HealthText.text = ((int) f).ToString(); 
         },
             oldHealth,

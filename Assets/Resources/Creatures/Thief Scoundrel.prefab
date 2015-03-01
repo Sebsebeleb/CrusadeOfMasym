@@ -11,8 +11,9 @@ GameObject:
   - 212: {fileID: 21263684}
   - 114: {fileID: 11463684}
   - 114: {fileID: 11493168}
+  - 95: {fileID: 9554572}
   m_Layer: 0
-  m_Name: Human Phalanx
+  m_Name: Thief Scoundrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,11 +26,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71120238, y: -1.51992071, z: 0}
+  m_LocalPosition: {x: -9.3327322, y: -6.29864502, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9554572
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb47ef09cb0de0044aee362d83c489f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11463684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -46,7 +62,7 @@ MonoBehaviour:
   Attack: 2
   Defense: 0
   StartMaxHealth: 6
-  StartSpeed: 1
+  StartSpeed: 3
 --- !u!114 &11493168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -59,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartEffects:
-  - phalanxeffect
+  - scoundreleffect
 --- !u!212 &21263684
 SpriteRenderer:
   m_ObjectHideFlags: 1

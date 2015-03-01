@@ -37,10 +37,11 @@ public class TurnManager : MonoBehaviour
         List<string> enemyExampleCards = new List<string>(); 
 
 
-        for (int i = 0; i < 20; i++) {
-            playerExampleCards.Add("Divine Light");
+        for (int i = 0; i < 10; i++) {
 
-            enemyExampleCards.Add("Human Phalanx");
+            playerExampleCards.Add("Divine Light");
+            playerExampleCards.Add("Thief Scoundrel");
+            enemyExampleCards.Add("Human Priest");
 
         }
 

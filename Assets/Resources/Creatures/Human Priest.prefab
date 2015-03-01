@@ -62,6 +62,7 @@ MonoBehaviour:
   Attack: 3
   Defense: 0
   StartMaxHealth: 6
+  StartSpeed: 1
 --- !u!114 &11493168
 MonoBehaviour:
   m_ObjectHideFlags: 1

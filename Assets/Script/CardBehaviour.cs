@@ -36,11 +36,13 @@ public class CardBehaviour : MonoBehaviour
 
     public void SetCard(CardData cardData)
     {
+        Debug.Log(cardData.CardName);
         switch (cardData.TypeOfCard) {
             case CardType.Creature:
                 Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
                 break;
             case CardType.Spell:
+                Debug.Log("Created a spell card");
                 Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description, cardData.SpellAnimationController);
                 break;
             case CardType.Equipment:
@@ -52,6 +54,7 @@ public class CardBehaviour : MonoBehaviour
         NameText.text = Card.Name;
         DescriptionText.text = Card.Description;
         TypeText.text = Card.cardType.ToString();
+
     }
 
     // Called by UI event system when this is selected in the hand

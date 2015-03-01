@@ -37,10 +37,11 @@ public class CreatureCard : BaseCard
 {
     public new int TargetingLevel = 1;
     
-    public new CardType cardType = CardType.Creature;
 
     public CreatureCard(String name, String description)
     {
+        cardType = CardType.Creature;
+
         Name = name;
         Description = description;
         AssociatedPermanent = DataLibrary.GetCreatureFromName(Name);
@@ -53,7 +54,6 @@ public class CreatureCard : BaseCard
 
 public class SpellCard : BaseCard
 {
-    public new CardType cardType = CardType.Spell;
     public new int TargetingLevel = 3;
 
     // The effect that will be used when this card is used
@@ -62,6 +62,8 @@ public class SpellCard : BaseCard
 
     public SpellCard(String spell, String description, RuntimeAnimatorController castAnimationController)
     {
+        cardType = CardType.Spell;
+
         Name = spell;
         AssociatedEffect = spell;
         Description = description;

@@ -48,12 +48,21 @@ public class HandManager : MonoBehaviour
 
     private bool CanUseSpell(BaseCard card, int x, int y)
     {
+        Debug.Log(card.Name);
+        Debug.Log("Can we play cast card with type");
+        Debug.Log(card.cardType);
+        Debug.Log("At: (" + x + ", " + y + ")");
         // We cannot spawn creatures on top of other creatures
+        Debug.Log((int)card.cardType);
+        Debug.Log((int)CardType.Creature);
+        int test = (int) card.cardType;
         if (card.cardType == CardType.Creature) {
             if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null) {
+                Debug.Log("No");
                 return false;
             }
         }
+        Debug.Log("Yes");
         return true;
     }
 

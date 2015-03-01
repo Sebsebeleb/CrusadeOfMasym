@@ -2,9 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
+public enum CombatZone
+{
+    Friendly,
+    Neutral,
+    Hostile,
+}
 public static class CombatManager
 {
     // Note: 15,y does not exist in every second row
@@ -36,6 +43,41 @@ public static class CombatManager
 
         //return new Vector3(pos.x -7.5, pos.y-0.5, 0);
         return new Vector3(x, y, 0);
+    }
+
+    /// <summary>
+    /// Returns what zone the targeted tile is considered to belong to, from faction's perspective.
+    /// </summary>
+    /// <param name="pos">The tile to check</param>
+    /// <param name="faction">The faction to check for</param>
+    /// <returns></returns>
+    public static CombatZone GetZone(MapPosition pos, Owner faction)
+    {
+        switch (faction) {
+            case Owner.ENEMY:
+                if (pos.x >= 14 - 4) {
+                    return CombatZone.Friendly;
+                }
+                else if (pos.x >= 5) {
+                    return CombatZone.Neutral;
+                }
+                else {
+                    return CombatZone.Hostile;
+                }
+                break;
+            case Owner.PLAYER:
+                if (pos.x >= 14 - 4) {
+                    return CombatZone.Hostile;
+                }
+                else if (pos.x >= 5) {
+                    return CombatZone.Neutral;
+                }
+                else {
+                    return CombatZone.Friendly;
+                }
+                break;
+        }
+        throw new Exception("Something seems to have went wrong with combat zones. Unhandled case of new type?");
     }
 
     // Spawn a new permanent on the map

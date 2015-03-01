@@ -3,11 +3,16 @@ using System.Collections;
 
 namespace Effects
 {
-    [NamedEffect("DivineLight")]
+    [NamedEffect("Divine Light")]
     public class DivineLight : ISpellEffect
     {
         public void OnUseCard(Owner caster, MapPosition target)
         {
+            CreatureStats creature = CombatManager.GetCreatureAt(target);
+
+            if (creature != null) {
+                creature.Heal(5);
+            }
         }
 
         public void Removed()

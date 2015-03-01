@@ -16,6 +16,7 @@ public class CreatureStats : MonoBehaviour
     public int Attack;
     public int Defense;
     public int StartMaxHealth;
+    public int StartSpeed;
 
     public MapPosition GridPosition;
 
@@ -62,6 +63,7 @@ public class CreatureStats : MonoBehaviour
     {
         _maxHP = StartMaxHealth;
         _hp = _maxHP;
+        _speed = StartSpeed;
     }
 
     public bool CanMove()
@@ -87,6 +89,11 @@ public class CreatureStats : MonoBehaviour
         Health -= finalDamage;
 
         return finalDamage;
+    }
+
+    public void Heal(int healAmount)
+    {
+        Health += healAmount;
     }
 
     // Returns a MapPosition that represents directly front of this creature

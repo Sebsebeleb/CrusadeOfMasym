@@ -326,7 +326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Creature
+  m_Text: oops
 --- !u!224 &466822648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -784,6 +784,7 @@ MonoBehaviour:
   NameText: {fileID: 1285937572}
   DescriptionText: {fileID: 759810828}
   TypeText: {fileID: 466822647}
+  CardArt: {fileID: 0}
 --- !u!114 &1239627321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156c03848465e8544b1d571edf7b9b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationDummyPrefab: {fileID: 0}
+  AnimationDummyPrefab: {fileID: 159250, guid: 4f152af1bb75265488bf6c57494f61da, type: 2}
 --- !u!114 &1647348091
 MonoBehaviour:
   m_ObjectHideFlags: 0
