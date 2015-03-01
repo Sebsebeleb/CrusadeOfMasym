@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEditor;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -39,7 +38,7 @@ public class TurnManager : MonoBehaviour
 
 
         for (int i = 0; i < 20; i++) {
-            playerExampleCards.Add("Human Phalanx");
+            playerExampleCards.Add("Divine Light");
 
             enemyExampleCards.Add("Human Phalanx");
 

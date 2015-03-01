@@ -12,7 +12,7 @@ public class StatDisplayBehaviour : MonoBehaviour
     public Text DefenceText;
 
     private const float valueLerpTime = 0.5f;
-    private LeanTweenType tweenType = LeanTweenType.easeOutSine;
+    private LeanTweenType tweenType = LeanTweenType.easeOutExpo;
 
     private int oldHealth;
     private int oldAttack;
