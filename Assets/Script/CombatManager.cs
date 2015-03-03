@@ -132,6 +132,8 @@ public static class CombatManager
                 yield return 0;
             }
         }
+
+        EventManager.InvokeEndOfTurn();
     }
 
     private static Stack<CreatureStats> GetTurnOrder(Owner player)

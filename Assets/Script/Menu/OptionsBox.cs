@@ -34,15 +34,15 @@ public class OptionsBox : MonoBehaviour
         hSliderValue = hSliderValue * 100;
         GUI.Label(new Rect(100, 100, 200, 20), "Music Volume = " + Mathf.Round(hSliderValue)+"%");
         hSliderValue = hSliderValue / 100;
-        audio.volume = hSliderValue;
+        GetComponent<AudioSource>().volume = hSliderValue;
 
         MusicEnabled = GUI.Toggle(new Rect(25, 25, 100, 30), MusicEnabled, "Music Enabled");
     }
 
     void Update()
     {
-        if (!MusicEnabled) audio.mute = true;
-        else audio.mute = false;
+        if (!MusicEnabled) GetComponent<AudioSource>().mute = true;
+        else GetComponent<AudioSource>().mute = false;
         if (Input.GetKeyDown(KeyCode.Escape)) ShowGUI = !ShowGUI;
     }
 
