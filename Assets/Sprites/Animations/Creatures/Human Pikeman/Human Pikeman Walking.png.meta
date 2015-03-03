@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 55f2c20766d30034783b3471ae502f2f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Pikeman Walking_0
+    21300002: Human Pikeman Walking_1
+    21300004: Human Pikeman Walking_2
+    21300006: Human Pikeman Walking_3
+    21300008: Human Pikeman Walking_4
+    21300010: Human Pikeman Walking_5
+    21300012: Human Pikeman Walking_6
+    21300014: Human Pikeman Walking_7
+    21300016: Human Pikeman Walking_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 280
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Pikeman Walking_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1391
+        width: 240
+        height: 657
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1401
+        width: 238
+        height: 647
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_2
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1392
+        width: 232
+        height: 656
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 731
+        width: 247
+        height: 654
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 725
+        width: 238
+        height: 658
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 729
+        width: 240
+        height: 654
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_6
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 729
+        width: 240
+        height: 656
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 219
+        height: 655
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Walking_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 63
+        width: 209
+        height: 656
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

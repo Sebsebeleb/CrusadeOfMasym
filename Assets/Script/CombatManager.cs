@@ -187,6 +187,11 @@ public static class CombatManager
             int movesLeft = (int)permanent.Speed;
 
             for (int i = 0; i < movesLeft; i++) {
+                CreatureStats inFront = GetCreatureAt(permanent.GetForward());
+                if (inFront != null) {
+                    Attack(inFront);
+                    return;
+                }
                 Move(permanent);
             }
         }
@@ -198,7 +203,7 @@ public static class CombatManager
         // Check if there is a target in front of us
         CreatureStats inFront = GetCreatureAt(permanent.GetForward());
 
-        if (inFront) {
+        if (inFront && inFront.OwnedBy != permanent.OwnedBy) {
             return true;
         }
         return false;
@@ -236,7 +241,7 @@ public static class CombatManager
                 if (!permanent) return;
                 permanent.GetComponent<Animator>().SetBool("IsWalking", false);
             });
-
+        
         StateManager.RegisterAnimation(AnimationMoveDuration);
         //permanent.transform.position = GridToWorld(to);
 

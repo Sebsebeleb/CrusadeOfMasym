@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: aa66f3ee99787c740bececc387c05649
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Pikeman Attack_0
+    21300002: Human Pikeman Attack_1
+    21300004: Human Pikeman Attack_2
+    21300006: Human Pikeman Attack_3
+    21300008: Human Pikeman Attack_4
+    21300010: Human Pikeman Attack_5
+    21300012: Human Pikeman Attack_6
+    21300014: Human Pikeman Attack_7
+    21300016: Human Pikeman Attack_8
+    21300018: Human Pikeman Attack_9
+    21300020: Human Pikeman Attack_10
+    21300022: Human Pikeman Attack_11
+    21300024: Human Pikeman Attack_12
+    21300026: Human Pikeman Attack_13
+    21300028: Human Pikeman Attack_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 280
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Pikeman Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3442
+        width: 202
+        height: 654
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_1
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3478
+        width: 420
+        height: 618
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3506
+        width: 592
+        height: 590
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 3506
+        width: 608
+        height: 590
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2846
+        width: 606
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_5
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 2846
+        width: 604
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_6
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2846
+        width: 612
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 610
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_8
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 2250
+        width: 612
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_9
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 2250
+        width: 616
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1654
+        width: 650
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_11
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1654
+        width: 704
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1058
+        width: 722
+        height: 592
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1026
+        width: 432
+        height: 624
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Attack_14
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 990
+        width: 216
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

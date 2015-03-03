@@ -26,12 +26,17 @@ public class EffectHolder : MonoBehaviour
 
     }
 
-    void AddEffect(IEffect effect)
+    public void AddEffect(IEffect effect)
     {
         effect.SetOwner(gameObject);
         effect.InitCallbacks();
 
         Effects.Add(effect);
+    }
+
+    public void RemoveEffect(IEffect effect)
+    {
+        DoRemoveEffect(effect);
     }
 
     void RemoveAllEffects()
@@ -45,8 +50,12 @@ public class EffectHolder : MonoBehaviour
 
     void OnDestroy()
     {
-        foreach (IEffect effect in Effects) {
-            effect.Removed();
-        }
+        RemoveAllEffects();
+    }
+
+    private void DoRemoveEffect(IEffect effect)
+    {
+        effect.Removed();
+        bool removed = Effects.Remove(effect);
     }
 }
