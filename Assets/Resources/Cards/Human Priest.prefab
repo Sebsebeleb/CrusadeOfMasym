@@ -44,6 +44,7 @@ MonoBehaviour:
   CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
   TypeOfCard: 0
   TargetingLevel: 0
+  SpellAnimation: {fileID: 0}
   AssociatedCardEffect: Human Priest
 --- !u!1001 &100100000
 Prefab:

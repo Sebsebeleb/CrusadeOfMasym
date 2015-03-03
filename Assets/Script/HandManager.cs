@@ -4,6 +4,7 @@ using System.Collections;
 
 public class HandManager : MonoBehaviour
 {
+    public GameObject AnimationDummyPrefab; // Used to play one-shot animations
     private CardBehaviour selectedCard;
 
     private void Start()
@@ -48,7 +49,8 @@ public class HandManager : MonoBehaviour
     private bool CanUseSpell(BaseCard card, int x, int y)
     {
         // We cannot spawn creatures on top of other creatures
-        if (card.Type == CardType.Creature) {
+        int test = (int) card.cardType;
+        if (card.cardType == CardType.Creature) {
             if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null) {
                 return false;
             }
@@ -59,5 +61,14 @@ public class HandManager : MonoBehaviour
     private void UseCard(BaseCard card, int x, int y)
     {
         card.UseCard(TurnManager.CurrentPlayer, new MapPosition(x, y));
+
+        if (card.CastAnimationController != null) {
+            GameObject dummy = Instantiate(AnimationDummyPrefab) as GameObject;
+            Animator dummyAnimator = dummy.GetComponent<Animator>();
+
+            dummyAnimator.runtimeAnimatorController = card.CastAnimationController;
+
+            dummy.transform.position = CombatManager.GridToWorld(new MapPosition(x, y));
+        }
     }
 }

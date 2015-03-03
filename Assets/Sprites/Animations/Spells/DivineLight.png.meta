@@ -1,0 +1,357 @@
+fileFormatVersion: 2
+guid: a5d1586e1184b5142b48d9016c2edf49
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DivineLight_0
+    21300002: DivineLight_1
+    21300004: DivineLight_2
+    21300006: DivineLight_3
+    21300008: DivineLight_4
+    21300010: DivineLight_5
+    21300012: DivineLight_6
+    21300014: DivineLight_7
+    21300016: DivineLight_8
+    21300018: DivineLight_9
+    21300020: DivineLight_10
+    21300022: DivineLight_11
+    21300024: DivineLight_12
+    21300026: DivineLight_13
+    21300028: DivineLight_14
+    21300030: DivineLight_15
+    21300032: DivineLight_16
+    21300034: DivineLight_17
+    21300036: DivineLight_18
+    21300038: DivineLight_19
+    21300040: DivineLight_20
+    21300042: DivineLight_21
+    21300044: DivineLight_22
+    21300046: DivineLight_23
+    21300048: DivineLight_24
+    21300050: DivineLight_25
+    21300052: DivineLight_26
+    21300054: DivineLight_27
+    21300056: DivineLight_28
+    21300058: DivineLight_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DivineLight_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1759
+        width: 110
+        height: 284
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_1
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1759
+        width: 111
+        height: 284
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_2
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1751
+        width: 110
+        height: 262
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1751
+        width: 113
+        height: 262
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_4
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1745
+        width: 104
+        height: 230
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1435
+        width: 105
+        height: 230
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1435
+        width: 106
+        height: 192
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1435
+        width: 107
+        height: 192
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_8
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1433
+        width: 138
+        height: 162
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_9
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1435
+        width: 138
+        height: 160
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1125
+        width: 195
+        height: 126
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1125
+        width: 200
+        height: 126
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1127
+        width: 200
+        height: 90
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1127
+        width: 167
+        height: 90
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_14
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1127
+        width: 132
+        height: 72
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 817
+        width: 137
+        height: 72
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_16
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 817
+        width: 128
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_17
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 817
+        width: 128
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_18
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 816
+        width: 134
+        height: 43
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_19
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 816
+        width: 134
+        height: 43
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_20
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 503
+        width: 126
+        height: 57
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 503
+        width: 126
+        height: 57
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_22
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 504
+        width: 123
+        height: 75
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_23
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 504
+        width: 120
+        height: 75
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_24
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 504
+        width: 104
+        height: 81
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_25
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 193
+        width: 104
+        height: 82
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_26
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 197
+        width: 88
+        height: 82
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DivineLight_27
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 197
+        width: 84
+        height: 82
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -18,10 +18,11 @@ public enum TargetType
 
 public abstract class BaseCard
 {
-    public CardType Type;
+    public CardType cardType;
     public int TargetingLevel;
     public string Description;
     public string Name;
+    public RuntimeAnimatorController CastAnimationController = null;
 
     public TargetType Targeting = TargetType.Single;
 
@@ -29,15 +30,18 @@ public abstract class BaseCard
 
     // Called when a card is succesfully used at a target tile
     abstract public void UseCard(Owner caster, MapPosition target);
-
+    
 }
 
 public class CreatureCard : BaseCard
 {
     public new int TargetingLevel = 1;
+    
 
     public CreatureCard(String name, String description)
     {
+        cardType = CardType.Creature;
+
         Name = name;
         Description = description;
         AssociatedPermanent = DataLibrary.GetCreatureFromName(Name);
@@ -55,11 +59,15 @@ public class SpellCard : BaseCard
     // The effect that will be used when this card is used
     public string AssociatedEffect;
 
-    public SpellCard(String spell, String description)
+
+    public SpellCard(String spell, String description, RuntimeAnimatorController castAnimationController)
     {
+        cardType = CardType.Spell;
+
+        Name = spell;
         AssociatedEffect = spell;
         Description = description;
-
+        CastAnimationController = castAnimationController;
     }
 
     public override void UseCard(Owner caster, MapPosition target)

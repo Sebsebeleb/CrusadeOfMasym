@@ -17,6 +17,7 @@ public class CardBehaviour : MonoBehaviour
     public Text NameText;
     public Text DescriptionText;
     public Text TypeText;
+    public Image CardArt;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class CardBehaviour : MonoBehaviour
                 Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
                 break;
             case CardType.Spell:
-                Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description);
+                Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description, cardData.SpellAnimationController);
                 break;
             case CardType.Equipment:
                 Debug.LogException(new NotImplementedException());
@@ -50,7 +51,8 @@ public class CardBehaviour : MonoBehaviour
 
         NameText.text = Card.Name;
         DescriptionText.text = Card.Description;
-        TypeText.text = Card.Type.ToString();
+        TypeText.text = Card.cardType.ToString();
+
     }
 
     // Called by UI event system when this is selected in the hand

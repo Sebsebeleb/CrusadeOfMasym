@@ -38,7 +38,6 @@ public class MapPosition
     /// <returns>Distance in tiles</returns>
     public static int Distance(MapPosition a, MapPosition b)
     {
-
         float deltaX = Mathf.Pow(a.x - b.x, 2);
         float deltaY = Mathf.Pow(a.y - b.y, 2);
         float squared = Mathf.Sqrt(deltaX + deltaY);
@@ -78,7 +77,6 @@ public class MapPosition
     {
         return new Vector2(pos.x, pos.y);
     }
-
 }
 
 internal class Utils
@@ -116,5 +114,32 @@ internal class Utils
         }
 
         return adj;
+    }
+
+    /// <summary>
+    /// Returns true if we are at the last tile of a lane
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="faction"></param>
+    /// <returns></returns>
+    public static bool IsAtEndOfLane(MapPosition pos, Owner faction)
+    {
+        if (faction == Owner.PLAYER) {
+            int add = pos.y%2 == 1 ? 1 : 0;
+
+            if (pos.x == 13 + add) {
+                return true;
+            }
+
+            return false;
+        }
+        if (faction == Owner.ENEMY) {
+            if (pos.x == 0) {
+                return true;
+            }
+
+            return false;
+        }
+        throw new Exception("Unknown faction used: " + faction);
     }
 }

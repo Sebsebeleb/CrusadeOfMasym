@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEditor;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -38,10 +37,11 @@ public class TurnManager : MonoBehaviour
         List<string> enemyExampleCards = new List<string>(); 
 
 
-        for (int i = 0; i < 20; i++) {
-            playerExampleCards.Add("Human Phalanx");
+        for (int i = 0; i < 10; i++) {
 
-            enemyExampleCards.Add("Human Phalanx");
+            playerExampleCards.Add("Divine Light");
+            playerExampleCards.Add("Thief Scoundrel");
+            enemyExampleCards.Add("Human Priest");
 
         }
 
@@ -101,6 +101,9 @@ public class TurnManager : MonoBehaviour
 
     public void NewTurn()
     {
+        if (!CanEndTurn()) {
+            return;
+        }
         StartCoroutine(CombatManager.DoCombatPhase(CurrentPlayer));
 
         if (CurrentPlayer == Owner.ENEMY) {
@@ -117,5 +120,14 @@ public class TurnManager : MonoBehaviour
 
         DrawStep();
 
+    }
+
+    private bool CanEndTurn()
+    {
+        if (StateManager.GetAnimationState() != AnimState.Idle) {
+            return false;
+        }
+
+        return true;
     }
 }

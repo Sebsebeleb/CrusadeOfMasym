@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: c3c49ae45ded8c543bc6b1ab39e861e7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Priest Walking_0
+    21300002: Human Priest Walking_1
+    21300004: Human Priest Walking_2
+    21300006: Human Priest Walking_3
+    21300008: Human Priest Walking_4
+    21300010: Human Priest Walking_5
+    21300012: Human Priest Walking_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 240
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Priest Walking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1657
+        width: 329
+        height: 391
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_1
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1639
+        width: 343
+        height: 409
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1213
+        width: 344
+        height: 420
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_3
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1200
+        width: 346
+        height: 433
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 349
+        height: 451
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 763
+        width: 344
+        height: 432
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Walking_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 337
+        height: 405
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

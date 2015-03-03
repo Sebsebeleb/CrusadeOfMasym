@@ -39,12 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33929349ab7cb84eb21438f5822fd83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardName: Human Priest
-  Description: Hello there
-  CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
+  CardName: Human Phalanx
+  Description: Has +2/1/0 for each adjecent ally
+  CardImage: {fileID: 21300010, guid: c3c49ae45ded8c543bc6b1ab39e861e7, type: 3}
   TypeOfCard: 0
   TargetingLevel: 0
-  AssociatedCardEffect: Human Priest
+  SpellAnimation: {fileID: 0}
+  AssociatedCardEffect: Human Phalanx
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

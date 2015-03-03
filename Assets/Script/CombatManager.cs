@@ -2,12 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
+public enum CombatZone
+{
+    Friendly,
+    Neutral,
+    Hostile,
+}
 public static class CombatManager
 {
     // Note: 15,y does not exist in every second row
     private static CreatureStats[,] permanentMap = new CreatureStats[15, 5];
+
+    private const float AnimationMoveDuration = 0.35f;
+    private const float AnimationAttackDuration = 0.35f;
 
     /// <summary>
     /// Translates a grid position to the correct world position
@@ -17,17 +29,56 @@ public static class CombatManager
     public static Vector3 GridToWorld(MapPosition pos)
     {
         float x = pos.x;
-        float y = pos.y%2 == 0 ? pos.y : pos.y - 0.5f;
+        float y = pos.y;
+
+        if (pos.y%2 == 0) {
+            x -= 0.5f;
+        }
 
         y = -y;
 
         x -= 6;
-        y += 2;
+        y += 1.5f;
 
         //permanent.transform.position = new Vector3(x, y);
 
         //return new Vector3(pos.x -7.5, pos.y-0.5, 0);
         return new Vector3(x, y, 0);
+    }
+
+    /// <summary>
+    /// Returns what zone the targeted tile is considered to belong to, from faction's perspective.
+    /// </summary>
+    /// <param name="pos">The tile to check</param>
+    /// <param name="faction">The faction to check for</param>
+    /// <returns></returns>
+    public static CombatZone GetZone(MapPosition pos, Owner faction)
+    {
+        switch (faction) {
+            case Owner.ENEMY:
+                if (pos.x >= 14 - 4) {
+                    return CombatZone.Friendly;
+                }
+                else if (pos.x >= 5) {
+                    return CombatZone.Neutral;
+                }
+                else {
+                    return CombatZone.Hostile;
+                }
+                break;
+            case Owner.PLAYER:
+                if (pos.x >= 14 - 4) {
+                    return CombatZone.Hostile;
+                }
+                else if (pos.x >= 5) {
+                    return CombatZone.Neutral;
+                }
+                else {
+                    return CombatZone.Friendly;
+                }
+                break;
+        }
+        throw new Exception("Something seems to have went wrong with combat zones. Unhandled case of new type?");
     }
 
     // Spawn a new permanent on the map
@@ -46,37 +97,29 @@ public static class CombatManager
                            " was attempted to be spawned on top of another permanentPrefab at: " +
                            pos);
         }
-        //Set the position
+
+        // Set up stats
+        stats.OwnedBy = caster;
+        stats.GridPosition = pos;
+
+        //Set the transform position
         permanent.transform.position = GridToWorld(pos);
+
+        // Flip the creature if it is an enemy
+        int xScale = stats.OwnedBy == Owner.PLAYER ? 1 : -1;
+        Vector3 scale = new Vector3(xScale, 1f, 1f);
+        permanent.transform.localScale = scale;
 
         permanentMap[pos.x, pos.y] = stats;
 
-        stats.OwnedBy = caster;
-        stats.GridPosition = pos;
-        
+
         EventManager.InvokeCreatureSpawned(stats, pos);
     }
 
     public static IEnumerator DoCombatPhase(Owner player)
     {
+        Stack<CreatureStats> turnOrder = GetTurnOrder(player);
 
-        Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
-
-
-        // Populate the turnOrder
-        // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
-        for (int x = 0; x < 15; x++) {
-            for (int y = 0; y < 5; y++) {
-                if (y%2 == 0 && x == 15) {
-                    //Skip the non-existing tiles
-                    continue;
-                }
-                CreatureStats permanent = permanentMap[x, y];
-                if (permanent != null && permanent.OwnedBy == player) {
-                    turnOrder.Push(permanent);
-                }
-            }
-        }
 
         //Now act on creatures
         foreach (CreatureStats creature in turnOrder) {
@@ -84,16 +127,51 @@ public static class CombatManager
 
             ActPermanent(creature);
 
-
             // Now we wait until animations are finished before continuing
-            if (StateManager.GetAnimationState() == AnimState.Playing) {
+            while (StateManager.GetAnimationState() == AnimState.Playing) {
                 yield return 0;
             }
         }
     }
 
+    private static Stack<CreatureStats> GetTurnOrder(Owner player)
+    {
+        Stack<CreatureStats> turnOrder = new Stack<CreatureStats>();
+
+        // Populate the turnOrder
+        // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
+        for (int y = 4; y >= 0; y--) {
+            for (int x = 0; x < 15; x++) {
+                if (y%2 == 0 && x == 15) {
+                    //Skip the non-existing tiles
+                    continue;
+                }
+
+                // Retrieve the creature in correct order depending on player
+                CreatureStats permanent = null;
+                switch (player) {
+                    case Owner.PLAYER:
+                        permanent = permanentMap[x, y];
+                        break;
+                    case Owner.ENEMY:
+                        permanent = permanentMap[15 - 1 - x, y];
+                        break;
+                }
+
+                if (permanent != null && permanent.OwnedBy == player) {
+                    turnOrder.Push(permanent);
+                }
+            }
+        }
+
+        return turnOrder;
+    }
+
     public static CreatureStats GetCreatureAt(MapPosition pos)
     {
+        if (Utils.OutOfBounds(pos)) {
+            return null;
+        }
         return permanentMap[pos.x, pos.y];
     }
 
@@ -106,7 +184,7 @@ public static class CombatManager
         }
 
         if (permanent.CanMove()) {
-            int movesLeft = Math.Min(1, (int) Mathf.Round(permanent.Speed));
+            int movesLeft = (int)permanent.Speed;
 
             for (int i = 0; i < movesLeft; i++) {
                 Move(permanent);
@@ -130,6 +208,9 @@ public static class CombatManager
     {
         CreatureStats enemy = permanent.GetAttackTarget();
         enemy.TakeDamage(permanent, permanent.Attack);
+
+        permanent.GetComponent<Animator>().Play("Attack");
+        StateManager.RegisterAnimation(AnimationAttackDuration);
     }
 
     /// <summary>
@@ -146,7 +227,18 @@ public static class CombatManager
         permanentMap[to.x, to.y] = permanent;
         permanent.GridPosition = to;
 
-        permanent.transform.position = GridToWorld(to);
+        permanent.GetComponent<Animator>().SetBool("IsWalking", true);
+
+        // Move it and set animating state
+        LeanTween.move(permanent.gameObject, GridToWorld(to), AnimationMoveDuration).
+            setOnComplete(() =>
+            {
+                if (!permanent) return;
+                permanent.GetComponent<Animator>().SetBool("IsWalking", false);
+            });
+
+        StateManager.RegisterAnimation(AnimationMoveDuration);
+        //permanent.transform.position = GridToWorld(to);
 
         EventManager.InvokePermanentMoved(permanent, from, to);
     }
@@ -160,5 +252,39 @@ public static class CombatManager
         EventManager.InvokePermanentDestroyed(permanent);
 
         GameObject.Destroy(permanent.gameObject);
+    }
+
+    /// <summary>
+    /// Returns the default tile for a creature to move in. This will always be x+1 or x-1 unless the creature is at the end of the lane and need to advance towards the general by switching lane.
+    /// </summary>
+    public static MapPosition GetAdvancingMovement(MapPosition position, Owner faction)
+    {
+        // If we are not at the end of the lane, just move forward.
+        if (!Utils.IsAtEndOfLane(position, faction)) {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.RIGHT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.LEFT);
+            }
+        }
+
+        if (position.y <= 2) {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.UPLEFT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.UPRIGHT);
+            }
+        }
+        else {
+            switch (faction) {
+                case Owner.PLAYER:
+                    return position.InDirection(Direction.DOWNLEFT);
+                case Owner.ENEMY:
+                    return position.InDirection(Direction.DOWNRIGHT);
+            }
+        }
+        throw new Exception("Error finding advancing move. Invalid faction? " + faction + ", " + position);
     }
 }

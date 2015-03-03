@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: d61c72d2ef155b140be947e90c32be32
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Priest Attacking_0
+    21300002: Human Priest Attacking_1
+    21300004: Human Priest Attacking_2
+    21300006: Human Priest Attacking_3
+    21300008: Human Priest Attacking_4
+    21300010: Human Priest Attacking_5
+    21300012: Human Priest Attacking_6
+    21300014: Human Priest Attacking_7
+    21300016: Human Priest Attacking_8
+    21300018: Human Priest Attacking_9
+    21300020: Human Priest Attacking_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 240
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Priest Attacking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1657
+        width: 329
+        height: 391
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1656
+        width: 333
+        height: 392
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_2
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1657
+        width: 332
+        height: 391
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1257
+        width: 333
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1257
+        width: 342
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 857
+        width: 361
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_6
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 857
+        width: 378
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 457
+        width: 385
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_8
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 456
+        width: 398
+        height: 395
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 408
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Priest Attacking_10
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 57
+        width: 424
+        height: 394
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

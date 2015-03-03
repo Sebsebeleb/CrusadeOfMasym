@@ -16,6 +16,7 @@ public class CreatureStats : MonoBehaviour
     public int Attack;
     public int Defense;
     public int StartMaxHealth;
+    public int StartSpeed;
 
     public MapPosition GridPosition;
 
@@ -62,6 +63,7 @@ public class CreatureStats : MonoBehaviour
     {
         _maxHP = StartMaxHealth;
         _hp = _maxHP;
+        Speed = StartSpeed;
     }
 
     public bool CanMove()
@@ -89,18 +91,15 @@ public class CreatureStats : MonoBehaviour
         return finalDamage;
     }
 
+    public void Heal(int healAmount)
+    {
+        Health += healAmount;
+    }
+
     // Returns a MapPosition that represents directly front of this creature
     public MapPosition GetForward()
     {
-        switch (OwnedBy) {
-            case Owner.PLAYER:
-                return GridPosition.InDirection(Direction.RIGHT);
-            case Owner.ENEMY:
-                return GridPosition.InDirection(Direction.LEFT);
-            default:
-                Debug.LogError("Invalid owner");
-                return null;
-        }
+        return CombatManager.GetAdvancingMovement(GridPosition, OwnedBy);
     }
 
     // Returns the target to attack if we decide to attack.
