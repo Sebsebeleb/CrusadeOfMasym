@@ -19,10 +19,15 @@ public enum Owner
 }
 
 public class MapPosition
-
 {
     public int x;
     public int y;
+
+    public bool Equals(MapPosition other)
+    {
+        if (other == null) return false;
+        return x == other.x && y == other.y;
+    }
 
     public MapPosition(int xx, int yy)
     {
@@ -114,6 +119,23 @@ internal class Utils
         }
 
         return adj;
+    }
+
+    /// <summary>
+    /// Is position A adjacent to position B?
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns>True if A is Adjacent to B</returns>
+    public static bool IsAdjacent(MapPosition a, MapPosition b)
+    {
+        // Not exactly optimized
+        foreach (Direction d in Enum.GetValues(typeof (Direction))) {
+            if (a.InDirection(d) == b) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>

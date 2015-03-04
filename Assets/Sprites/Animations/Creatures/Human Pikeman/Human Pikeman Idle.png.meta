@@ -1,0 +1,670 @@
+fileFormatVersion: 2
+guid: 8b32e191fec44aa42b7b50f2f5d98036
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Pikeman Idle_0
+    21300002: Human Pikeman Idle_1
+    21300004: Human Pikeman Idle_2
+    21300006: Human Pikeman Idle_3
+    21300008: Human Pikeman Idle_4
+    21300010: Human Pikeman Idle_5
+    21300012: Human Pikeman Idle_6
+    21300014: Human Pikeman Idle_7
+    21300016: Human Pikeman Idle_8
+    21300018: Human Pikeman Idle_9
+    21300020: Human Pikeman Idle_10
+    21300022: Human Pikeman Idle_11
+    21300024: Human Pikeman Idle_12
+    21300026: Human Pikeman Idle_13
+    21300028: Human Pikeman Idle_14
+    21300030: Human Pikeman Idle_15
+    21300032: Human Pikeman Idle_16
+    21300034: Human Pikeman Idle_17
+    21300036: Human Pikeman Idle_18
+    21300038: Human Pikeman Idle_19
+    21300040: Human Pikeman Idle_20
+    21300042: Human Pikeman Idle_21
+    21300044: Human Pikeman Idle_22
+    21300046: Human Pikeman Idle_23
+    21300048: Human Pikeman Idle_24
+    21300050: Human Pikeman Idle_25
+    21300052: Human Pikeman Idle_26
+    21300054: Human Pikeman Idle_27
+    21300056: Human Pikeman Idle_28
+    21300058: Human Pikeman Idle_29
+    21300060: Human Pikeman Idle_30
+    21300062: Human Pikeman Idle_31
+    21300064: Human Pikeman Idle_32
+    21300066: Human Pikeman Idle_33
+    21300068: Human Pikeman Idle_34
+    21300070: Human Pikeman Idle_35
+    21300072: Human Pikeman Idle_36
+    21300074: Human Pikeman Idle_37
+    21300076: Human Pikeman Idle_38
+    21300078: Human Pikeman Idle_39
+    21300080: Human Pikeman Idle_40
+    21300082: Human Pikeman Idle_41
+    21300084: Human Pikeman Idle_42
+    21300086: Human Pikeman Idle_43
+    21300088: Human Pikeman Idle_44
+    21300090: Human Pikeman Idle_45
+    21300092: Human Pikeman Idle_46
+    21300094: Human Pikeman Idle_47
+    21300096: Human Pikeman Idle_48
+    21300098: Human Pikeman Idle_49
+    21300100: Human Pikeman Idle_50
+    21300102: Human Pikeman Idle_51
+    21300104: Human Pikeman Idle_52
+    21300106: Human Pikeman Idle_53
+    21300108: Human Pikeman Idle_54
+    21300110: Human Pikeman Idle_55
+    21300112: Human Pikeman Idle_56
+    21300114: Human Pikeman Idle_57
+    21300116: Human Pikeman Idle_58
+    21300118: Human Pikeman Idle_59
+    21300120: Human Pikeman Idle_60
+    21300122: Human Pikeman Idle_61
+    21300124: Human Pikeman Idle_62
+    21300126: Human Pikeman Idle_63
+    21300128: Human Pikeman Idle_64
+    21300130: Human Pikeman Idle_65
+    21300132: Human Pikeman Idle_66
+    21300134: Human Pikeman Idle_67
+    21300136: Human Pikeman Idle_68
+    21300138: Human Pikeman Idle_69
+    21300140: Human Pikeman Idle_70
+    21300142: Human Pikeman Idle_71
+    21300144: Human Pikeman Idle_72
+    21300146: Human Pikeman Idle_73
+    21300148: Human Pikeman Idle_74
+    21300150: Human Pikeman Idle_75
+    21300152: Human Pikeman Idle_76
+    21300154: Human Pikeman Idle_77
+    21300156: Human Pikeman Idle_78
+    21300158: Human Pikeman Idle_79
+    21300160: Human Pikeman Idle_80
+    21300162: Human Pikeman Idle_81
+    21300164: Human Pikeman Idle_82
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 280
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Pikeman Idle_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 3434
+        width: 204
+        height: 662
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 3434
+        width: 200
+        height: 662
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_2
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 3438
+        width: 204
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 3438
+        width: 204
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 3438
+        width: 204
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 3438
+        width: 200
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 3438
+        width: 204
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_8
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 3442
+        width: 204
+        height: 654
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_11
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 3442
+        width: 204
+        height: 654
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_14
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 3446
+        width: 200
+        height: 650
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3822
+        width: 6
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_16
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 3822
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_17
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 3826
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_18
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 3826
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 3826
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_20
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 2778
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_21
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2778
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_22
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 2778
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_23
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 2778
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_25
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 2778
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_27
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 2782
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_29
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 2782
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_30
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2782
+        width: 210
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_32
+      rect:
+        serializedVersion: 2
+        x: 2842
+        y: 2782
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_34
+      rect:
+        serializedVersion: 2
+        x: 3182
+        y: 2786
+        width: 204
+        height: 644
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_35
+      rect:
+        serializedVersion: 2
+        x: 3526
+        y: 2786
+        width: 204
+        height: 644
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_36
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 2786
+        width: 204
+        height: 644
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3166
+        width: 6
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2518
+        width: 6
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_41
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2130
+        width: 204
+        height: 640
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_43
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 2126
+        width: 207
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_44
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 2126
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_46
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 2126
+        width: 204
+        height: 644
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_48
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2126
+        width: 204
+        height: 644
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_50
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 2122
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_51
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 2122
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_52
+      rect:
+        serializedVersion: 2
+        x: 2514
+        y: 2122
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_53
+      rect:
+        serializedVersion: 2
+        x: 2854
+        y: 2122
+        width: 204
+        height: 648
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_54
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 2118
+        width: 204
+        height: 652
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_55
+      rect:
+        serializedVersion: 2
+        x: 3530
+        y: 2118
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_56
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 2118
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_62
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1458
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_64
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1458
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_66
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1458
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_68
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1458
+        width: 204
+        height: 656
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_69
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1454
+        width: 204
+        height: 660
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_72
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 1454
+        width: 200
+        height: 660
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_74
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 1454
+        width: 204
+        height: 660
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_76
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 1454
+        width: 200
+        height: 660
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_77
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 1450
+        width: 204
+        height: 664
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_78
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 1450
+        width: 204
+        height: 664
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_79
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1450
+        width: 200
+        height: 664
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 3442
+        width: 216
+        height: 654
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Pikeman Idle_7
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 3442
+        width: 212
+        height: 654
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -35,7 +35,7 @@ public class StatDisplayBehaviour : MonoBehaviour
 
         LeanTween.value(gameObject, delegate(float f)
         {
-            HealthText.text = ((int) f).ToString(); 
+            HealthText.text = (Mathf.Round(f)).ToString(); 
         },
             oldHealth,
             value,
@@ -49,7 +49,7 @@ public class StatDisplayBehaviour : MonoBehaviour
     {
         if (value == oldAttack) return;
 
-        LeanTween.value(gameObject, delegate(float f, object o) { AttackText.text= ((int) f).ToString(); },
+        LeanTween.value(gameObject, delegate(float f, object o) { AttackText.text= (Mathf.Round(f)).ToString(); },
             oldAttack,
             value,
             valueLerpTime
@@ -61,7 +61,7 @@ public class StatDisplayBehaviour : MonoBehaviour
     private void SetDefence(int value)
     {
         if (oldDefence == value) return;
-        LeanTween.value(gameObject, delegate(float f, object o) { DefenceText.text= ((int) f).ToString(); },
+        LeanTween.value(gameObject, delegate(float f, object o) { DefenceText.text= (Mathf.Round(f)).ToString(); },
             oldDefence,
             value,
             valueLerpTime

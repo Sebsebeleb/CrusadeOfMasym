@@ -10,6 +10,7 @@ public static class EventManager
     public static event CreatureAttackedHandler OnCreatureAttacked;
     public static event CreatureStartMovement OnCreatureStartMovement;
     public static event CreatureSpawned OnCreatureSpawned;
+    public static event EndOfTurn OnEndOfTurn;
 
     public delegate void PermanentMovedHandler(CreatureStats mover, MapPosition from, MapPosition to);
 
@@ -20,6 +21,8 @@ public static class EventManager
     public delegate void CreatureStartMovement(CreatureStats creature);
 
     public delegate void CreatureSpawned(CreatureStats creature, MapPosition at);
+
+    public delegate void EndOfTurn();
 
 
     public static void InvokePermanentMoved(CreatureStats mover, MapPosition from, MapPosition to)
@@ -50,5 +53,11 @@ public static class EventManager
     {
         var handler = OnCreatureSpawned;
         if (handler != null) handler(creature, at);
+    }
+
+    public static void InvokeEndOfTurn()
+    {
+        var handler = OnEndOfTurn;
+        if (handler != null) handler();
     }
 }
