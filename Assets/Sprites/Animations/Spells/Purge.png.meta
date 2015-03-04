@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 789216ec3814d7d4aa0bde9e2181aedf
+timeCreated: 1425486977
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Purge_0
+    21300002: Purge_1
+    21300004: Purge_2
+    21300006: Purge_3
+    21300008: Purge_4
+    21300010: Purge_5
+    21300012: Purge_6
+    21300014: Purge_7
+    21300016: Purge_8
+    21300018: Purge_9
+    21300020: Purge_10
+    21300022: Purge_11
+    21300024: Purge_12
+    21300026: Purge_13
+    21300028: Purge_14
+    21300030: Purge_15
+    21300032: Purge_16
+    21300034: Purge_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Purge_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 919
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 900
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_3
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 895
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_4
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 887
+        width: 103
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 694
+        width: 118
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 692
+        width: 132
+        height: 119
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_7
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 683
+        width: 149
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_8
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 672
+        width: 149
+        height: 155
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_9
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 664
+        width: 141
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 470
+        width: 141
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_11
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 473
+        width: 132
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 487
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_13
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 479
+        width: 119
+        height: 149
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_14
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 521
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 326
+        width: 104
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 324
+        width: 110
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Purge_17
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 318
+        width: 122
+        height: 115
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

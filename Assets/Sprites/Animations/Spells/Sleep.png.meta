@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 62825996881002b46b2589fde81160fc
+timeCreated: 1425485919
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Sleep_0
+    21300002: Sleep_1
+    21300004: Sleep_2
+    21300006: Sleep_3
+    21300008: Sleep_4
+    21300010: Sleep_5
+    21300012: Sleep_6
+    21300014: Sleep_7
+    21300016: Sleep_8
+    21300018: Sleep_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -20,6 +32,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -27,9 +42,10 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -42,6 +58,108 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Sleep_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 31
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 224
+        width: 36
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 178
+        width: 44
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 182
+        width: 41
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 43
+        height: 37
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 147
+        width: 34
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 42
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 83
+        width: 48
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 43
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sleep_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 42
+        width: 41
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

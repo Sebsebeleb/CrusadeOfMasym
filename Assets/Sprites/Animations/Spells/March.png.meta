@@ -1,7 +1,26 @@
 fileFormatVersion: 2
 guid: 007122836e0c5654590bf72fc06818e1
+timeCreated: 1425485907
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: March_0
+    21300002: March_1
+    21300004: March_2
+    21300006: March_3
+    21300008: March_4
+    21300010: March_5
+    21300012: March_6
+    21300014: March_7
+    21300016: March_8
+    21300018: March_9
+    21300020: March_10
+    21300022: March_11
+    21300024: March_12
+    21300026: March_13
+    21300028: March_14
+    21300030: March_15
+    21300032: March_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -20,6 +39,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -27,9 +49,10 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -42,6 +65,178 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: March_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1767
+        width: 480
+        height: 281
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_1
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1783
+        width: 490
+        height: 265
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_2
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1799
+        width: 504
+        height: 249
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_3
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1781
+        width: 490
+        height: 267
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1461
+        width: 469
+        height: 300
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_5
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1431
+        width: 454
+        height: 330
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_6
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1405
+        width: 432
+        height: 355
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_7
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1367
+        width: 398
+        height: 394
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 365
+        height: 425
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_9
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 967
+        width: 401
+        height: 394
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_10
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 991
+        width: 418
+        height: 370
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_11
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1019
+        width: 442
+        height: 342
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 619
+        width: 459
+        height: 314
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_13
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 641
+        width: 478
+        height: 292
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_14
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 679
+        width: 500
+        height: 254
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_15
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 703
+        width: 516
+        height: 230
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: March_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409
+        width: 529
+        height: 207
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
