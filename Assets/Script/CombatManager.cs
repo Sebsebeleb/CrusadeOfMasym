@@ -185,16 +185,20 @@ public static class CombatManager
             return;
         }
 
+
         if (permanent.CanMove()) {
             int movesLeft = (int)permanent.Speed;
 
             for (int i = 0; i < movesLeft; i++) {
-                CreatureStats inFront = GetCreatureAt(permanent.GetForward());
-                if (inFront != null) {
-                    Attack(inFront);
+                if (CanAttackAnything(permanent)) {
+                    Attack(permanent);
                     return;
                 }
-                Move(permanent);
+                CreatureStats inFront = GetCreatureAt(permanent.GetForward());
+                if (!inFront) {
+                    Move(permanent);
+                    
+                }
             }
         }
     }
@@ -293,5 +297,17 @@ public static class CombatManager
             }
         }
         throw new Exception("Error finding advancing move. Invalid faction? " + faction + ", " + position);
+    }
+
+    /// <summary>
+    /// Can something spawn a creature here? currently only illegal if there is already a creature there
+    /// </summary>
+    /// <param name="zombiePrefab"></param>
+    /// <param name="owner"></param>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    internal static bool CanSpawn(GameObject creaturePrefab, Owner owner, MapPosition position)
+    {
+        return !GetCreatureAt(position);
     }
 }

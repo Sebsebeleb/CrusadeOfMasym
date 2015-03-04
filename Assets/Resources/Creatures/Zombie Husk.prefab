@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11493168}
   - 95: {fileID: 9554572}
   m_Layer: 0
-  m_Name: Human Pikeman
+  m_Name: Zombie Husk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ Animator:
   m_GameObject: {fileID: 163684}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96aa048b60c5a8a4cb3860bd2caa041b, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb47ef09cb0de0044aee362d83c489f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -60,10 +60,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnedBy: 0
-  name: 
+  name: Zombie Husk
   Attack: 3
   Defense: 0
-  StartMaxHealth: 7
+  StartMaxHealth: 5
   StartSpeed: 1
 --- !u!114 &11493168
 MonoBehaviour:
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300158, guid: 8b32e191fec44aa42b7b50f2f5d98036, type: 3}
+  m_Sprite: {fileID: 21300012, guid: c3c49ae45ded8c543bc6b1ab39e861e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
