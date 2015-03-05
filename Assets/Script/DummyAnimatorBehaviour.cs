@@ -15,6 +15,7 @@ public class DummyAnimatorBehaviour : MonoBehaviour
     void Update()
     {
         AnimatorStateInfo animationState = anim.GetCurrentAnimatorStateInfo(0);
+
         if (animationState.IsName("done")) {
             Destroy(gameObject);
         }

@@ -22,7 +22,7 @@ public abstract class BaseCard
     public int TargetingLevel;
     public string Description;
     public string Name;
-    public RuntimeAnimatorController CastAnimationController = null;
+    public string AnimationName;
 
     public TargetType Targeting = TargetType.Single;
 
@@ -60,14 +60,14 @@ public class SpellCard : BaseCard
     public string AssociatedEffect;
 
 
-    public SpellCard(String spell, String description, RuntimeAnimatorController castAnimationController)
+    public SpellCard(string spell, string description, string castAnimationName)
     {
         cardType = CardType.Spell;
 
         Name = spell;
         AssociatedEffect = spell;
         Description = description;
-        CastAnimationController = castAnimationController;
+        AnimationName = castAnimationName;
     }
 
     public override void UseCard(Owner caster, MapPosition target)

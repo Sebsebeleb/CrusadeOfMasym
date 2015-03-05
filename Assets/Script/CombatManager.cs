@@ -47,6 +47,26 @@ public static class CombatManager
     }
 
     /// <summary>
+    /// Inverse of GridToWorld
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public static MapPosition WorldToGrid(Vector3 pos)
+    {
+        float x = pos.x;
+        float y = pos.y;
+
+        x += 6f;
+        y -= 1.5f;
+        y = -y;
+
+        if ((int)y%2 == 0) {
+            x += 0.5f;
+        }
+        return new MapPosition((int)x, (int)y);
+    }
+
+    /// <summary>
     /// Returns what zone the targeted tile is considered to belong to, from faction's perspective.
     /// </summary>
     /// <param name="pos">The tile to check</param>
@@ -65,7 +85,6 @@ public static class CombatManager
                 else {
                     return CombatZone.Hostile;
                 }
-                break;
             case Owner.PLAYER:
                 if (pos.x >= 14 - 4) {
                     return CombatZone.Hostile;
@@ -76,7 +95,6 @@ public static class CombatManager
                 else {
                     return CombatZone.Friendly;
                 }
-                break;
         }
         throw new Exception("Something seems to have went wrong with combat zones. Unhandled case of new type?");
     }
@@ -119,7 +137,6 @@ public static class CombatManager
     public static IEnumerator DoCombatPhase(Owner player)
     {
         Stack<CreatureStats> turnOrder = GetTurnOrder(player);
-
 
         //Now act on creatures
         foreach (CreatureStats creature in turnOrder) {
@@ -302,7 +319,7 @@ public static class CombatManager
     /// <summary>
     /// Can something spawn a creature here? currently only illegal if there is already a creature there
     /// </summary>
-    /// <param name="zombiePrefab"></param>
+    /// <param name="creaturePrefab"></param>
     /// <param name="owner"></param>
     /// <param name="position"></param>
     /// <returns></returns>

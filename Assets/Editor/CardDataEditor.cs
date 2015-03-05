@@ -12,10 +12,9 @@ public class CardDataEditor : Editor
         CardData myTarget = (CardData)target;
 
         if (myTarget.TypeOfCard == CardType.Spell) {
-            RuntimeAnimatorController anim = EditorGUILayout.ObjectField("Spell Animation Controller", myTarget.SpellAnimationController, typeof (RuntimeAnimatorController),
-                false) as RuntimeAnimatorController;
+            string anim = EditorGUILayout.TextField("Spell Animation Controller", myTarget.SpellAnimationName);
 
-            myTarget.SpellAnimationController = anim;
+            myTarget.SpellAnimationName= anim;
         }
 
         if (GUI.changed) {
