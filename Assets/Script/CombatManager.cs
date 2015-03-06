@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
+using Assets.Script;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
@@ -235,7 +236,7 @@ public static class CombatManager
     private static void Attack(CreatureStats permanent)
     {
         CreatureStats enemy = permanent.GetAttackTarget();
-        enemy.TakeDamage(permanent, permanent.Attack);
+        enemy.TakeDamage(new Source(creature:permanent), new Damage(permanent.Attack, DamageType.Physical));
 
         permanent.GetComponent<Animator>().Play("Attack");
         StateManager.RegisterAnimation(AnimationAttackDuration);

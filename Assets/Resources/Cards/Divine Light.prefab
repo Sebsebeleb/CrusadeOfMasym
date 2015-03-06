@@ -44,8 +44,7 @@ MonoBehaviour:
   CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
   TypeOfCard: 1
   TargetingLevel: 0
-  SpellAnimationController: {fileID: 9100000, guid: d7476975af7b0c043803b6756fcecce1,
-    type: 2}
+  SpellAnimationName: Divine Light
   AssociatedCardEffect: Divine Light
 --- !u!1001 &100100000
 Prefab:
@@ -58,4 +57,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194072}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

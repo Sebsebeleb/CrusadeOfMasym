@@ -40,7 +40,7 @@ public class TurnManager : MonoBehaviour
         for (int i = 0; i < 10; i++) {
 
             playerExampleCards.Add("Human Phalanx");
-            playerExampleCards.Add("Purge");
+            playerExampleCards.Add("Consecration");
             enemyExampleCards.Add("Zombie King");
             enemyExampleCards.Add("Human Pikeman");
 

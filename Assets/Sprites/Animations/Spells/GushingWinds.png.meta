@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c8672e69b0f2be4b8408218fee45cc2
-timeCreated: 1425485812
+timeCreated: 1425631850
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,101 +63,71 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 900
-        width: 140
-        height: 89
+        y: 872
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_1
       rect:
         serializedVersion: 2
-        x: 244
-        y: 909
-        width: 129
-        height: 71
+        x: 212
+        y: 872
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 733
-        width: 96
-        height: 106
+        x: 5
+        y: 713
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_3
       rect:
         serializedVersion: 2
-        x: 323
-        y: 721
-        width: 65
-        height: 126
+        x: 212
+        y: 713
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 649
-        width: 59
-        height: 43
+        x: 5
+        y: 554
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_5
       rect:
         serializedVersion: 2
-        x: 344
-        y: 671
-        width: 33
-        height: 28
+        x: 212
+        y: 554
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GushingWinds_6
       rect:
         serializedVersion: 2
-        x: 135
-        y: 561
-        width: 58
-        height: 44
+        x: 5
+        y: 395
+        width: 187
+        height: 144
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GushingWinds_7
-      rect:
-        serializedVersion: 2
-        x: 334
-        y: 554
-        width: 44
-        height: 30
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GushingWinds_8
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 514
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GushingWinds_9
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 409
-        width: 19
-        height: 14
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
