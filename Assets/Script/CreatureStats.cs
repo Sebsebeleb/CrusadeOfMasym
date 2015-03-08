@@ -19,6 +19,13 @@ public class CreatureStats : MonoBehaviour
     public int StartMaxHealth;
     public int StartSpeed;
 
+    //Can the creature act during combat phases?
+    private int _canAct;
+    public bool CanAct
+    {
+        get { return _canAct >= 0; }
+    }
+
     public MapPosition GridPosition;
 
 
@@ -76,6 +83,20 @@ public class CreatureStats : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    /// <summary>
+    /// Remove the ability to act or restore it.
+    /// </summary>
+    /// <param name="restore">true for restore, otherwise remove</param>
+    public void SetCanAct(bool restore)
+    {
+        if (restore) {
+            _canAct++;
+        }
+        else {
+            _canAct--;
+        }
     }
 
     /// <summary>

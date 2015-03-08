@@ -178,7 +178,7 @@ public static class CombatManager
                         break;
                 }
 
-                if (permanent != null && permanent.OwnedBy == player) {
+                if (permanent != null && permanent.OwnedBy == player && permanent.CanAct) {
                     turnOrder.Push(permanent);
                 }
             }
@@ -200,7 +200,6 @@ public static class CombatManager
     {
         if (CanAttackAnything(permanent)) {
             Attack(permanent);
-        throw new NotImplementedException();
             return;
         }
 

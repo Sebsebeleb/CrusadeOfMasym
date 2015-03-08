@@ -40,10 +40,9 @@ public class TurnManager : MonoBehaviour
         for (int i = 0; i < 10; i++) {
 
             playerExampleCards.Add("Human Phalanx");
-            playerExampleCards.Add("March");
+            playerExampleCards.Add("Sleep");
             enemyExampleCards.Add("Zombie King");
             enemyExampleCards.Add("Human Pikeman");
-
         }
 
         PlayerDeck = new Deck(playerExampleCards);
@@ -106,6 +105,8 @@ public class TurnManager : MonoBehaviour
             return;
         }
         StartCoroutine(CombatManager.DoCombatPhase(CurrentPlayer));
+
+        EventManager.InvokeEndOfTurn();
 
         if (CurrentPlayer == Owner.ENEMY) {
             EnemyHand.gameObject.SetActive(false);
