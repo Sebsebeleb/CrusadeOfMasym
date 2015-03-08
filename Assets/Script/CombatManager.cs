@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using Assets.Script;
 using UnityEditorInternal;
@@ -151,7 +152,6 @@ public static class CombatManager
             }
         }
 
-        EventManager.InvokeEndOfTurn();
     }
 
     private static Stack<CreatureStats> GetTurnOrder(Owner player)
@@ -200,6 +200,7 @@ public static class CombatManager
     {
         if (CanAttackAnything(permanent)) {
             Attack(permanent);
+        throw new NotImplementedException();
             return;
         }
 
@@ -327,5 +328,21 @@ public static class CombatManager
     internal static bool CanSpawn(GameObject creaturePrefab, Owner owner, MapPosition position)
     {
         return !GetCreatureAt(position);
+    }
+
+    internal static List<CreatureStats> GetAllCreatures()
+    {
+        List<CreatureStats> allCreatures = new List<CreatureStats>();
+
+        for (int x = 0; x <= 14; x++) {
+            for (int y = 0; y <= 4; y++) {
+                CreatureStats creature = GetCreatureAt(new MapPosition(x, y));
+                if (creature) {
+                    allCreatures.Add(creature);
+                }
+            }
+        }
+
+        return allCreatures;
     }
 }

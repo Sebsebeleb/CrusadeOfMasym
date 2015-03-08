@@ -20,3 +20,30 @@ public interface ISpellEffect : IEffect
 {
     void OnUseCard(Owner caster, MapPosition target);
 }
+
+public abstract class TemporaryEffect : IEffect
+{
+    ~TemporaryEffect()
+    {
+        UnregisterCallbacks();
+    }
+
+    protected virtual void UnregisterCallbacks()
+    {
+        
+    }
+
+    public virtual void Removed()
+    {
+        UnregisterCallbacks();
+    }
+
+    public virtual void SetOwner(GameObject owner)
+    {
+    }
+
+    public virtual void InitCallbacks()
+    {
+
+    }
+}

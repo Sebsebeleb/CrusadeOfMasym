@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 494072}
   - 114: {fileID: 11498550}
   m_Layer: 0
-  m_Name: Purge
+  m_Name: March
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,13 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33929349ab7cb84eb21438f5822fd83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardName: Purge
-  Description: Removes all effects from target creature
+  CardName: March
+  Description: Gives all your creatures +1 speed and +1/0/0 for 3 turns
   CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
   TypeOfCard: 1
   TargetingLevel: 0
-  SpellAnimationName: Purge
-  AssociatedCardEffect: Purge
+  SpellAnimationName: March
+  AssociatedCardEffect: March
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
