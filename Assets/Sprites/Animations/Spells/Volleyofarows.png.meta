@@ -1,7 +1,26 @@
 fileFormatVersion: 2
 guid: 953abef65cb50154a8f4c7d721307454
+timeCreated: 1425485925
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Volleyofarows_0
+    21300002: Volleyofarows_1
+    21300004: Volleyofarows_2
+    21300006: Volleyofarows_3
+    21300008: Volleyofarows_4
+    21300010: Volleyofarows_5
+    21300012: Volleyofarows_6
+    21300014: Volleyofarows_7
+    21300016: Volleyofarows_8
+    21300018: Volleyofarows_9
+    21300020: Volleyofarows_10
+    21300022: Volleyofarows_11
+    21300024: Volleyofarows_12
+    21300026: Volleyofarows_13
+    21300028: Volleyofarows_14
+    21300030: Volleyofarows_15
+    21300032: Volleyofarows_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -20,6 +39,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -27,9 +49,10 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -42,6 +65,178 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Volleyofarows_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 457
+        width: 62
+        height: 55
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 456
+        width: 63
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 456
+        width: 62
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 62
+        height: 57
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 391
+        width: 62
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 386
+        width: 59
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 59
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 311
+        width: 54
+        height: 66
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 311
+        width: 53
+        height: 65
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 306
+        width: 47
+        height: 70
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 227
+        width: 47
+        height: 69
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_11
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 224
+        width: 40
+        height: 72
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 223
+        width: 40
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 231
+        width: 53
+        height: 65
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 40
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 136
+        width: 25
+        height: 76
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Volleyofarows_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 143
+        width: 47
+        height: 70
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

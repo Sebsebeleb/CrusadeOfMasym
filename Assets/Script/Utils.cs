@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public enum Direction
@@ -20,13 +21,34 @@ public enum Owner
 
 public class MapPosition
 {
-    public int x;
-    public int y;
+    public readonly int x;
+    public readonly int y;
 
     public bool Equals(MapPosition other)
     {
         if (other == null) return false;
         return x == other.x && y == other.y;
+    }
+
+    public static bool operator ==(MapPosition a, MapPosition b)
+    {
+        // If both are null, or both are same instance, return true.
+        if (ReferenceEquals(a, b)) {
+            return true;
+        }
+
+        // If one is null, but not both, return false.
+        if (((object) a == null) || ((object) b == null)) {
+            return false;
+        }
+
+        // Return true if the fields match:
+        return a.x == b.x && a.y == b.y;
+    }
+
+    public static bool operator !=(MapPosition a, MapPosition b)
+    {
+        return !(a == b);
     }
 
     public MapPosition(int xx, int yy)
@@ -60,19 +82,34 @@ public class MapPosition
     {
         int nx;
         int ny;
+
+        bool rowIsOdd = y%2 == 1;
+
         switch (Dir) {
             case Direction.UPLEFT:
-                return new MapPosition(x - 1, y + 1);
+                if (rowIsOdd) {
+                    return new MapPosition(x - 1, y + 1);
+                }
+                return new MapPosition(x, y+1);
             case Direction.UPRIGHT:
-                return new MapPosition(x, y + 1);
+                if (rowIsOdd) {
+                    return new MapPosition(x, y + 1);
+                }
+                return new MapPosition(x + 1, y + 1);
             case Direction.LEFT:
                 return new MapPosition(x - 1, y);
             case Direction.RIGHT:
                 return new MapPosition(x + 1, y);
             case Direction.DOWNLEFT:
-                return new MapPosition(x - 1, y - 1);
-            case Direction.DOWNRIGHT:
+                if (rowIsOdd) {
+                    return new MapPosition(x - 1, y - 1);
+                }
                 return new MapPosition(x, y - 1);
+            case Direction.DOWNRIGHT:
+                if (rowIsOdd) {
+                    return new MapPosition(x, y - 1);
+                }
+                return new MapPosition(x + 1, y - 1);
             default:
                 return null;
         }
@@ -84,7 +121,7 @@ public class MapPosition
     }
 }
 
-internal class Utils
+public class Utils
 {
     public static bool OutOfBounds(MapPosition position)
     {
@@ -131,6 +168,8 @@ internal class Utils
     {
         // Not exactly optimized
         foreach (Direction d in Enum.GetValues(typeof (Direction))) {
+            MapPosition indir = a.InDirection(d);
+            bool IsEqual = b == indir;
             if (a.InDirection(d) == b) {
                 return true;
             }

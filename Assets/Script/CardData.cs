@@ -12,7 +12,7 @@ public class CardData : MonoBehaviour
     public int TargetingLevel;
 
     [HideInInspector]
-    public RuntimeAnimatorController SpellAnimationController; // Only used for spell cards, exposed by the custom inspector
+    public string SpellAnimationName; // Only used for spell cards, exposed by the custom inspector
 
     // For spells, this should be the name of the effect to be used when the card is used. For creatures it's the creature name, etc.
     public string AssociatedCardEffect;

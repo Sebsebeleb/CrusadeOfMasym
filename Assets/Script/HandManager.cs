@@ -25,14 +25,20 @@ public class HandManager : MonoBehaviour
     {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        float fx = worldPos.x + 7.5f;
-        int y = (int) Mathf.Floor(worldPos.y - 1.5f)*-1;
+        //float fx = worldPos.x + 7.5f;
+        //int y = (int) Mathf.Floor(worldPos.y - 1.5f)*-1;
 
-        if (y%2 != 0) {
-            fx += 0.5f;
-        }
+        //if (y%2 != 0) {
+        //    fx += 0.5f;
+        //}
 
-        int x = (int) Mathf.Floor(fx);
+        //int x = (int) Mathf.Floor(fx);
+
+        MapPosition gridPosition = CombatManager.WorldToGrid(worldPos);
+
+        int x = gridPosition.x;
+        int y = gridPosition.y;
+
 
         // TODO: every second row
         if (0 <= x && x <= 15) {
@@ -40,8 +46,9 @@ public class HandManager : MonoBehaviour
                 if (CanUseSpell(selectedCard.GetBaseCard(), x, y)) {
                     UseCard(selectedCard.GetBaseCard(), x, y);
                     Destroy(selectedCard.gameObject);
-                    selectedCard = null;
                 }
+                // Deselect card on failed attempt for now
+                selectedCard = null;
             }
         }
     }
@@ -49,7 +56,6 @@ public class HandManager : MonoBehaviour
     private bool CanUseSpell(BaseCard card, int x, int y)
     {
         // We cannot spawn creatures on top of other creatures
-        int test = (int) card.cardType;
         if (card.cardType == CardType.Creature) {
             if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null) {
                 return false;
@@ -62,11 +68,11 @@ public class HandManager : MonoBehaviour
     {
         card.UseCard(TurnManager.CurrentPlayer, new MapPosition(x, y));
 
-        if (card.CastAnimationController != null) {
-            GameObject dummy = Instantiate(AnimationDummyPrefab) as GameObject;
+        if (card.AnimationName != null) {
+            GameObject dummy = Instantiate(AnimationDummyPrefab);
             Animator dummyAnimator = dummy.GetComponent<Animator>();
 
-            dummyAnimator.runtimeAnimatorController = card.CastAnimationController;
+            dummyAnimator.Play(card.AnimationName);
 
             dummy.transform.position = CombatManager.GridToWorld(new MapPosition(x, y));
         }

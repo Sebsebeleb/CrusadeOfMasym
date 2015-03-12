@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using Assets.Script;
 
 public class CreatureStats : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class CreatureStats : MonoBehaviour
     public int Defense;
     public int StartMaxHealth;
     public int StartSpeed;
+
+    //Can the creature act during combat phases?
+    private int _canAct;
+    public bool CanAct
+    {
+        get { return _canAct >= 0; }
+    }
 
     public MapPosition GridPosition;
 
@@ -78,14 +86,35 @@ public class CreatureStats : MonoBehaviour
     }
 
     /// <summary>
+    /// Remove the ability to act or restore it.
+    /// </summary>
+    /// <param name="restore">true for restore, otherwise remove</param>
+    public void SetCanAct(bool restore)
+    {
+        if (restore) {
+            _canAct++;
+        }
+        else {
+            _canAct--;
+        }
+    }
+
+    /// <summary>
     /// Deal damage to this permanent
     /// </summary>
-    /// <param name="source">The attacker or other sort of source</param>
+    /// <param name="damageSource">The attacker or other sort of source</param>
     /// <param name="damage">The amount of damage to take</param>
     /// <returns>The actual damage taken</returns>
-    public int TakeDamage(CreatureStats source, int damage)
+    public int TakeDamage(Source damageSource, Damage damage)
     {
-        int finalDamage = damage - Defense;
+        int finalDamage = damage.Value;
+
+        // If the damage is physical, block it using defense
+        if (damage.damageType == DamageType.Physical)
+        {
+            finalDamage -= Defense;
+            
+        }
         Health -= finalDamage;
 
         return finalDamage;

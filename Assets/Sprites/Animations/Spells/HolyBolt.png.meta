@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 391a171733df7464e890e06833d122c9
+timeCreated: 1425485865
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: HolyBolt_0
+    21300002: HolyBolt_1
+    21300004: HolyBolt_2
+    21300006: HolyBolt_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -20,6 +26,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -27,9 +36,10 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -42,6 +52,48 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: HolyBolt_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 877
+        width: 308
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HolyBolt_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 696
+        width: 300
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HolyBolt_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 521
+        width: 293
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HolyBolt_3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 352
+        width: 282
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

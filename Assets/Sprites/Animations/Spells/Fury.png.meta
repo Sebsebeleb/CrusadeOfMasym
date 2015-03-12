@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: ca4ca290934c4ff4c8e8737f05b58d3b
+timeCreated: 1425485722
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Fury_0
+    21300002: Fury_1
+    21300004: Fury_2
+    21300006: Fury_3
+    21300008: Fury_4
+    21300010: Fury_5
+    21300012: Fury_6
+    21300014: Fury_7
+    21300016: Fury_8
+    21300018: Fury_9
+    21300020: Fury_10
+    21300022: Fury_11
+    21300024: Fury_12
+    21300026: Fury_13
+    21300028: Fury_14
+    21300030: Fury_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -20,6 +38,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -27,9 +48,10 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -42,6 +64,168 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Fury_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1760
+        width: 116
+        height: 185
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_1
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1760
+        width: 116
+        height: 185
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_2
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1735
+        width: 116
+        height: 228
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_3
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 1735
+        width: 116
+        height: 228
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_4
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1693
+        width: 116
+        height: 330
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_5
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1301
+        width: 116
+        height: 330
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_6
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1278
+        width: 232
+        height: 378
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_7
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1278
+        width: 232
+        height: 378
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_8
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1287
+        width: 351
+        height: 354
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_9
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1287
+        width: 380
+        height: 354
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 919
+        width: 348
+        height: 296
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 919
+        width: 353
+        height: 359
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_12
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 925
+        width: 354
+        height: 353
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_13
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 925
+        width: 354
+        height: 286
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_14
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 933
+        width: 116
+        height: 268
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fury_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 541
+        width: 116
+        height: 268
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

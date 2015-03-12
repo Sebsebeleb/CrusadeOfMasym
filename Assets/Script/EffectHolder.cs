@@ -39,7 +39,7 @@ public class EffectHolder : MonoBehaviour
         DoRemoveEffect(effect);
     }
 
-    void RemoveAllEffects()
+    public void RemoveAllEffects()
     {
         foreach (IEffect effect in Effects) {
             effect.Removed();

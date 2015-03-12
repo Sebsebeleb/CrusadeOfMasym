@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: f606ec5d11483e748aa8f10101925b91
+timeCreated: 1425595828
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Phalanx Walking_0
+    21300002: Human Phalanx Walking_1
+    21300004: Human Phalanx Walking_2
+    21300006: Human Phalanx Walking_3
+    21300008: Human Phalanx Walking_4
+    21300010: Human Phalanx Walking_5
+    21300012: Human Phalanx Walking_6
+    21300014: Human Phalanx Walking_7
+    21300016: Human Phalanx Walking_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 270
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Phalanx Walking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1459
+        width: 514
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1467
+        width: 406
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_2
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1461
+        width: 403
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_3
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1460
+        width: 399
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 393
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_5
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 862
+        width: 392
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_6
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 861
+        width: 383
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_7
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 864
+        width: 373
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Walking_8
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 861
+        width: 379
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

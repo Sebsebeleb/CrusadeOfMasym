@@ -26,6 +26,9 @@ public static class DataLibrary
     private static void LoadCreature(string creatureName)
     {
         GameObject creature = Resources.Load<GameObject>(ResourcePath + creatureName);
+        if (!creature) {
+            Debug.LogError("Something attempted to load: " + creature + " but it was not found");
+        }
         CreatureMap[creatureName] = creature;
     }
 

@@ -11,7 +11,7 @@ namespace Effects.CreatureEffects
     {
         private CreatureStats ownerStats;
 
-        private List<MapPosition> spawnPositions = new List<MapPosition>(); 
+        private List<MapPosition> spawnPositions = new List<MapPosition>();
 
         public void Removed()
         {
@@ -40,8 +40,9 @@ namespace Effects.CreatureEffects
         {
             GameObject zombiePrefab = DataLibrary.GetCreatureFromName("Zombie Husk");
 
-            CombatManager.SpawnPermanent(zombiePrefab, TurnManager.CurrentPlayer, position);
-
+            if (CombatManager.CanSpawn(zombiePrefab, TurnManager.CurrentPlayer, position)) {
+                CombatManager.SpawnPermanent(zombiePrefab, TurnManager.CurrentPlayer, position);
+            }
         }
 
         private void HandleDeath(CreatureStats creature)

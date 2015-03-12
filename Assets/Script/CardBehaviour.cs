@@ -41,7 +41,7 @@ public class CardBehaviour : MonoBehaviour
                 Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
                 break;
             case CardType.Spell:
-                Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description, cardData.SpellAnimationController);
+                Card = new SpellCard(cardData.AssociatedCardEffect, cardData.Description, cardData.SpellAnimationName);
                 break;
             case CardType.Equipment:
                 Debug.LogException(new NotImplementedException());

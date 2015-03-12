@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
+using Assets.Script;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
@@ -47,6 +49,26 @@ public static class CombatManager
     }
 
     /// <summary>
+    /// Inverse of GridToWorld
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public static MapPosition WorldToGrid(Vector3 pos)
+    {
+        float x = pos.x;
+        float y = pos.y;
+
+        x += 6f;
+        y -= 1.5f;
+        y = -y;
+
+        if ((int)y%2 == 0) {
+            x += 0.5f;
+        }
+        return new MapPosition((int)x, (int)y);
+    }
+
+    /// <summary>
     /// Returns what zone the targeted tile is considered to belong to, from faction's perspective.
     /// </summary>
     /// <param name="pos">The tile to check</param>
@@ -65,7 +87,6 @@ public static class CombatManager
                 else {
                     return CombatZone.Hostile;
                 }
-                break;
             case Owner.PLAYER:
                 if (pos.x >= 14 - 4) {
                     return CombatZone.Hostile;
@@ -76,7 +97,6 @@ public static class CombatManager
                 else {
                     return CombatZone.Friendly;
                 }
-                break;
         }
         throw new Exception("Something seems to have went wrong with combat zones. Unhandled case of new type?");
     }
@@ -120,7 +140,6 @@ public static class CombatManager
     {
         Stack<CreatureStats> turnOrder = GetTurnOrder(player);
 
-
         //Now act on creatures
         foreach (CreatureStats creature in turnOrder) {
             EventManager.InvokeCreatureStartMovement(creature);
@@ -133,7 +152,6 @@ public static class CombatManager
             }
         }
 
-        EventManager.InvokeEndOfTurn();
     }
 
     private static Stack<CreatureStats> GetTurnOrder(Owner player)
@@ -160,7 +178,7 @@ public static class CombatManager
                         break;
                 }
 
-                if (permanent != null && permanent.OwnedBy == player) {
+                if (permanent != null && permanent.OwnedBy == player && permanent.CanAct) {
                     turnOrder.Push(permanent);
                 }
             }
@@ -185,16 +203,20 @@ public static class CombatManager
             return;
         }
 
+
         if (permanent.CanMove()) {
             int movesLeft = (int)permanent.Speed;
 
             for (int i = 0; i < movesLeft; i++) {
-                CreatureStats inFront = GetCreatureAt(permanent.GetForward());
-                if (inFront != null) {
-                    Attack(inFront);
+                if (CanAttackAnything(permanent)) {
+                    Attack(permanent);
                     return;
                 }
-                Move(permanent);
+                CreatureStats inFront = GetCreatureAt(permanent.GetForward());
+                if (!inFront) {
+                    Move(permanent);
+                    
+                }
             }
         }
     }
@@ -214,7 +236,7 @@ public static class CombatManager
     private static void Attack(CreatureStats permanent)
     {
         CreatureStats enemy = permanent.GetAttackTarget();
-        enemy.TakeDamage(permanent, permanent.Attack);
+        enemy.TakeDamage(new Source(creature:permanent), new Damage(permanent.Attack, DamageType.Physical));
 
         permanent.GetComponent<Animator>().Play("Attack");
         StateManager.RegisterAnimation(AnimationAttackDuration);
@@ -293,5 +315,33 @@ public static class CombatManager
             }
         }
         throw new Exception("Error finding advancing move. Invalid faction? " + faction + ", " + position);
+    }
+
+    /// <summary>
+    /// Can something spawn a creature here? currently only illegal if there is already a creature there
+    /// </summary>
+    /// <param name="creaturePrefab"></param>
+    /// <param name="owner"></param>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    internal static bool CanSpawn(GameObject creaturePrefab, Owner owner, MapPosition position)
+    {
+        return !GetCreatureAt(position);
+    }
+
+    internal static List<CreatureStats> GetAllCreatures()
+    {
+        List<CreatureStats> allCreatures = new List<CreatureStats>();
+
+        for (int x = 0; x <= 14; x++) {
+            for (int y = 0; y <= 4; y++) {
+                CreatureStats creature = GetCreatureAt(new MapPosition(x, y));
+                if (creature) {
+                    allCreatures.Add(creature);
+                }
+            }
+        }
+
+        return allCreatures;
     }
 }

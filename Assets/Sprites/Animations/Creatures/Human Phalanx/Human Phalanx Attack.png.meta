@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: fad19915a902bcb459beae03f6718998
+timeCreated: 1425595486
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Phalanx Attack_0
+    21300002: Human Phalanx Attack_1
+    21300004: Human Phalanx Attack_2
+    21300006: Human Phalanx Attack_3
+    21300008: Human Phalanx Attack_4
+    21300010: Human Phalanx Attack_5
+    21300012: Human Phalanx Attack_6
+    21300014: Human Phalanx Attack_7
+    21300016: Human Phalanx Attack_8
+    21300018: Human Phalanx Attack_9
+    21300020: Human Phalanx Attack_10
+    21300022: Human Phalanx Attack_11
+    21300024: Human Phalanx Attack_12
+    21300026: Human Phalanx Attack_13
+    21300028: Human Phalanx Attack_14
+    21300030: Human Phalanx Attack_15
+    21300032: Human Phalanx Attack_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 270
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Phalanx Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3509
+        width: 345
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 3509
+        width: 422
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_2
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 3509
+        width: 475
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 3504
+        width: 478
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2913
+        width: 475
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_5
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 2913
+        width: 478
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_6
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 2911
+        width: 478
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_7
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 2911
+        width: 480
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2317
+        width: 479
+        height: 590
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_9
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 2317
+        width: 480
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_10
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2317
+        width: 478
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_11
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 2317
+        width: 506
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1721
+        width: 521
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_13
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1721
+        width: 481
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_14
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1719
+        width: 452
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_15
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1721
+        width: 396
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Attack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1125
+        width: 351
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: e5f39a403cd062b4f84b2474beb14fb9
+timeCreated: 1425595577
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Human Phalanx Idle_0
+    21300002: Human Phalanx Idle_1
+    21300004: Human Phalanx Idle_2
+    21300006: Human Phalanx Idle_3
+    21300008: Human Phalanx Idle_4
+    21300010: Human Phalanx Idle_5
+    21300012: Human Phalanx Idle_6
+    21300014: Human Phalanx Idle_7
+    21300016: Human Phalanx Idle_8
+    21300018: Human Phalanx Idle_9
+    21300020: Human Phalanx Idle_10
+    21300022: Human Phalanx Idle_11
+    21300024: Human Phalanx Idle_12
+    21300026: Human Phalanx Idle_13
+    21300028: Human Phalanx Idle_14
+    21300030: Human Phalanx Idle_15
+    21300032: Human Phalanx Idle_16
+    21300034: Human Phalanx Idle_17
+    21300036: Human Phalanx Idle_18
+    21300038: Human Phalanx Idle_19
+    21300040: Human Phalanx Idle_20
+    21300042: Human Phalanx Idle_21
+    21300044: Human Phalanx Idle_22
+    21300046: Human Phalanx Idle_23
+    21300048: Human Phalanx Idle_24
+    21300050: Human Phalanx Idle_25
+    21300052: Human Phalanx Idle_26
+    21300054: Human Phalanx Idle_27
+    21300056: Human Phalanx Idle_28
+    21300058: Human Phalanx Idle_29
+    21300060: Human Phalanx Idle_30
+    21300062: Human Phalanx Idle_31
+    21300064: Human Phalanx Idle_32
+    21300066: Human Phalanx Idle_33
+    21300068: Human Phalanx Idle_34
+    21300070: Human Phalanx Idle_35
+    21300072: Human Phalanx Idle_36
+    21300074: Human Phalanx Idle_37
+    21300076: Human Phalanx Idle_38
+    21300078: Human Phalanx Idle_39
+    21300080: Human Phalanx Idle_40
+    21300082: Human Phalanx Idle_41
+    21300084: Human Phalanx Idle_42
+    21300086: Human Phalanx Idle_43
+    21300088: Human Phalanx Idle_44
+    21300090: Human Phalanx Idle_45
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 270
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Human Phalanx Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3501
+        width: 339
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_1
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 3503
+        width: 342
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_2
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 3503
+        width: 340
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 3503
+        width: 340
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 3505
+        width: 340
+        height: 591
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 3505
+        width: 338
+        height: 591
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 3507
+        width: 338
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_7
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 3507
+        width: 341
+        height: 589
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_8
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 3507
+        width: 336
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_9
+      rect:
+        serializedVersion: 2
+        x: 3105
+        y: 3509
+        width: 336
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_10
+      rect:
+        serializedVersion: 2
+        x: 3447
+        y: 3509
+        width: 336
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2904
+        width: 331
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_12
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 2909
+        width: 334
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_13
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2909
+        width: 332
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_14
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 2911
+        width: 336
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 2911
+        width: 332
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_16
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 2913
+        width: 330
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_17
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 2913
+        width: 330
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_18
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 2915
+        width: 330
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_19
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 2915
+        width: 328
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_20
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 2915
+        width: 330
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_21
+      rect:
+        serializedVersion: 2
+        x: 3709
+        y: 2912
+        width: 328
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2323
+        width: 325
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_23
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2323
+        width: 329
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_24
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 2320
+        width: 328
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_25
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 2320
+        width: 330
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_26
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 2321
+        width: 330
+        height: 580
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_27
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 2319
+        width: 330
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_28
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 2319
+        width: 331
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_29
+      rect:
+        serializedVersion: 2
+        x: 2677
+        y: 2317
+        width: 332
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_30
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 2317
+        width: 332
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_31
+      rect:
+        serializedVersion: 2
+        x: 3353
+        y: 2315
+        width: 334
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_32
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 2315
+        width: 337
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1723
+        width: 331
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_34
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1721
+        width: 335
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_35
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1721
+        width: 337
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_36
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1719
+        width: 336
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_37
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1719
+        width: 338
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_38
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1719
+        width: 336
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_39
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 1717
+        width: 338
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_40
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 1717
+        width: 338
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_41
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 1715
+        width: 338
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_42
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 1712
+        width: 338
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_43
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 1713
+        width: 342
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1111
+        width: 339
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Human Phalanx Idle_45
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1111
+        width: 342
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
