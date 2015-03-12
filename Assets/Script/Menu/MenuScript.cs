@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour {
 
         if (id == "StoryMode")
         {
+            OptionsBox.StopMusic = true;
             Application.LoadLevel(1);
         }
         else if (id == "DeckBuilder")
