@@ -1,0 +1,95 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 650M  (ID=0xfd1)
+    Vendor:   NVIDIA
+    VRAM:     1985 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\System.Core.dll (this message is harmless)
+StoryMode
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Platform assembly: C:\Users\Sebsebeleb\Documents\Repos\CrusadeOfMasym\Builds\CrusadeOfMasym_Data\Managed\System.dll (this message is harmless)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.278817 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 422.
+Total: 0.306185 ms (FindLiveObjects: 0.039769 ms CreateObjectMapping: 0.034210 ms MarkObjects: 0.204836 ms  DeleteObjects: 0.013684 ms)
+
+Loaded effect Effects.CreatureEffects.NecromancerEffect and stored it as necromancereffect
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect PhalanxEffect and stored it as phalanxeffect
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect ScoundrelEffect and stored it as scoundreleffect
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect ZombieKingEffect and stored it as zombiekingsteal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect Assets.Script.Data.Effects.Spells.Consecration and stored it as Consecration
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect Effects.DivineLight and stored it as Divine Light
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect Assets.Script.Data.Effects.Spells.March and stored it as March
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect Assets.Script.Data.Effects.Spells.Purge and stored it as Purge
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Loaded effect Assets.Script.Data.Effects.Spells.Sleep and stored it as Sleep
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+IndexOutOfRangeException: Array index is out of range.
+  at CombatManager.GetCreatureAt (.MapPosition pos) [0x00000] in <filename unknown>:0 
+  at ZombieKingEffect.DoSteal () [0x00000] in <filename unknown>:0 
+  at ZombieKingEffect.OnCreatureStartMovement (.CreatureStats creature) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) EventManager/CreatureStartMovement:invoke_void__this___CreatureStats (CreatureStats)
+  at (wrapper delegate-invoke) EventManager/CreatureStartMovement:invoke_void__this___CreatureStats (CreatureStats)
+  at EventManager.InvokeCreatureStartMovement (.CreatureStats creature) [0x00000] in <filename unknown>:0 
+  at CombatManager+<DoCombatPhase>c__Iterator0.MoveNext () [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine_Auto(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+TurnManager:NewTurn()
+UnityEngine.Events.InvokableCall:Invoke(Object[])
+UnityEngine.Events.InvokableCallList:Invoke(Object[])
+UnityEngine.Events.UnityEventBase:Invoke(Object[])
+UnityEngine.Events.UnityEvent:Invoke()
+UnityEngine.UI.Button:Press()
+UnityEngine.UI.Button:OnPointerClick(PointerEventData)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+

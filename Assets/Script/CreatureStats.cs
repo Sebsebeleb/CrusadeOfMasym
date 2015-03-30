@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using Assets.Script;
+using UnityEngine.UI;
 
 public class CreatureStats : MonoBehaviour
 {
@@ -76,13 +77,23 @@ public class CreatureStats : MonoBehaviour
 
     public bool CanMove()
     {
+        if (isImobile) {
+            return false;
+        }
         if (Speed >= 1) {
             return true;
         }
+
+        // If speed is less than 1 we only move every x turn
         if (Speed > 0 && _speedCounter >= 1.0f) {
             return true;
         }
         return false;
+    }
+
+    public void MakeImobile()
+    {
+        isImobile = true;
     }
 
     /// <summary>

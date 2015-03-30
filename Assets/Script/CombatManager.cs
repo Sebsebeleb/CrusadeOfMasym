@@ -1,13 +1,8 @@
-﻿using System;
+﻿using Assets.Script;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Policy;
-using Assets.Script;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public enum CombatZone
 {
@@ -15,6 +10,7 @@ public enum CombatZone
     Neutral,
     Hostile,
 }
+
 public static class CombatManager
 {
     // Note: 15,y does not exist in every second row
@@ -33,7 +29,8 @@ public static class CombatManager
         float x = pos.x;
         float y = pos.y;
 
-        if (pos.y%2 == 0) {
+        if (pos.y % 2 == 0)
+        {
             x -= 0.5f;
         }
 
@@ -62,7 +59,8 @@ public static class CombatManager
         y -= 1.5f;
         y = -y;
 
-        if ((int)y%2 == 0) {
+        if ((int)y % 2 == 0)
+        {
             x += 0.5f;
         }
         return new MapPosition((int)x, (int)y);
@@ -76,43 +74,58 @@ public static class CombatManager
     /// <returns></returns>
     public static CombatZone GetZone(MapPosition pos, Owner faction)
     {
-        switch (faction) {
+        switch (faction)
+        {
             case Owner.ENEMY:
-                if (pos.x >= 14 - 4) {
+                if (pos.x >= 14 - 4)
+                {
                     return CombatZone.Friendly;
                 }
-                else if (pos.x >= 5) {
+                else if (pos.x >= 5)
+                {
                     return CombatZone.Neutral;
                 }
-                else {
+                else
+                {
                     return CombatZone.Hostile;
                 }
             case Owner.PLAYER:
-                if (pos.x >= 14 - 4) {
+                if (pos.x >= 14 - 4)
+                {
                     return CombatZone.Hostile;
                 }
-                else if (pos.x >= 5) {
+                else if (pos.x >= 5)
+                {
                     return CombatZone.Neutral;
                 }
-                else {
+                else
+                {
                     return CombatZone.Friendly;
                 }
         }
         throw new Exception("Something seems to have went wrong with combat zones. Unhandled case of new type?");
     }
 
-    // Spawn a new permanent on the map
+    /// <summary>
+    /// Spawns a creature on the map
+    /// </summary>
+    /// <param name="permanentPrefab">The prefab of a creature to spawn</param>
+    /// <param name="caster">Who is the owner?</param>
+    /// <param name="pos">Where on the map to spawn it</param>
+    /// <returns></returns>
     public static void SpawnPermanent(GameObject permanentPrefab, Owner caster, MapPosition pos)
     {
         GameObject permanent = GameObject.Instantiate(permanentPrefab) as GameObject;
         CreatureStats stats = permanent.GetComponent<CreatureStats>();
 
         // Error checking
-        if (Utils.OutOfBounds(pos)) {
+        if (Utils.OutOfBounds(pos))
+        {
             Debug.LogError("Error, " + stats.name + " was attempted to be spawned in invalid position: " + pos);
         }
 
-        if (permanentMap[pos.x, pos.y] != null) {
+        if (permanentMap[pos.x, pos.y] != null)
+        {
             Debug.LogError("Error, " + stats.name +
                            " was attempted to be spawned on top of another permanentPrefab at: " +
                            pos);
@@ -141,17 +154,18 @@ public static class CombatManager
         Stack<CreatureStats> turnOrder = GetTurnOrder(player);
 
         //Now act on creatures
-        foreach (CreatureStats creature in turnOrder) {
+        foreach (CreatureStats creature in turnOrder)
+        {
             EventManager.InvokeCreatureStartMovement(creature);
 
             ActPermanent(creature);
 
             // Now we wait until animations are finished before continuing
-            while (StateManager.GetAnimationState() == AnimState.Playing) {
+            while (StateManager.GetAnimationState() == AnimState.Playing)
+            {
                 yield return 0;
             }
         }
-
     }
 
     private static Stack<CreatureStats> GetTurnOrder(Owner player)
@@ -160,16 +174,20 @@ public static class CombatManager
 
         // Populate the turnOrder
         // TODO: correct turn order (right -> left -> down for Player, left -> right -> down for enemy
-        for (int y = 4; y >= 0; y--) {
-            for (int x = 0; x < 15; x++) {
-                if (y%2 == 0 && x == 15) {
+        for (int y = 4; y >= 0; y--)
+        {
+            for (int x = 0; x < 15; x++)
+            {
+                if (y % 2 == 0 && x == 15)
+                {
                     //Skip the non-existing tiles
                     continue;
                 }
 
                 // Retrieve the creature in correct order depending on player
                 CreatureStats permanent = null;
-                switch (player) {
+                switch (player)
+                {
                     case Owner.PLAYER:
                         permanent = permanentMap[x, y];
                         break;
@@ -178,7 +196,8 @@ public static class CombatManager
                         break;
                 }
 
-                if (permanent != null && permanent.OwnedBy == player && permanent.CanAct) {
+                if (permanent != null && permanent.OwnedBy == player && permanent.CanAct)
+                {
                     turnOrder.Push(permanent);
                 }
             }
@@ -189,7 +208,8 @@ public static class CombatManager
 
     public static CreatureStats GetCreatureAt(MapPosition pos)
     {
-        if (Utils.OutOfBounds(pos)) {
+        if (Utils.OutOfBounds(pos))
+        {
             return null;
         }
         return permanentMap[pos.x, pos.y];
@@ -198,24 +218,28 @@ public static class CombatManager
     // Does a creature's combat turn
     private static void ActPermanent(CreatureStats permanent)
     {
-        if (CanAttackAnything(permanent)) {
+        if (CanAttackAnything(permanent))
+        {
             Attack(permanent);
             return;
         }
 
 
-        if (permanent.CanMove()) {
+        if (permanent.CanMove())
+        {
             int movesLeft = (int)permanent.Speed;
 
-            for (int i = 0; i < movesLeft; i++) {
-                if (CanAttackAnything(permanent)) {
+            for (int i = 0; i < movesLeft; i++)
+            {
+                if (CanAttackAnything(permanent))
+                {
                     Attack(permanent);
                     return;
                 }
                 CreatureStats inFront = GetCreatureAt(permanent.GetForward());
-                if (!inFront) {
+                if (!inFront)
+                {
                     Move(permanent);
-                    
                 }
             }
         }
@@ -227,7 +251,8 @@ public static class CombatManager
         // Check if there is a target in front of us
         CreatureStats inFront = GetCreatureAt(permanent.GetForward());
 
-        if (inFront && inFront.OwnedBy != permanent.OwnedBy) {
+        if (inFront && inFront.OwnedBy != permanent.OwnedBy)
+        {
             return true;
         }
         return false;
@@ -236,7 +261,7 @@ public static class CombatManager
     private static void Attack(CreatureStats permanent)
     {
         CreatureStats enemy = permanent.GetAttackTarget();
-        enemy.TakeDamage(new Source(creature:permanent), new Damage(permanent.Attack, DamageType.Physical));
+        enemy.TakeDamage(new Source(creature: permanent), new Damage(permanent.Attack, DamageType.Physical));
 
         permanent.GetComponent<Animator>().Play("Attack");
         StateManager.RegisterAnimation(AnimationAttackDuration);
@@ -265,7 +290,7 @@ public static class CombatManager
                 if (!permanent) return;
                 permanent.GetComponent<Animator>().SetBool("IsWalking", false);
             });
-        
+
         StateManager.RegisterAnimation(AnimationMoveDuration);
         //permanent.transform.position = GridToWorld(to);
 
@@ -289,8 +314,10 @@ public static class CombatManager
     public static MapPosition GetAdvancingMovement(MapPosition position, Owner faction)
     {
         // If we are not at the end of the lane, just move forward.
-        if (!Utils.IsAtEndOfLane(position, faction)) {
-            switch (faction) {
+        if (!Utils.IsAtEndOfLane(position, faction))
+        {
+            switch (faction)
+            {
                 case Owner.PLAYER:
                     return position.InDirection(Direction.RIGHT);
                 case Owner.ENEMY:
@@ -298,20 +325,51 @@ public static class CombatManager
             }
         }
 
-        if (position.y <= 2) {
-            switch (faction) {
+        if (position.y <= 2)
+        {
+            switch (faction)
+            {
                 case Owner.PLAYER:
-                    return position.InDirection(Direction.UPLEFT);
+                    if (position.y == 1)
+                        return position.InDirection(Direction.UPRIGHT);
+                    else
+                    {
+                        return position.InDirection(Direction.UPLEFT);
+                    }
+
                 case Owner.ENEMY:
-                    return position.InDirection(Direction.UPRIGHT);
+                    if (position.y == 1)
+                    {
+                        return position.InDirection(Direction.UPLEFT);
+                    }
+                    else
+                    {
+                        return position.InDirection(Direction.UPLEFT);
+                    }
             }
         }
-        else {
-            switch (faction) {
+        else
+        {
+            switch (faction)
+            {
                 case Owner.PLAYER:
-                    return position.InDirection(Direction.DOWNLEFT);
+                    if (position.y == 3)
+                    {
+                        return position.InDirection(Direction.DOWNRIGHT);
+                    }
+                    else
+                    {
+                        return position.InDirection(Direction.DOWNLEFT);
+                    }
                 case Owner.ENEMY:
-                    return position.InDirection(Direction.DOWNRIGHT);
+                    if (position.y == 3)
+                    {
+                        return position.InDirection(Direction.DOWNRIGHT);
+                    }
+                    else
+                    {
+                        return position.InDirection(Direction.DOWNLEFT);
+                    }
             }
         }
         throw new Exception("Error finding advancing move. Invalid faction? " + faction + ", " + position);
@@ -333,10 +391,13 @@ public static class CombatManager
     {
         List<CreatureStats> allCreatures = new List<CreatureStats>();
 
-        for (int x = 0; x <= 14; x++) {
-            for (int y = 0; y <= 4; y++) {
+        for (int x = 0; x <= 14; x++)
+        {
+            for (int y = 0; y <= 4; y++)
+            {
                 CreatureStats creature = GetCreatureAt(new MapPosition(x, y));
-                if (creature) {
+                if (creature)
+                {
                     allCreatures.Add(creature);
                 }
             }

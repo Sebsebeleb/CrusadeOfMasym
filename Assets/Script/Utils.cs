@@ -186,7 +186,7 @@ public class Utils
     public static bool IsAtEndOfLane(MapPosition pos, Owner faction)
     {
         if (faction == Owner.PLAYER) {
-            int add = pos.y%2 == 1 ? 1 : 0;
+            int add = pos.y%2 == 1 ? 2 : 0;
 
             if (pos.x == 13 + add) {
                 return true;
