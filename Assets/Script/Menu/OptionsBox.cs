@@ -10,11 +10,21 @@ public class OptionsBox : MonoBehaviour
     public static bool StopMusic = false;
     public static bool SoundEnabled = true;
 
+    private AudioSource audio;
+    public AudioClip Menu;
+    public AudioClip Story;
+
+    public static bool PlayStoryMusic = false;
+    public static bool PlayMenuMusic = false;
+
+
     private Rect windowRect = new Rect(800, 500, 300, 200);
 
     void Awake() 
     {
         DontDestroyOnLoad(transform.gameObject);
+        audio = GetComponent<AudioSource>();
+        PlayMenuMusic = true;
     }
 
     public void OnButtonCallback(string id)
@@ -54,12 +64,28 @@ public class OptionsBox : MonoBehaviour
 
     void Update()
     {
-        if (!MusicEnabled) GetComponent<AudioSource>().mute = true;
-        else GetComponent<AudioSource>().mute = false;
+        if (PlayMenuMusic)
+        {
+            audio.Stop();
+            audio.pitch = 0.8f;
+            audio.clip = Menu;
+            audio.Play();
+            PlayMenuMusic = false;
+        }
+        else if (PlayStoryMusic)
+        {
+            audio.Stop();
+            audio.pitch = 1f;
+            audio.clip = Story;
+            audio.Play();
+            PlayStoryMusic = false;
+        }
+        if (!MusicEnabled) audio.mute = true;
+        else audio.mute = false;
         if (Input.GetKeyDown(KeyCode.Escape)) ShowGUI = !ShowGUI;
         if (StopMusic)
         {
-            GetComponent<AudioSource>().Stop();
+            audio.Stop();
             StopMusic = false;
         }
     }
