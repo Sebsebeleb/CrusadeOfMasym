@@ -9,6 +9,7 @@ namespace Assets.Script
     {
         Physical,
         Spell,
+        True, // Special damage type from special effects, like fury dealing 2 damage to owner each turn. This damage cannot be prevented
     }
 
     /// <summary>

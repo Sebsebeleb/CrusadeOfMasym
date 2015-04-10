@@ -142,6 +142,17 @@ public class Utils
         return false;
     }
 
+    public static bool IsLongLane(int y)
+    {
+
+        return (y%2 != 0);
+    }
+
+    public static bool IsLongLane(MapPosition position)
+    {
+        return IsLongLane(position.y);
+    }
+
     //Util map functions
     public static List<MapPosition> GetAdjacent(MapPosition position)
     {

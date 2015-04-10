@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace Effects
 {
@@ -10,7 +9,8 @@ namespace Effects
         {
             CreatureStats creature = CombatManager.GetCreatureAt(target);
 
-            if (creature != null) {
+            if (creature != null)
+            {
                 creature.Heal(5);
             }
         }

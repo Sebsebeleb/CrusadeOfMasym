@@ -52,6 +52,7 @@ public class CardBehaviour : MonoBehaviour
         NameText.text = Card.Name;
         DescriptionText.text = Card.Description;
         TypeText.text = Card.cardType.ToString();
+        CardArt.sprite = cardData.CardImage;
 
     }
 

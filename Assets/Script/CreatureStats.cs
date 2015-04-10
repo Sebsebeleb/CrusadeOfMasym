@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using Assets.Script;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
-using Assets.Script;
-using UnityEngine.UI;
 
 public class CreatureStats : MonoBehaviour
 {
@@ -19,6 +18,9 @@ public class CreatureStats : MonoBehaviour
     public int Defense;
     public int StartMaxHealth;
     public int StartSpeed;
+
+    // Where can we attack?
+    private List<Direction> attackDirections = new List<Direction>();
 
     //Can the creature act during combat phases?
     private int _canAct;
@@ -48,7 +50,8 @@ public class CreatureStats : MonoBehaviour
         set
         {
             _hp = Math.Min(value, _maxHP);
-            if (_hp <= 0) {
+            if (_hp <= 0)
+            {
                 Die();
             }
         }
@@ -59,7 +62,8 @@ public class CreatureStats : MonoBehaviour
     {
         get
         {
-            if (_speed >= 1.0) {
+            if (_speed >= 1.0)
+            {
                 return Mathf.Floor(_speed);
             }
 
@@ -75,17 +79,34 @@ public class CreatureStats : MonoBehaviour
         Speed = StartSpeed;
     }
 
+    // Called right after initalizing stats
+    public void OnSpawned()
+    {
+        switch (OwnedBy)
+        {
+            case Owner.PLAYER:
+                attackDirections.Add(Direction.RIGHT);
+                break;
+            case Owner.ENEMY:
+                attackDirections.Add(Direction.LEFT);
+                break;
+        }
+    }
+
     public bool CanMove()
     {
-        if (isImobile) {
+        if (isImobile)
+        {
             return false;
         }
-        if (Speed >= 1) {
+        if (Speed >= 1)
+        {
             return true;
         }
 
         // If speed is less than 1 we only move every x turn
-        if (Speed > 0 && _speedCounter >= 1.0f) {
+        if (Speed > 0 && _speedCounter >= 1.0f)
+        {
             return true;
         }
         return false;
@@ -96,16 +117,28 @@ public class CreatureStats : MonoBehaviour
         isImobile = true;
     }
 
+    public void AddAttackDirection(Direction dir)
+    {
+        if (attackDirections.Contains(dir))
+        {
+            return;
+        }
+
+        attackDirections.Add(dir);
+    }
+
     /// <summary>
     /// Remove the ability to act or restore it.
     /// </summary>
     /// <param name="restore">true for restore, otherwise remove</param>
     public void SetCanAct(bool restore)
     {
-        if (restore) {
+        if (restore)
+        {
             _canAct++;
         }
-        else {
+        else
+        {
             _canAct--;
         }
     }
@@ -124,7 +157,7 @@ public class CreatureStats : MonoBehaviour
         if (damage.damageType == DamageType.Physical)
         {
             finalDamage -= Defense;
-            
+
         }
         Health -= finalDamage;
 
@@ -146,6 +179,17 @@ public class CreatureStats : MonoBehaviour
     // TODO: Possibility of multiple targets, should return the most prioritised target
     public CreatureStats GetAttackTarget()
     {
+        attackDirections.Sort();
+        foreach (Direction dir in attackDirections)
+        {
+            CreatureStats possibleTarget = CombatManager.GetCreatureAt(GridPosition.InDirection(dir));
+            if (possibleTarget)
+            {
+                return possibleTarget;
+            }
+        }
+
+        // This probably should never happen
         return CombatManager.GetCreatureAt(GetForward());
     }
 

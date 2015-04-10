@@ -145,6 +145,8 @@ public static class CombatManager
 
         permanentMap[pos.x, pos.y] = stats;
 
+        stats.OnSpawned();
+
 
         EventManager.InvokeCreatureSpawned(stats, pos);
     }
@@ -261,10 +263,13 @@ public static class CombatManager
     private static void Attack(CreatureStats permanent)
     {
         CreatureStats enemy = permanent.GetAttackTarget();
-        enemy.TakeDamage(new Source(creature: permanent), new Damage(permanent.Attack, DamageType.Physical));
+        Damage damage = new Damage(permanent.Attack, DamageType.Physical);
+        enemy.TakeDamage(new Source(creature: permanent), damage);
 
         permanent.GetComponent<Animator>().Play("Attack");
         StateManager.RegisterAnimation(AnimationAttackDuration);
+
+        EventManager.InvokeCreatureAttack(permanent, enemy, damage);
     }
 
     /// <summary>
