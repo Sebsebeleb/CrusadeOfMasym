@@ -336,21 +336,21 @@ public static class CombatManager
             switch (faction)
             {
                 case Owner.PLAYER:
-                    if (position.y == 1)
-                        return position.InDirection(Direction.UPRIGHT);
+                    if (position.y != 1)
+                        return position.InDirection(Direction.DOWNRIGHT);
                     else
                     {
-                        return position.InDirection(Direction.UPLEFT);
+                        return position.InDirection(Direction.DOWNLEFT);
                     }
 
                 case Owner.ENEMY:
-                    if (position.y == 1)
+                    if (position.y != 1)
                     {
-                        return position.InDirection(Direction.UPLEFT);
+                        return position.InDirection(Direction.DOWNLEFT);
                     }
                     else
                     {
-                        return position.InDirection(Direction.UPLEFT);
+                        return position.InDirection(Direction.DOWNRIGHT);
                     }
             }
         }
@@ -361,20 +361,20 @@ public static class CombatManager
                 case Owner.PLAYER:
                     if (position.y == 3)
                     {
-                        return position.InDirection(Direction.DOWNRIGHT);
+                        return position.InDirection(Direction.UPLEFT);
                     }
                     else
                     {
-                        return position.InDirection(Direction.DOWNLEFT);
+                        return position.InDirection(Direction.UPRIGHT);
                     }
                 case Owner.ENEMY:
                     if (position.y == 3)
                     {
-                        return position.InDirection(Direction.DOWNRIGHT);
+                        return position.InDirection(Direction.UPRIGHT);
                     }
                     else
                     {
-                        return position.InDirection(Direction.DOWNLEFT);
+                        return position.InDirection(Direction.UPLEFT);
                     }
             }
         }

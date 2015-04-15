@@ -88,13 +88,13 @@ public class MapPosition
 
         switch (Dir)
         {
-            case Direction.UPLEFT:
+            case Direction.DOWNLEFT:
                 if (rowIsOdd)
                 {
                     return new MapPosition(x - 1, y + 1);
                 }
                 return new MapPosition(x, y + 1);
-            case Direction.UPRIGHT:
+            case Direction.DOWNRIGHT:
                 if (rowIsOdd)
                 {
                     return new MapPosition(x, y + 1);
@@ -104,13 +104,13 @@ public class MapPosition
                 return new MapPosition(x - 1, y);
             case Direction.RIGHT:
                 return new MapPosition(x + 1, y);
-            case Direction.DOWNLEFT:
+            case Direction.UPLEFT:
                 if (rowIsOdd)
                 {
                     return new MapPosition(x - 1, y - 1);
                 }
                 return new MapPosition(x, y - 1);
-            case Direction.DOWNRIGHT:
+            case Direction.UPRIGHT:
                 if (rowIsOdd)
                 {
                     return new MapPosition(x, y - 1);
@@ -212,7 +212,7 @@ public class Utils
     {
         if (faction == Owner.PLAYER)
         {
-            int add = pos.y % 2 == 1 ? 2 : 0;
+            int add = Utils.IsLongLane(pos) ? 1 : 0;
 
             if (pos.x == 13 + add)
             {
