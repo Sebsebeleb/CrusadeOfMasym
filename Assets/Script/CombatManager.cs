@@ -29,14 +29,14 @@ public static class CombatManager
         float x = pos.x;
         float y = pos.y;
 
-        if (pos.y % 2 == 0)
+        if (Utils.IsLongLane(pos))
         {
             x -= 0.5f;
         }
 
         y = -y;
 
-        x -= 6;
+        x -= 6.5f;
         y += 1.5f;
 
         //permanent.transform.position = new Vector3(x, y);
@@ -55,11 +55,11 @@ public static class CombatManager
         float x = pos.x;
         float y = pos.y;
 
-        x += 6f;
-        y -= 1.5f;
+        x += 7.0f;
+        y -= 2.0f;
         y = -y;
 
-        if ((int)y % 2 == 0)
+        if ((int)y % 2 == 1)
         {
             x += 0.5f;
         }
