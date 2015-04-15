@@ -251,9 +251,9 @@ public static class CombatManager
     private static bool CanAttackAnything(CreatureStats permanent)
     {
         // Check if there is a target in front of us
-        CreatureStats inFront = GetCreatureAt(permanent.GetForward());
+        CreatureStats target = permanent.GetAttackTarget();
 
-        if (inFront && inFront.OwnedBy != permanent.OwnedBy)
+        if (target && target.OwnedBy != permanent.OwnedBy)
         {
             return true;
         }
@@ -305,10 +305,11 @@ public static class CombatManager
     /// <summary>
     /// Removes a permanent from the game. Destroys the gameobject and performs other cleanup actions and event handling
     /// </summary>
-    /// <param name="permanent"></param>
-    public static void RemovePermanent(CreatureStats permanent)
+    /// <param name="permanent">The permanent that was destroyed</param>
+    /// <param name="killSource">The source that caused the permanent to be destroyed</param>
+    public static void RemovePermanent(CreatureStats permanent, Source killSource = null)
     {
-        EventManager.InvokePermanentDestroyed(permanent);
+        EventManager.InvokePermanentDestroyed(permanent, killSource);
 
         GameObject.Destroy(permanent.gameObject);
     }
@@ -383,9 +384,9 @@ public static class CombatManager
     /// <summary>
     /// Can something spawn a creature here? currently only illegal if there is already a creature there
     /// </summary>
-    /// <param name="creaturePrefab"></param>
-    /// <param name="owner"></param>
-    /// <param name="position"></param>
+    /// <param name="creaturePrefab">The creature to spawn</param>
+    /// <param name="owner">Who's creature is it</param>
+    /// <param name="position">Where to spawn it</param>
     /// <returns></returns>
     internal static bool CanSpawn(GameObject creaturePrefab, Owner owner, MapPosition position)
     {

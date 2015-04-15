@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: b9eab7be71e64bd4aa822629771ae5f3
+timeCreated: 1428768763
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Commanderattacking_0
+    21300002: Commanderattacking_1
+    21300004: Commanderattacking_2
+    21300006: Commanderattacking_3
+    21300008: Commanderattacking_4
+    21300010: Commanderattacking_5
+    21300012: Commanderattacking_6
+    21300014: Commanderattacking_7
+    21300016: Commanderattacking_8
+    21300018: Commanderattacking_9
+    21300020: Commanderattacking_10
+    21300022: Commanderattacking_11
+    21300024: Commanderattacking_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 180
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Commanderattacking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 723
+        width: 186
+        height: 301
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 723
+        width: 195
+        height: 301
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 723
+        width: 192
+        height: 301
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_3
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 723
+        width: 200
+        height: 301
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 723
+        width: 200
+        height: 301
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 169
+        height: 310
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 393
+        width: 157
+        height: 321
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 383
+        width: 138
+        height: 330
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_8
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 394
+        width: 138
+        height: 320
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_9
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 412
+        width: 167
+        height: 302
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_10
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 412
+        width: 186
+        height: 302
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 192
+        height: 302
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Commanderattacking_12
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 72
+        width: 191
+        height: 302
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

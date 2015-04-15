@@ -43,7 +43,7 @@ MonoBehaviour:
   Description: Friendly creatures in radius 1 around target tile are healed for 3
   CardImage: {fileID: 21300000, guid: 5545a4ee68ae4be40b9d53c47c0b1116, type: 3}
   TypeOfCard: 1
-  TargetingLevel: 0
+  TargetingLevel: 1
   SpellAnimationName: HolyLight
   AssociatedCardEffect: HolyLight
 --- !u!1001 &100100000

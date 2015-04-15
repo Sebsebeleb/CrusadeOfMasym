@@ -2,7 +2,7 @@
 
 namespace Effects
 {
-    [NamedEffect("Divine Light")]
+    [NamedEffect("DivineLight")]
     public class DivineLight : ISpellEffect
     {
         public void OnUseCard(Owner caster, MapPosition target)

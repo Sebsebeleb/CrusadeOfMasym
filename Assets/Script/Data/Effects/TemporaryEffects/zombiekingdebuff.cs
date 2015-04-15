@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ZombieKingDebuff : IEffect
+public class ZombieKingDebuff : TemporaryEffect
 {
     private CreatureStats owner;
     private bool stoleAttack;
@@ -19,33 +15,41 @@ public class ZombieKingDebuff : IEffect
         DurationLeft = Duration;
     }
 
-    public void Removed()
+    public override void Removed()
     {
-        if (stoleAttack) {
+        if (stoleAttack)
+        {
             owner.Attack++;
         }
         owner.MaxHealth++;
-        owner.Health++;
+        owner.SetHealth(owner.GetHealth() + 1);
     }
 
-    public void SetOwner(GameObject newOwner)
+    public override void SetOwner(GameObject newOwner)
     {
         owner = newOwner.GetComponent<CreatureStats>();
-        if (stoleAttack) {
+        if (stoleAttack)
+        {
             owner.Attack--;
         }
-        owner.Health--;
+        owner.SetHealth(owner.GetHealth() - 1);
         owner.MaxHealth--;
     }
 
-    public void InitCallbacks()
+    protected override void UnregisterCallbacks()
+    {
+        EventManager.OnCreatureStartMovement -= OnCreatureStartMovement;
+    }
+
+    public override void InitCallbacks()
     {
         EventManager.OnCreatureStartMovement += OnCreatureStartMovement;
     }
 
     private void OnCreatureStartMovement(CreatureStats creature)
     {
-        if (creature == owner) {
+        if (creature == owner)
+        {
             DoTurn();
         }
     }
@@ -53,7 +57,8 @@ public class ZombieKingDebuff : IEffect
     private void DoTurn()
     {
         DurationLeft--;
-        if (DurationLeft <= 0) {
+        if (DurationLeft <= 0)
+        {
             owner.GetComponent<EffectHolder>().RemoveEffect(this);
         }
     }

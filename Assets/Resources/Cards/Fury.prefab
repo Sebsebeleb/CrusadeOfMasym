@@ -44,7 +44,7 @@ MonoBehaviour:
     and deals + 3 damage, lasts 3 turns.
   CardImage: {fileID: 21300000, guid: 01dc8af1f2fa7c34899ccf1509ce9f65, type: 3}
   TypeOfCard: 1
-  TargetingLevel: 0
+  TargetingLevel: 1
   SpellAnimationName: Fury
   AssociatedCardEffect: Fury
 --- !u!1001 &100100000

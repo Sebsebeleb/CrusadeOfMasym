@@ -12,7 +12,7 @@ public static class EventManager
 
     public delegate void PermanentMovedHandler(CreatureStats mover, MapPosition from, MapPosition to);
 
-    public delegate void PermanentDestroyedHandler(CreatureStats creature);
+    public delegate void PermanentDestroyedHandler(CreatureStats creature, Source killSource);
 
     public delegate void CreatureAttackedHandler(CreatureStats creature, CreatureStats source);
 
@@ -31,10 +31,10 @@ public static class EventManager
         if (handler != null) handler(mover, from, to);
     }
 
-    public static void InvokePermanentDestroyed(CreatureStats creature)
+    public static void InvokePermanentDestroyed(CreatureStats creature, Source killSource)
     {
         var handler = OnPermanentDestroyed;
-        if (handler != null) handler(creature);
+        if (handler != null) handler(creature, killSource);
     }
 
     public static void InvokeCreatureAttacked(CreatureStats creature, CreatureStats source)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Pretty much the opposite of the debuff. Gives +1 max health and health, and +1 attack if it was able to steal it.
@@ -29,10 +25,11 @@ public class ZombieKingBuff : IEffect
 
     public void Removed()
     {
-        if (stoleAttack) {
+        if (stoleAttack)
+        {
             owner.Attack--;
         }
-        owner.Health--;
+        owner.SetHealth(owner.GetHealth() - 1);
         owner.MaxHealth--;
 
         UnregisterCallbacks();
@@ -41,10 +38,11 @@ public class ZombieKingBuff : IEffect
     public void SetOwner(GameObject newOwner)
     {
         owner = newOwner.GetComponent<CreatureStats>();
-        if (stoleAttack) {
+        if (stoleAttack)
+        {
             owner.Attack++;
         }
-        owner.Health++;
+        owner.SetHealth(owner.GetHealth() + 1);
         owner.MaxHealth++;
     }
 
@@ -60,7 +58,8 @@ public class ZombieKingBuff : IEffect
 
     private void OnCreatureStartMovement(CreatureStats creature)
     {
-        if (creature == owner) {
+        if (creature == owner)
+        {
             DoTurn();
         }
     }
@@ -68,7 +67,8 @@ public class ZombieKingBuff : IEffect
     private void DoTurn()
     {
         DurationLeft--;
-        if (DurationLeft <= 0) {
+        if (DurationLeft <= 0)
+        {
             owner.GetComponent<EffectHolder>().RemoveEffect(this);
         }
     }

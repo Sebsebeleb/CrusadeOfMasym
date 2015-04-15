@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e5f39a403cd062b4f84b2474beb14fb9
-timeCreated: 1425595577
+timeCreated: 1428770107
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -89,7 +89,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 270
+  spritePixelsToUnits: 350
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -102,7 +102,7 @@ TextureImporter:
         y: 3501
         width: 339
         height: 595
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_1
@@ -112,7 +112,7 @@ TextureImporter:
         y: 3503
         width: 342
         height: 593
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_2
@@ -122,7 +122,7 @@ TextureImporter:
         y: 3503
         width: 340
         height: 593
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_3
@@ -132,7 +132,7 @@ TextureImporter:
         y: 3503
         width: 340
         height: 593
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_4
@@ -142,8 +142,8 @@ TextureImporter:
         y: 3505
         width: 340
         height: 591
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_5
       rect:
@@ -152,8 +152,8 @@ TextureImporter:
         y: 3505
         width: 338
         height: 591
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_6
       rect:
@@ -162,7 +162,7 @@ TextureImporter:
         y: 3507
         width: 338
         height: 589
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_7
@@ -172,8 +172,8 @@ TextureImporter:
         y: 3507
         width: 341
         height: 589
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_8
       rect:
@@ -182,7 +182,7 @@ TextureImporter:
         y: 3507
         width: 336
         height: 589
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_9
@@ -192,7 +192,7 @@ TextureImporter:
         y: 3509
         width: 336
         height: 587
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_10
@@ -202,7 +202,7 @@ TextureImporter:
         y: 3509
         width: 336
         height: 587
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_11
@@ -212,7 +212,7 @@ TextureImporter:
         y: 2904
         width: 331
         height: 593
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_12
@@ -222,7 +222,7 @@ TextureImporter:
         y: 2909
         width: 334
         height: 587
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_13
@@ -232,7 +232,7 @@ TextureImporter:
         y: 2909
         width: 332
         height: 587
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_14
@@ -242,7 +242,7 @@ TextureImporter:
         y: 2911
         width: 336
         height: 584
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_15
@@ -252,7 +252,7 @@ TextureImporter:
         y: 2911
         width: 332
         height: 584
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_16
@@ -262,7 +262,7 @@ TextureImporter:
         y: 2913
         width: 330
         height: 583
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_17
@@ -272,7 +272,7 @@ TextureImporter:
         y: 2913
         width: 330
         height: 583
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_18
@@ -282,7 +282,7 @@ TextureImporter:
         y: 2915
         width: 330
         height: 581
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_19
@@ -292,7 +292,7 @@ TextureImporter:
         y: 2915
         width: 328
         height: 580
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_20
@@ -302,7 +302,7 @@ TextureImporter:
         y: 2915
         width: 330
         height: 581
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_21
@@ -312,7 +312,7 @@ TextureImporter:
         y: 2912
         width: 328
         height: 585
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_22
@@ -322,7 +322,7 @@ TextureImporter:
         y: 2323
         width: 325
         height: 578
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_23
@@ -332,7 +332,7 @@ TextureImporter:
         y: 2323
         width: 329
         height: 578
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_24
@@ -342,7 +342,7 @@ TextureImporter:
         y: 2320
         width: 328
         height: 581
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_25
@@ -352,7 +352,7 @@ TextureImporter:
         y: 2320
         width: 330
         height: 584
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_26
@@ -362,8 +362,8 @@ TextureImporter:
         y: 2321
         width: 330
         height: 580
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_27
       rect:
@@ -372,7 +372,7 @@ TextureImporter:
         y: 2319
         width: 330
         height: 585
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_28
@@ -382,7 +382,7 @@ TextureImporter:
         y: 2319
         width: 331
         height: 585
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_29
@@ -392,7 +392,7 @@ TextureImporter:
         y: 2317
         width: 332
         height: 584
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_30
@@ -402,7 +402,7 @@ TextureImporter:
         y: 2317
         width: 332
         height: 584
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_31
@@ -412,7 +412,7 @@ TextureImporter:
         y: 2315
         width: 334
         height: 586
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_32
@@ -422,7 +422,7 @@ TextureImporter:
         y: 2315
         width: 337
         height: 589
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_33
@@ -432,7 +432,7 @@ TextureImporter:
         y: 1723
         width: 331
         height: 589
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_34
@@ -442,7 +442,7 @@ TextureImporter:
         y: 1721
         width: 335
         height: 588
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_35
@@ -452,7 +452,7 @@ TextureImporter:
         y: 1721
         width: 337
         height: 588
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_36
@@ -462,7 +462,7 @@ TextureImporter:
         y: 1719
         width: 336
         height: 590
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_37
@@ -472,7 +472,7 @@ TextureImporter:
         y: 1719
         width: 338
         height: 590
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_38
@@ -482,7 +482,7 @@ TextureImporter:
         y: 1719
         width: 336
         height: 590
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_39
@@ -492,7 +492,7 @@ TextureImporter:
         y: 1717
         width: 338
         height: 595
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_40
@@ -502,7 +502,7 @@ TextureImporter:
         y: 1717
         width: 338
         height: 592
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_41
@@ -512,7 +512,7 @@ TextureImporter:
         y: 1715
         width: 338
         height: 597
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_42
@@ -522,7 +522,7 @@ TextureImporter:
         y: 1712
         width: 338
         height: 597
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_43
@@ -532,7 +532,7 @@ TextureImporter:
         y: 1713
         width: 342
         height: 596
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_44
@@ -542,7 +542,7 @@ TextureImporter:
         y: 1111
         width: 339
         height: 596
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Human Phalanx Idle_45
@@ -552,7 +552,7 @@ TextureImporter:
         y: 1111
         width: 342
         height: 596
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

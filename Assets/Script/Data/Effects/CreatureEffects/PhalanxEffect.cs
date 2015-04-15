@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Assets.Script;
 using UnityEngine;
 
 [NamedEffect("phalanxeffect")]
@@ -22,7 +19,7 @@ public class PhalanxEffect : IEffect
     public void Removed()
     {
         // Remove the bonuses granted by the trait
-        ownerStats.Attack -= currentBonus*2;
+        ownerStats.Attack -= currentBonus * 2;
         ownerStats.Defense -= currentBonus;
     }
 
@@ -37,7 +34,7 @@ public class PhalanxEffect : IEffect
         CalculateBonus();
     }
 
-    private void OnPermanentDestroyed(CreatureStats permanent)
+    private void OnPermanentDestroyed(CreatureStats permanent, Source killSource)
     {
         CalculateBonus();
     }
@@ -49,18 +46,20 @@ public class PhalanxEffect : IEffect
 
     private void CalculateBonus()
     {
-        int numadjacent= 0;
+        int numadjacent = 0;
         // Check for adjacent allies
-        foreach (MapPosition position in Utils.GetAdjacent(ownerStats.GridPosition)) {
+        foreach (MapPosition position in Utils.GetAdjacent(ownerStats.GridPosition))
+        {
             CreatureStats adjCreature = CombatManager.GetCreatureAt(position);
-            if (adjCreature != null && adjCreature.OwnedBy == ownerStats.OwnedBy) {
+            if (adjCreature != null && adjCreature.OwnedBy == ownerStats.OwnedBy)
+            {
                 numadjacent++;
             }
         }
 
-        int diff =  numadjacent - currentBonus;
+        int diff = numadjacent - currentBonus;
 
-        ownerStats.Attack += diff*2;
+        ownerStats.Attack += diff * 2;
         ownerStats.Defense += diff;
 
         currentBonus = numadjacent;

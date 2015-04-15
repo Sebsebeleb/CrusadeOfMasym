@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Assets.Script;
+﻿using Assets.Script;
 using UnityEngine;
 
 namespace Effects.CreatureEffects
@@ -13,7 +12,7 @@ namespace Effects.CreatureEffects
         {
         }
 
-        public void SetOwner(UnityEngine.GameObject owner)
+        public void SetOwner(GameObject owner)
         {
             ownerStats = owner.GetComponent<CreatureStats>();
         }
@@ -22,7 +21,7 @@ namespace Effects.CreatureEffects
         {
             EventManager.OnCreatureAttack += HandleAttack;
         }
-
+        
         private void HandleAttack(CreatureStats attacker, CreatureStats target, Damage damagedone)
         {
 
@@ -40,11 +39,11 @@ namespace Effects.CreatureEffects
                 directionUp = Direction.UPLEFT;
             }
 
-            CreatureStats EnemyUp = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionUp));
-            CreatureStats EnemyDown = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionDown));
+            CreatureStats enemyUp = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionUp));
+            CreatureStats enemyDown = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionDown));
 
-            EnemyDown.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
-            EnemyUp.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
+            enemyDown.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
+            enemyUp.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
         }
     }
 }

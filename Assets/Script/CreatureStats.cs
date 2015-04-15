@@ -44,17 +44,18 @@ public class CreatureStats : MonoBehaviour
         }
     }
 
-    public int Health
+    public void SetHealth(int value, Source damageSource = null)
     {
-        get { return _hp; }
-        set
+        _hp = Math.Min(value, _maxHP);
+        if (_hp <= 0)
         {
-            _hp = Math.Min(value, _maxHP);
-            if (_hp <= 0)
-            {
-                Die();
-            }
+            Die(damageSource);
         }
+    }
+
+    public int GetHealth()
+    {
+        return _hp;
     }
 
     // If speed is higher than 1.0, it is always rounded down.
@@ -159,14 +160,14 @@ public class CreatureStats : MonoBehaviour
             finalDamage -= Defense;
 
         }
-        Health -= finalDamage;
+        SetHealth(GetHealth() - finalDamage, damageSource);
 
         return finalDamage;
     }
 
     public void Heal(int healAmount)
     {
-        Health += healAmount;
+        SetHealth(GetHealth() + healAmount);
     }
 
     // Returns a MapPosition that represents directly front of this creature
@@ -193,8 +194,8 @@ public class CreatureStats : MonoBehaviour
         return CombatManager.GetCreatureAt(GetForward());
     }
 
-    public void Die()
+    public void Die(Source killSource = null)
     {
-        CombatManager.RemovePermanent(this);
+        CombatManager.RemovePermanent(this, killSource);
     }
 }

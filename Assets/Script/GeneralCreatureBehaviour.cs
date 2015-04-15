@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using Assets.Script;
+using UnityEngine;
 
 public class GeneralCreatureBehaviour : MonoBehaviour
 {
@@ -20,9 +20,10 @@ public class GeneralCreatureBehaviour : MonoBehaviour
     {
     }
 
-    public void OnPermanentDestroyed(CreatureStats deadCreature)
+    public void OnPermanentDestroyed(CreatureStats deadCreature, Source killSource)
     {
-        if (deadCreature == stats) {
+        if (deadCreature == stats)
+        {
             LoseGame();
         }
     }
@@ -30,7 +31,8 @@ public class GeneralCreatureBehaviour : MonoBehaviour
     private void LoseGame()
     {
         Owner winner = Owner.PLAYER;
-        if (stats.OwnedBy == Owner.PLAYER) {
+        if (stats.OwnedBy == Owner.PLAYER)
+        {
             winner = Owner.ENEMY;
         }
         GM.GetComponent<GameManager>().EndGame(winner);

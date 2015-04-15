@@ -43,7 +43,7 @@ MonoBehaviour:
   Description: Gives all your creatures +1 speed and +1/0/0 for 3 turns
   CardImage: {fileID: 21300000, guid: d5290a531d21e214a9559cf46d207e12, type: 3}
   TypeOfCard: 1
-  TargetingLevel: 0
+  TargetingLevel: 3
   SpellAnimationName: March
   AssociatedCardEffect: March
 --- !u!1001 &100100000

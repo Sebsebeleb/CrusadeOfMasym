@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Assets.Script;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Effects.CreatureEffects
@@ -30,7 +28,8 @@ namespace Effects.CreatureEffects
 
         private void HandleSpawning()
         {
-            foreach (MapPosition position in spawnPositions) {
+            foreach (MapPosition position in spawnPositions)
+            {
                 SpawnZombie(position);
             }
             spawnPositions.Clear();
@@ -40,17 +39,19 @@ namespace Effects.CreatureEffects
         {
             GameObject zombiePrefab = DataLibrary.GetCreatureFromName("Zombie Husk");
 
-            if (CombatManager.CanSpawn(zombiePrefab, TurnManager.CurrentPlayer, position)) {
+            if (CombatManager.CanSpawn(zombiePrefab, TurnManager.CurrentPlayer, position))
+            {
                 CombatManager.SpawnPermanent(zombiePrefab, TurnManager.CurrentPlayer, position);
             }
         }
 
-        private void HandleDeath(CreatureStats creature)
+        private void HandleDeath(CreatureStats creature, Source killSource)
         {
             bool isAdjacent = Utils.IsAdjacent(ownerStats.GridPosition, creature.GridPosition);
             // If the creature is adjacent, and it's name doesnt start with zombie
             if (Utils.IsAdjacent(ownerStats.GridPosition, creature.GridPosition)
-                && !creature.name.ToLower().StartsWith("zombie")) {
+                && !creature.name.ToLower().StartsWith("zombie"))
+            {
                 RegisterDeath(creature.GridPosition);
             }
         }
