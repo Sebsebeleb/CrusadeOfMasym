@@ -7,9 +7,9 @@ public class ButtonScript : MonoBehaviour
     public MenuScript menu;
     public OptionsBox options;
 
-    void OnMouseUpAsButton()
+    /*void OnMouseUpAsButton()
     {
         menu.OnButtonCallback(ButtonID);
         options.OnButtonCallback(ButtonID);
-    }
+    }*/
 }

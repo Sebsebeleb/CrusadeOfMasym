@@ -5,7 +5,7 @@ public class OptionsBox : MonoBehaviour
 {
     public float musicSliderValue = 0.5f;
     public static float soundSliderValue = 0.5f;
-    public bool ShowGUI = false;
+    public static bool ShowGUI = false;
     private bool MusicEnabled = true;
     public static bool StopMusic = false;
     public static bool SoundEnabled = true;
@@ -27,13 +27,13 @@ public class OptionsBox : MonoBehaviour
         PlayMenuMusic = true;
     }
 
-    public void OnButtonCallback(string id)
+    /*public void OnButtonCallback(string id)
     {
         if (id == "Options")
         {
             ShowGUI = !ShowGUI;
         }
-    }
+    }*/
 
     void OnGUI()
     {
