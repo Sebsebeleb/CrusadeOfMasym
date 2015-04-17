@@ -41,9 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardName: Sleep
   Description: Removes all effects from target creature
-  CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
+  CardImage: {fileID: 21300000, guid: b1232e2ed380c9649b7cbf17091e063d, type: 3}
   TypeOfCard: 1
-  TargetingLevel: 0
+  TargetingLevel: 1
   SpellAnimationName: Sleep
   AssociatedCardEffect: Sleep
 --- !u!1001 &100100000

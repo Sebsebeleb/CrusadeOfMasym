@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace Effects
 {
-    [NamedEffect("Divine Light")]
+    [NamedEffect("DivineLight")]
     public class DivineLight : ISpellEffect
     {
         public void OnUseCard(Owner caster, MapPosition target)
         {
             CreatureStats creature = CombatManager.GetCreatureAt(target);
 
-            if (creature != null) {
+            if (creature != null)
+            {
                 creature.Heal(5);
             }
         }

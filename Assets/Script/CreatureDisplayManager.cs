@@ -9,8 +9,7 @@ public class CreatureDisplayManager : MonoBehaviour
 
     public GameObject StatDisplayPrefab;
 
-    // Use this for initialization
-    private void Start()
+    private void Awake()
     {
         EventManager.OnCreatureSpawned += onCreatureSpawned;
     }

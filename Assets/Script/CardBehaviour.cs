@@ -36,6 +36,7 @@ public class CardBehaviour : MonoBehaviour
 
     public void SetCard(CardData cardData)
     {
+        Debug.Log(cardData);
         switch (cardData.TypeOfCard) {
             case CardType.Creature:
                 Card = new CreatureCard(cardData.AssociatedCardEffect, cardData.Description);
@@ -52,6 +53,7 @@ public class CardBehaviour : MonoBehaviour
         NameText.text = Card.Name;
         DescriptionText.text = Card.Description;
         TypeText.text = Card.cardType.ToString();
+        CardArt.sprite = cardData.CardImage;
 
     }
 

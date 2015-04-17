@@ -1,5 +1,4 @@
 using System;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public enum CardType
@@ -23,6 +22,7 @@ public abstract class BaseCard
     public string Description;
     public string Name;
     public string AnimationName;
+    public Sprite CardArt;
 
     public TargetType Targeting = TargetType.Single;
 
@@ -30,13 +30,13 @@ public abstract class BaseCard
 
     // Called when a card is succesfully used at a target tile
     abstract public void UseCard(Owner caster, MapPosition target);
-    
+
 }
 
 public class CreatureCard : BaseCard
 {
     public new int TargetingLevel = 1;
-    
+
 
     public CreatureCard(String name, String description)
     {

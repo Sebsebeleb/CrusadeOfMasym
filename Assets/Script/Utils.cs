@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public enum Direction
@@ -33,12 +32,14 @@ public class MapPosition
     public static bool operator ==(MapPosition a, MapPosition b)
     {
         // If both are null, or both are same instance, return true.
-        if (ReferenceEquals(a, b)) {
+        if (ReferenceEquals(a, b))
+        {
             return true;
         }
 
         // If one is null, but not both, return false.
-        if (((object) a == null) || ((object) b == null)) {
+        if (((object)a == null) || ((object)b == null))
+        {
             return false;
         }
 
@@ -69,7 +70,7 @@ public class MapPosition
         float deltaY = Mathf.Pow(a.y - b.y, 2);
         float squared = Mathf.Sqrt(deltaX + deltaY);
 
-        return (int) Mathf.Round(squared);
+        return (int)Mathf.Round(squared);
     }
 
     public override string ToString()
@@ -83,16 +84,19 @@ public class MapPosition
         int nx;
         int ny;
 
-        bool rowIsOdd = y%2 == 1;
+        bool rowIsOdd = y % 2 == 1;
 
-        switch (Dir) {
-            case Direction.UPLEFT:
-                if (rowIsOdd) {
+        switch (Dir)
+        {
+            case Direction.DOWNLEFT:
+                if (rowIsOdd)
+                {
                     return new MapPosition(x - 1, y + 1);
                 }
-                return new MapPosition(x, y+1);
-            case Direction.UPRIGHT:
-                if (rowIsOdd) {
+                return new MapPosition(x, y + 1);
+            case Direction.DOWNRIGHT:
+                if (rowIsOdd)
+                {
                     return new MapPosition(x, y + 1);
                 }
                 return new MapPosition(x + 1, y + 1);
@@ -100,13 +104,15 @@ public class MapPosition
                 return new MapPosition(x - 1, y);
             case Direction.RIGHT:
                 return new MapPosition(x + 1, y);
-            case Direction.DOWNLEFT:
-                if (rowIsOdd) {
+            case Direction.UPLEFT:
+                if (rowIsOdd)
+                {
                     return new MapPosition(x - 1, y - 1);
                 }
                 return new MapPosition(x, y - 1);
-            case Direction.DOWNRIGHT:
-                if (rowIsOdd) {
+            case Direction.UPRIGHT:
+                if (rowIsOdd)
+                {
                     return new MapPosition(x, y - 1);
                 }
                 return new MapPosition(x + 1, y - 1);
@@ -125,21 +131,36 @@ public class Utils
 {
     public static bool OutOfBounds(MapPosition position)
     {
-        if (position.x < 0 || position.y < 0 || position.y > 5) {
+        if (position.x < 0 || position.y < 0 || position.y > 5)
+        {
             return true;
         }
 
         //
-        if (position.y%2 == 0) {
-            if (position.x > 14)
+        if (position.y % 2 == 0)
+        {
+            if (position.x > 13)
                 return true;
         }
-        else {
-            if (position.x > 15) {
+        else
+        {
+            if (position.x > 14)
+            {
                 return true;
             }
         }
         return false;
+    }
+
+    public static bool IsLongLane(int y)
+    {
+
+        return (y % 2 != 0);
+    }
+
+    public static bool IsLongLane(MapPosition position)
+    {
+        return IsLongLane(position.y);
     }
 
     //Util map functions
@@ -148,9 +169,11 @@ public class Utils
         var adj = new List<MapPosition>();
 
         // Iterate over all the directions and check if they are valid positions
-        foreach (Direction dir in Enum.GetValues(typeof (Direction))) {
+        foreach (Direction dir in Enum.GetValues(typeof(Direction)))
+        {
             MapPosition tile = position.InDirection(dir);
-            if (!OutOfBounds(tile)) {
+            if (!OutOfBounds(tile))
+            {
                 adj.Add(tile);
             }
         }
@@ -167,10 +190,12 @@ public class Utils
     public static bool IsAdjacent(MapPosition a, MapPosition b)
     {
         // Not exactly optimized
-        foreach (Direction d in Enum.GetValues(typeof (Direction))) {
+        foreach (Direction d in Enum.GetValues(typeof(Direction)))
+        {
             MapPosition indir = a.InDirection(d);
             bool IsEqual = b == indir;
-            if (a.InDirection(d) == b) {
+            if (a.InDirection(d) == b)
+            {
                 return true;
             }
         }
@@ -185,17 +210,21 @@ public class Utils
     /// <returns></returns>
     public static bool IsAtEndOfLane(MapPosition pos, Owner faction)
     {
-        if (faction == Owner.PLAYER) {
-            int add = pos.y%2 == 1 ? 1 : 0;
+        if (faction == Owner.PLAYER)
+        {
+            int add = Utils.IsLongLane(pos) ? 1 : 0;
 
-            if (pos.x == 13 + add) {
+            if (pos.x == 13 + add)
+            {
                 return true;
             }
 
             return false;
         }
-        if (faction == Owner.ENEMY) {
-            if (pos.x == 0) {
+        if (faction == Owner.ENEMY)
+        {
+            if (pos.x == 0)
+            {
                 return true;
             }
 

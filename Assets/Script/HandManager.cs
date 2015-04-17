@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 
 public class HandManager : MonoBehaviour
 {
@@ -41,9 +39,12 @@ public class HandManager : MonoBehaviour
 
 
         // TODO: every second row
-        if (0 <= x && x <= 15) {
-            if (selectedCard != null && Input.GetMouseButtonDown(0)) {
-                if (CanUseSpell(selectedCard.GetBaseCard(), x, y)) {
+        if (0 <= x && x <= 15)
+        {
+            if (selectedCard != null && Input.GetMouseButtonDown(0))
+            {
+                if (CanUseSpell(selectedCard.GetBaseCard(), x, y))
+                {
                     UseCard(selectedCard.GetBaseCard(), x, y);
                     Destroy(selectedCard.gameObject);
                 }
@@ -55,20 +56,56 @@ public class HandManager : MonoBehaviour
 
     private bool CanUseSpell(BaseCard card, int x, int y)
     {
+        //Check targeting level
+        int targetingCost = GetTargetingCost(TurnManager.CurrentPlayer, new MapPosition(x, y));
+
+        if (card.TargetingLevel < targetingCost)
+        {
+            return false;
+        }
+
         // We cannot spawn creatures on top of other creatures
-        if (card.cardType == CardType.Creature) {
-            if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null) {
+        if (card.cardType == CardType.Creature)
+        {
+            if (CombatManager.GetCreatureAt(new MapPosition(x, y)) != null)
+            {
                 return false;
             }
         }
+
         return true;
+    }
+
+    private int GetTargetingCost(Owner player, MapPosition position)
+    {
+        int level;
+        if (position.x <= 3)
+        {
+            level = 0;
+        }
+        else if (position.x <= 9)
+        {
+            level = 1;
+        }
+        else
+        {
+            level = 2;
+        }
+
+        // reverse it for enemy
+        if (player == Owner.ENEMY)
+        {
+            level = 2 - level;
+        }
+        return level;
     }
 
     private void UseCard(BaseCard card, int x, int y)
     {
         card.UseCard(TurnManager.CurrentPlayer, new MapPosition(x, y));
 
-        if (card.AnimationName != null) {
+        if (card.AnimationName != null)
+        {
             GameObject dummy = Instantiate(AnimationDummyPrefab);
             Animator dummyAnimator = dummy.GetComponent<Animator>();
 

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using Assets.Script;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
-using Assets.Script;
 
 public class CreatureStats : MonoBehaviour
 {
@@ -18,6 +18,9 @@ public class CreatureStats : MonoBehaviour
     public int Defense;
     public int StartMaxHealth;
     public int StartSpeed;
+
+    // Where can we attack?
+    private List<Direction> attackDirections = new List<Direction>();
 
     //Can the creature act during combat phases?
     private int _canAct;
@@ -41,16 +44,18 @@ public class CreatureStats : MonoBehaviour
         }
     }
 
-    public int Health
+    public void SetHealth(int value, Source damageSource = null)
     {
-        get { return _hp; }
-        set
+        _hp = Math.Min(value, _maxHP);
+        if (_hp <= 0)
         {
-            _hp = Math.Min(value, _maxHP);
-            if (_hp <= 0) {
-                Die();
-            }
+            Die(damageSource);
         }
+    }
+
+    public int GetHealth()
+    {
+        return _hp;
     }
 
     // If speed is higher than 1.0, it is always rounded down.
@@ -58,7 +63,8 @@ public class CreatureStats : MonoBehaviour
     {
         get
         {
-            if (_speed >= 1.0) {
+            if (_speed >= 1.0)
+            {
                 return Mathf.Floor(_speed);
             }
 
@@ -74,15 +80,52 @@ public class CreatureStats : MonoBehaviour
         Speed = StartSpeed;
     }
 
+    // Called right after initalizing stats
+    public void OnSpawned()
+    {
+        switch (OwnedBy)
+        {
+            case Owner.PLAYER:
+                attackDirections.Add(Direction.RIGHT);
+                break;
+            case Owner.ENEMY:
+                attackDirections.Add(Direction.LEFT);
+                break;
+        }
+    }
+
     public bool CanMove()
     {
-        if (Speed >= 1) {
+        if (isImobile)
+        {
+            return false;
+        }
+        if (Speed >= 1)
+        {
             return true;
         }
-        if (Speed > 0 && _speedCounter >= 1.0f) {
+
+        // If speed is less than 1 we only move every x turn
+        if (Speed > 0 && _speedCounter >= 1.0f)
+        {
             return true;
         }
         return false;
+    }
+
+    public void MakeImobile()
+    {
+        isImobile = true;
+    }
+
+    public void AddAttackDirection(Direction dir)
+    {
+        if (attackDirections.Contains(dir))
+        {
+            return;
+        }
+
+        attackDirections.Add(dir);
     }
 
     /// <summary>
@@ -91,10 +134,12 @@ public class CreatureStats : MonoBehaviour
     /// <param name="restore">true for restore, otherwise remove</param>
     public void SetCanAct(bool restore)
     {
-        if (restore) {
+        if (restore)
+        {
             _canAct++;
         }
-        else {
+        else
+        {
             _canAct--;
         }
     }
@@ -113,16 +158,16 @@ public class CreatureStats : MonoBehaviour
         if (damage.damageType == DamageType.Physical)
         {
             finalDamage -= Defense;
-            
+
         }
-        Health -= finalDamage;
+        SetHealth(GetHealth() - finalDamage, damageSource);
 
         return finalDamage;
     }
 
     public void Heal(int healAmount)
     {
-        Health += healAmount;
+        SetHealth(GetHealth() + healAmount);
     }
 
     // Returns a MapPosition that represents directly front of this creature
@@ -135,11 +180,22 @@ public class CreatureStats : MonoBehaviour
     // TODO: Possibility of multiple targets, should return the most prioritised target
     public CreatureStats GetAttackTarget()
     {
+        attackDirections.Sort();
+        foreach (Direction dir in attackDirections)
+        {
+            CreatureStats possibleTarget = CombatManager.GetCreatureAt(GridPosition.InDirection(dir));
+            if (possibleTarget)
+            {
+                return possibleTarget;
+            }
+        }
+
+        // This probably should never happen
         return CombatManager.GetCreatureAt(GetForward());
     }
 
-    public void Die()
+    public void Die(Source killSource = null)
     {
-        CombatManager.RemovePermanent(this);
+        CombatManager.RemovePermanent(this, killSource);
     }
 }
