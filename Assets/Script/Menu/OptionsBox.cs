@@ -58,11 +58,11 @@ public class OptionsBox : MonoBehaviour
 
         SoundEnabled = GUI.Toggle(new Rect(24, 75, 105, 30), SoundEnabled, "Sound Enabled");
         if(GUI.Button(new Rect(165, 140, 100, 30), "Close Options")) ShowGUI=!ShowGUI;
-        if (GUI.Button(new Rect(40, 140, 100, 30), "Test Sound")) ; //Create Thingy With Sound?//
+        if (GUI.Button(new Rect(40, 140, 100, 30), "Main Menu")) { if (Application.loadedLevel > 0) { Application.LoadLevel(0); PlayMenuMusic = true; ShowGUI = !ShowGUI; } }
 
     }
 
-    void Update()
+    void AudioManager()
     {
         if (PlayMenuMusic)
         {
@@ -88,6 +88,12 @@ public class OptionsBox : MonoBehaviour
             audio.Stop();
             StopMusic = false;
         }
+    }
+
+    void Update()
+    {
+        AudioManager();
+        Debug.Log(Application.loadedLevel);
     }
 
 }
