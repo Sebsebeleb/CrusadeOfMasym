@@ -35,7 +35,7 @@ public class MenuScript : MonoBehaviour {
     }
     public void Options()
     {
-        OptionsBox.ShowGUI = !OptionsBox.ShowGUI;
+        OptionsBox.ShowGUI = true;
     }
     public void Exit()
     {
