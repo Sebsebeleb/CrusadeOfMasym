@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 8b32e191fec44aa42b7b50f2f5d98036
+timeCreated: 1429701395
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Human Pikeman Idle_0
@@ -85,6 +87,7 @@ TextureImporter:
     21300160: Human Pikeman Idle_80
     21300162: Human Pikeman Idle_81
     21300164: Human Pikeman Idle_82
+    21300166: Empty
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -650,10 +653,10 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 
+    - name: Empty
       rect:
         serializedVersion: 2
-        x: 2794
+        x: 2797
         y: 3442
         width: 216
         height: 654
@@ -667,8 +670,8 @@ TextureImporter:
         y: 3442
         width: 212
         height: 654
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

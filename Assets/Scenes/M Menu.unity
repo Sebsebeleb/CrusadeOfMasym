@@ -213,6 +213,7 @@ GameObject:
   - 4: {fileID: 233622826}
   - 212: {fileID: 233622825}
   - 114: {fileID: 233622827}
+  - 114: {fileID: 233622828}
   m_Layer: 0
   m_Name: M Menu Scene
   m_TagString: Untagged
@@ -269,9 +270,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc847632c0fef24f8e03a439db7ad52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuManagerPrefab: {fileID: 132824, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
   Speed: .00100000005
   Accel: 9.99999975e-05
+--- !u!114 &233622828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233622824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45659ac09cc224b4095e6bb66166ed57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuManagerPrefab: {fileID: 132824, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
 --- !u!1 &251998071
 GameObject:
   m_ObjectHideFlags: 0
