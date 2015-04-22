@@ -17,12 +17,15 @@ public class OptionsBox : MonoBehaviour
     public static bool PlayStoryMusic = false;
     public static bool PlayMenuMusic = false;
 
+    public static bool OnlyOne = false;
+
 
     private Rect windowRect = new Rect(800, 500, 300, 200);
 
     void Awake() 
     {
         DontDestroyOnLoad(transform.gameObject);
+        OnlyOne = true;
         audio = GetComponent<AudioSource>();
         PlayMenuMusic = true;
     }
@@ -93,7 +96,7 @@ public class OptionsBox : MonoBehaviour
     void Update()
     {
         AudioManager();
-        Debug.Log(Application.loadedLevel);
+        //Debug.Log(Application.loadedLevel);
     }
 
 }

@@ -162,7 +162,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 0}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -203,130 +203,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 11686576}
---- !u!1 &94419297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 94419300}
-  - 114: {fileID: 94419299}
-  - 114: {fileID: 94419298}
-  - 82: {fileID: 94419301}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &94419298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 94419297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae38993339c8cd4ca7dee817699753b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSliderValue: .5
-  Menu: {fileID: 8300000, guid: 3472b2b30dc589b45936833eec347466, type: 3}
-  Story: {fileID: 8300000, guid: 5e6d2f9be319db141b172a026801ec1a, type: 3}
---- !u!114 &94419299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 94419297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28163beed3851c242b3b9624a963bd6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &94419300
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 94419297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!82 &94419301
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 94419297}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: .5
-  m_Pitch: .800000012
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &233622824
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +257,7 @@ Transform:
   m_LocalScale: {x: 1.57000005, y: 1.20000005, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &233622827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc847632c0fef24f8e03a439db7ad52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuManagerPrefab: {fileID: 132824, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
   Speed: .00100000005
   Accel: 9.99999975e-05
 --- !u!1 &251998071
@@ -467,7 +344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &325598093
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +486,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 11442360, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
         m_MethodName: DeckBuilder
         m_Mode: 1
         m_Arguments:
@@ -725,7 +602,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 0}
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -907,7 +784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 11442360, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
         m_MethodName: StoryMode
         m_Mode: 1
         m_Arguments:
@@ -1179,7 +1056,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 11442360, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1460,7 +1337,7 @@ Transform:
   - {fileID: 874703355}
   - {fileID: 701191053}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1047541377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1413,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 0}
         m_MethodName: DeckBuilder
         m_Mode: 1
         m_Arguments:
@@ -1779,7 +1656,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 11442360, guid: 0b2d1fe9e69dc114aa171cc361324fdf, type: 2}
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -2027,7 +1904,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 94419299}
+      - m_Target: {fileID: 0}
         m_MethodName: StoryMode
         m_Mode: 1
         m_Arguments:
