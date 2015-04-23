@@ -42,7 +42,7 @@ public class TurnManager : MonoBehaviour
             playerExampleCards.Add("Human Phalanx");
             playerExampleCards.Add("Sleep");
             playerExampleCards.Add("Undead Vampire");
-            playerExampleCards.Add("Thief Rogue");
+            playerExampleCards.Add("Human Priest");
             playerExampleCards.Add("Divine Light");
             enemyExampleCards.Add("Fury");
             enemyExampleCards.Add("Holy Bolt");

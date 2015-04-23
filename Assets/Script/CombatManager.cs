@@ -270,6 +270,7 @@ public static class CombatManager
         StateManager.RegisterAnimation(AnimationAttackDuration);
 
         EventManager.InvokeCreatureAttack(permanent, enemy, damage);
+        EventManager.InvokeCreatureAttacked(enemy, permanent);
     }
 
     /// <summary>

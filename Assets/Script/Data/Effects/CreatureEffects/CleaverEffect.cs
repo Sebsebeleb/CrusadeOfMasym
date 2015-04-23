@@ -42,8 +42,12 @@ namespace Effects.CreatureEffects
             CreatureStats enemyUp = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionUp));
             CreatureStats enemyDown = CombatManager.GetCreatureAt(attacker.GridPosition.InDirection(directionDown));
 
-            enemyDown.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
-            enemyUp.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
+            if (enemyDown) {
+                enemyDown.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
+            }
+            if (enemyUp) {
+                enemyUp.TakeDamage(new Source(attacker, null), new Damage((int)Mathf.Round(damagedone.Value * 0.5f), DamageType.Physical));
+            }
         }
     }
 }
