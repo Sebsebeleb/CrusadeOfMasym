@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 9816c7dd5203058449507045b55aadc4
+timeCreated: 1429613240
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Zombie king walking_0
+    21300002: Zombie king walking_1
+    21300004: Zombie king walking_2
+    21300006: Zombie king walking_3
+    21300008: Zombie king walking_4
+    21300010: Zombie king walking_5
+    21300012: Zombie king walking_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Zombie king walking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1631
+        width: 317
+        height: 417
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1614
+        width: 327
+        height: 434
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_2
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1629
+        width: 330
+        height: 419
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1183
+        width: 324
+        height: 422
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1151
+        width: 325
+        height: 454
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1171
+        width: 322
+        height: 433
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king walking_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 728
+        width: 335
+        height: 414
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,4 +1,5 @@
-﻿using Assets.Script;
+﻿using System.Security.AccessControl;
+using Assets.Script;
 using UnityEngine;
 
 public class GeneralCreatureBehaviour : MonoBehaviour
@@ -12,6 +13,14 @@ public class GeneralCreatureBehaviour : MonoBehaviour
 
         stats = GetComponent<CreatureStats>();
         stats.MakeImobile();
+
+        // Make them able to attack everywhere
+        Direction[] dirs = {Direction.DOWNLEFT, Direction.DOWNRIGHT, Direction.UPLEFT, Direction.UPRIGHT};
+
+        foreach (Direction dir in dirs) {
+            stats.AddAttackDirection(dir);
+        }
+        
 
         EventManager.OnPermanentDestroyed += OnPermanentDestroyed;
     }

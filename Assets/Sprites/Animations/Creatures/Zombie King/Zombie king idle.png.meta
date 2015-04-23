@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 8a1234d83447a3444b6a02555ade0f47
+timeCreated: 1429613230
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Zombie king idle_0
+    21300002: Zombie king idle_1
+    21300004: Zombie king idle_2
+    21300006: Zombie king idle_3
+    21300008: Zombie king idle_4
+    21300010: Zombie king idle_5
+    21300012: Zombie king idle_6
+    21300014: Zombie king idle_7
+    21300016: Zombie king idle_8
+    21300018: Zombie king idle_9
+    21300020: Zombie king idle_10
+    21300022: Zombie king idle_11
+    21300024: Zombie king idle_12
+    21300026: Zombie king idle_13
+    21300028: Zombie king idle_14
+    21300030: Zombie king idle_15
+    21300032: Zombie king idle_16
+    21300034: Zombie king idle_17
+    21300036: Zombie king idle_18
+    21300038: Zombie king idle_19
+    21300040: Zombie king idle_20
+    21300042: Zombie king idle_21
+    21300044: Zombie king idle_22
+    21300046: Zombie king idle_23
+    21300048: Zombie king idle_24
+    21300050: Zombie king idle_25
+    21300052: Zombie king idle_26
+    21300054: Zombie king idle_27
+    21300056: Zombie king idle_28
+    21300058: Zombie king idle_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Zombie king idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3677
+        width: 329
+        height: 419
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 3679
+        width: 334
+        height: 417
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_2
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 3681
+        width: 338
+        height: 415
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_3
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 3680
+        width: 340
+        height: 416
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_4
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 3683
+        width: 342
+        height: 413
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3259
+        width: 341
+        height: 412
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_6
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3256
+        width: 349
+        height: 415
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_7
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3261
+        width: 353
+        height: 410
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_8
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 3263
+        width: 352
+        height: 408
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_9
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 3264
+        width: 355
+        height: 409
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2847
+        width: 355
+        height: 406
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_11
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2849
+        width: 360
+        height: 404
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_12
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 2851
+        width: 362
+        height: 402
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_13
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 2853
+        width: 364
+        height: 403
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_14
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 2853
+        width: 368
+        height: 398
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2443
+        width: 368
+        height: 398
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_16
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2441
+        width: 365
+        height: 400
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_17
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 2439
+        width: 362
+        height: 402
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_18
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 2439
+        width: 360
+        height: 402
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_19
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 2437
+        width: 358
+        height: 404
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2023
+        width: 351
+        height: 406
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_21
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 2023
+        width: 352
+        height: 409
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_22
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 2021
+        width: 350
+        height: 410
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_23
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 2019
+        width: 346
+        height: 410
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_24
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 2016
+        width: 344
+        height: 415
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1597
+        width: 339
+        height: 414
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_26
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1595
+        width: 338
+        height: 416
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_27
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1592
+        width: 337
+        height: 419
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_28
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 1591
+        width: 334
+        height: 420
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie king idle_29
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1591
+        width: 333
+        height: 420
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

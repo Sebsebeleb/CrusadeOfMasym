@@ -62,10 +62,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OwnedBy: 0
   name: General
-  Attack: 0
+  Attack: 3
   Defense: 0
   StartMaxHealth: 1
-  StartSpeed: 1
+  StartSpeed: 12
 --- !u!114 &11491414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: c3c49ae45ded8c543bc6b1ab39e861e7, type: 3}
+  m_Sprite: {fileID: 21300010, guid: b9eab7be71e64bd4aa822629771ae5f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

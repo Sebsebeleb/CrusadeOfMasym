@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11429120}
   - 114: {fileID: 11467938}
   - 114: {fileID: 11478430}
+  - 95: {fileID: 9510232}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -105,6 +106,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &9510232
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129122}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 289e20b447f1ae84ab24ef1ec8717ebf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11411748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,7 +295,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: .760784328, g: .760784328, b: .75686276, a: 1}
@@ -383,7 +401,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -270, y: -637}
+  m_AnchoredPosition: {x: -607, y: -1270}
   m_SizeDelta: {x: 270, y: 378}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22429124
