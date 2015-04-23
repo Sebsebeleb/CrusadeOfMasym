@@ -5,7 +5,7 @@ public class OptionsBox : MonoBehaviour
 {
     public float musicSliderValue = 0.5f;
     public static float soundSliderValue = 0.5f;
-    public bool ShowGUI = false;
+    public static bool ShowGUI = false;
     private bool MusicEnabled = true;
     public static bool StopMusic = false;
     public static bool SoundEnabled = true;
@@ -17,24 +17,20 @@ public class OptionsBox : MonoBehaviour
     public static bool PlayStoryMusic = false;
     public static bool PlayMenuMusic = false;
 
+    public static bool OnlyOne = false;
 
-    private Rect windowRect = new Rect(800, 500, 300, 200);
+
+    private Rect windowRect = new Rect(600, 300, 300, 200);
 
     void Awake() 
     {
         DontDestroyOnLoad(transform.gameObject);
+        OnlyOne = true;
         audio = GetComponent<AudioSource>();
-        PlayMenuMusic = true;
+        if (Application.loadedLevel == 0) PlayMenuMusic = true;
+        else if (Application.loadedLevel == 1) PlayStoryMusic = true;
+        else MusicEnabled = false;
     }
-
-    public void OnButtonCallback(string id)
-    {
-        if (id == "Options")
-        {
-            ShowGUI = !ShowGUI;
-        }
-    }
-
     void OnGUI()
     {
         if (!ShowGUI) return;
@@ -57,12 +53,12 @@ public class OptionsBox : MonoBehaviour
         soundSliderValue = soundSliderValue / 100;
 
         SoundEnabled = GUI.Toggle(new Rect(24, 75, 105, 30), SoundEnabled, "Sound Enabled");
-        if(GUI.Button(new Rect(165, 140, 100, 30), "Close Options")) ShowGUI=!ShowGUI;
-        if (GUI.Button(new Rect(40, 140, 100, 30), "Test Sound")) ; //Create Thingy With Sound?//
-
+        if(GUI.Button(new Rect(165, 140, 100, 30), "Test Sound")) /*DoStuffz*/;
+        if (GUI.Button(new Rect(265, 5, 25, 25), "X")) ShowGUI = !ShowGUI;
+        if (GUI.Button(new Rect(40, 140, 100, 30), "Main Menu")) { if (Application.loadedLevel > 0) { Application.LoadLevel(0); PlayMenuMusic = true; ShowGUI = !ShowGUI; } }
     }
 
-    void Update()
+    void AudioManager()
     {
         if (PlayMenuMusic)
         {
@@ -88,6 +84,12 @@ public class OptionsBox : MonoBehaviour
             audio.Stop();
             StopMusic = false;
         }
+    }
+
+    void Update()
+    {
+        AudioManager();
+        //Debug.Log(Application.loadedLevel);
     }
 
 }
