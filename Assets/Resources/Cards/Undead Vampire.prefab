@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardName: Udnead Vampire
   Description: When this creature kills an enemy in combat, it heals for 3.
-  CardImage: {fileID: 21300020, guid: 007122836e0c5654590bf72fc06818e1, type: 3}
+  CardImage: {fileID: 21300000, guid: 63096aa20ccc3da43be2bdaeb06281d1, type: 3}
   TypeOfCard: 0
   TargetingLevel: 0
   SpellAnimationName: 

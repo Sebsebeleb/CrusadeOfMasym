@@ -42,10 +42,10 @@ MonoBehaviour:
   CardName: Zombie King
   Description: At the begining of his turn, steals 1/0/1 from adjacent enemies for
     himself for 3 turns
-  CardImage: {fileID: 21300000, guid: 5aaac5bdef637bb45890e44c7c6b9024, type: 3}
+  CardImage: {fileID: 21300000, guid: 37f0fc41a1c407e4a87344ab9fdef9c0, type: 3}
   TypeOfCard: 0
   TargetingLevel: 0
-  SpellAnimationController: {fileID: 0}
+  SpellAnimationName: 
   AssociatedCardEffect: Zombie King
 --- !u!1001 &100100000
 Prefab:
@@ -58,4 +58,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194072}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

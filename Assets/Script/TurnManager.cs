@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -33,17 +31,20 @@ public class TurnManager : MonoBehaviour
     // Currently sets the decks of both players to a test deck
     private void PopulateDecks()
     {
-        List<string> playerExampleCards = new List<string>(); 
-        List<string> enemyExampleCards = new List<string>(); 
+        List<string> playerExampleCards = new List<string>();
+        List<string> enemyExampleCards = new List<string>();
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
 
             playerExampleCards.Add("Human Phalanx");
             playerExampleCards.Add("Sleep");
             playerExampleCards.Add("Undead Vampire");
             playerExampleCards.Add("Human Priest");
             playerExampleCards.Add("Divine Light");
+            playerExampleCards.Add("Consecration");
+            enemyExampleCards.Add("Meteor");
             enemyExampleCards.Add("Fury");
             enemyExampleCards.Add("Holy Bolt");
             enemyExampleCards.Add("Human Cleaver");
@@ -62,7 +63,8 @@ public class TurnManager : MonoBehaviour
     {
         Deck currentDeck = null;
         Transform currentHand = null;
-        switch (CurrentPlayer) {
+        switch (CurrentPlayer)
+        {
             case Owner.PLAYER:
                 currentDeck = PlayerDeck;
                 currentHand = PlayerHand;
@@ -77,9 +79,10 @@ public class TurnManager : MonoBehaviour
 
         }
 
-        int toDraw =  7 - currentHand.transform.childCount;
+        int toDraw = 7 - currentHand.transform.childCount;
 
-        for (int i = toDraw; i > 0; i--) {
+        for (int i = toDraw; i > 0; i--)
+        {
             string drawn = currentDeck.DrawCard();
             GameObject physicalCard = MakePhysicalCard(drawn);
             physicalCard.transform.SetParent(currentHand.transform);
@@ -102,23 +105,26 @@ public class TurnManager : MonoBehaviour
 
     public void DiscardStep()
     {
-        
+
     }
 
     public void NewTurn()
     {
-        if (!CanEndTurn()) {
+        if (!CanEndTurn())
+        {
             return;
         }
         StartCoroutine(CombatManager.DoCombatPhase(CurrentPlayer));
 
         EventManager.InvokeEndOfTurn();
 
-        if (CurrentPlayer == Owner.ENEMY) {
+        if (CurrentPlayer == Owner.ENEMY)
+        {
             EnemyHand.gameObject.SetActive(false);
             PlayerHand.gameObject.SetActive(true);
         }
-        else {
+        else
+        {
             PlayerHand.gameObject.SetActive(false);
             EnemyHand.gameObject.SetActive(true);
         }
@@ -132,7 +138,8 @@ public class TurnManager : MonoBehaviour
 
     private bool CanEndTurn()
     {
-        if (StateManager.GetAnimationState() != AnimState.Idle) {
+        if (StateManager.GetAnimationState() != AnimState.Idle)
+        {
             return false;
         }
 
