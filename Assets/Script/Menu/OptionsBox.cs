@@ -3,9 +3,12 @@ using System.Collections;
 
 public class OptionsBox : MonoBehaviour
 {
-    public float musicSliderValue = 0.5f;
-    public static float soundSliderValue = 0.5f;
     public static bool ShowGUI = false;
+
+    public float musicSliderValue = 0.3f;
+    private float musicSliderValueDefault = 0.3f;
+    public static float soundSliderValue = 0.3f;
+
     private bool MusicEnabled = true;
     public static bool StopMusic = false;
     public static bool SoundEnabled = true;
@@ -18,13 +21,17 @@ public class OptionsBox : MonoBehaviour
     public static bool PlayMenuMusic = false;
 
     public static bool OnlyOne = false;
-
+    public static bool FirstLoad = true;
 
     private Rect windowRect = new Rect(600, 300, 300, 200);
 
     void Awake() 
     {
         DontDestroyOnLoad(transform.gameObject);
+        if (FirstLoad)
+        {
+            musicSliderValue = 0f;
+        }
         OnlyOne = true;
         audio = GetComponent<AudioSource>();
         if (Application.loadedLevel == 0) PlayMenuMusic = true;
@@ -60,6 +67,12 @@ public class OptionsBox : MonoBehaviour
 
     void AudioManager()
     {
+        if (FirstLoad && musicSliderValue <= musicSliderValueDefault)
+        {
+            musicSliderValue += 0.005f;
+            GetComponent<AudioSource>().volume = musicSliderValue;
+        }
+        if (FirstLoad && musicSliderValue >= musicSliderValueDefault) { musicSliderValue = musicSliderValueDefault; FirstLoad = false; }
         if (PlayMenuMusic)
         {
             audio.Stop();
@@ -89,7 +102,6 @@ public class OptionsBox : MonoBehaviour
     void Update()
     {
         AudioManager();
-        //Debug.Log(Application.loadedLevel);
     }
 
 }
